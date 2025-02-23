@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - projectile
+  - FxTemporaire
+  - Seat Enter
+  - Seat Exit
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Player1
+  - Player2
+  - PostProcessing
+  - Interactables
+  - Instrument
+  - DoorCollider
+  - Door
+  - VRHands
+  - NoInteractPickups
+  - Player UI
+  - Frozen Interactable
+  - Interactable Cube
+  - Frozen Cube
+  - Mr Hugs
+  - Pool Table
+  - VR Hands
+  - Brick
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1719363347
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  - Showbiz
+  - Light Layer 2
+  - Light Layer 3
+  - Light Layer 4
+  - Light Layer 5
+  - Light Layer 6
+  - Light Layer 7
+  - Decal Layer default
+  - Decal Layer 1
+  - Decal Layer 2
+  - Decal Layer 3
+  - Decal Layer 4
+  - Decal Layer 5
+  - Decal Layer 6
+  - Decal Layer 7
