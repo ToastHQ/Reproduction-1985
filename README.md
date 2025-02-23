@@ -9,9 +9,6 @@
 
 ---
 
-> [!CAUTION]
-> **No branches are currently stable yet!** It's advised that you do not contribute at this time.
-
 ### Contents
 1. [About](#about)
 2. [Getting Started](#getting-started)
