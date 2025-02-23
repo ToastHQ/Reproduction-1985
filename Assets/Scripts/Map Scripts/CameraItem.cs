@@ -16,13 +16,11 @@ public class CameraItem : MonoBehaviour
         if (input == 0)
         {
             player.playerState = Player.PlayerState.frozenAllUnlock;
-            player.DisplayMessage(image, 150, 5);
         }
         else
         {
             player2 = GameObject.Find("Player 2").GetComponent<Player>();
             player2.playerState = Player.PlayerState.frozenAllUnlock;
-            player2.DisplayMessage(image, 150, 5);
         }
 
         PlayerPrefs.SetInt("Item: Camera", 1);

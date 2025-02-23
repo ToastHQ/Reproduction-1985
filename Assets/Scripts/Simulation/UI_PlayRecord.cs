@@ -529,6 +529,8 @@ public class UI_PlayRecord : MonoBehaviour
                         costumeName = meshRenderers[i].gameObject.name
                     };
                 }
+
+                character.GetComponentInChildren<Character_Valves>().StartUp(); // Start up the character once setup
             }
         }
 

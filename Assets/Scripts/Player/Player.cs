@@ -89,12 +89,7 @@ public class Player : MonoBehaviour
     [Header("PlayerState")] public PlayerState playerState;
 
     [Header("Player Items")] public CharacterItems[] itemList;
-
-    public string currentItem;
-    public float itemWheelCooldown;
-    public PlayerInteractions playerInter;
-    public ScreenShotItem screenShotItem;
-    public PrizeDeleteItem prizeDeleteItem;
+    
     public GameObject pauseMenu;
     public bool canPause = true;
     public float JumpBool;
@@ -106,9 +101,7 @@ public class Player : MonoBehaviour
     public Vector2 GPJoy;
     public Vector2 GPCam;
     public Vector2 GPZoom;
-
-    [Header("Anims")] private Animator _animator;
-
+    
     private Vector2 camAcceleration;
     private float camHeight;
 
@@ -126,7 +119,6 @@ public class Player : MonoBehaviour
     //New Input
     [SerializeField] private Controller gamepad;
 
-    private float groundedTimeAnim;
     private bool holdGamepad;
     private Vector2 JoyStick;
     private int JumpFrames;
@@ -137,7 +129,6 @@ public class Player : MonoBehaviour
 
     private bool runGamepad;
     private float smoothScroll;
-    private float timedelta;
 
     private void Awake()
     {
@@ -146,7 +137,6 @@ public class Player : MonoBehaviour
         smoothScroll = PlayerCamScript.fieldOfView;
         Cursor.lockState = CursorLockMode.Locked;
         //Initialize Variables
-        _animator = transform.Find("PlayerModel").GetComponent<Animator>();
         CharCont = GetComponent<CharacterController>();
         oldPosition = transform.position;
         gamepad = new Controller();
@@ -194,37 +184,8 @@ public class Player : MonoBehaviour
             if (enableCamZoom) CamZoomCheck();
 
             bool camMove = true;
-            //Items
-            switch (currentItem)
-            {
-                case "Item Pickup":
-                    playerInter.enabled = true;
-                    screenShotItem.enabled = false;
-                    prizeDeleteItem.enabled = false;
-                    camMove = playerInter.PickupCheck(false);
-                    break;
-                case "Item Freeze":
-                    playerInter.enabled = true;
-                    screenShotItem.enabled = false;
-                    prizeDeleteItem.enabled = false;
-                    camMove = playerInter.PickupCheck(true);
-                    break;
-                case "Screenshot":
-                    playerInter.enabled = false;
-                    screenShotItem.enabled = true;
-                    prizeDeleteItem.enabled = false;
-                    screenShotItem.ScreenshotCheck();
-                    break;
-                case "Item Eraser":
-                    playerInter.enabled = false;
-                    screenShotItem.enabled = false;
-                    prizeDeleteItem.enabled = true;
-                    prizeDeleteItem.DeleterCheck();
-                    break;
-            }
 
-            //Camera
-            if (camMove) CameraMove(CStick);
+            CameraMove(CStick);
         }
 
         //Flashlight
@@ -234,10 +195,6 @@ public class Player : MonoBehaviour
         if (playerState != PlayerState.frozenBody && playerState != PlayerState.frozenAll &&
             playerState != PlayerState.frozenAllUnlock)
         {
-            //Item Wheel
-            if (Input.GetKeyDown(KeyCode.Z) && controlType == ControllerType.keyboard) OpenItemWheel();
-            if (itemWheelCooldown > 0) itemWheelCooldown -= Time.deltaTime;
-
             //Pause
             if (Input.GetKeyDown(KeyCode.Escape) && controlType == ControllerType.keyboard && canPause)
             {
@@ -286,9 +243,6 @@ public class Player : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
                 break;
         }
-
-        //Anim
-        AnimCheck();
     }
 
     private void FixedUpdate()
@@ -300,17 +254,7 @@ public class Player : MonoBehaviour
             if (enableUIClick)
                 RayCastClick();
     }
-
-
-    private void LateUpdate()
-    {
-        headBone.transform.rotation = Quaternion.Lerp(headBone.transform.rotation,
-            Quaternion.LookRotation(PlayerCamScript.transform.forward, headBone.transform.up), 0.4f);
-        neckBone.transform.rotation = Quaternion.Lerp(neckBone.transform.rotation,
-            Quaternion.LookRotation(PlayerCamScript.transform.forward, neckBone.transform.up), 0.4f);
-        spineBone.transform.rotation = Quaternion.Lerp(spineBone.transform.rotation,
-            Quaternion.LookRotation(PlayerCamScript.transform.forward, spineBone.transform.up), 0.2f);
-    }
+    
 
     private void OnEnable()
     {
@@ -420,11 +364,6 @@ public class Player : MonoBehaviour
             (runGamepad && controlType == ControllerType.gamepad) || (sprint && !crouchBool))
         {
             nowSpeed = sprintSpeed;
-            _animator.SetBool("Sprint", true);
-        }
-        else
-        {
-            _animator.SetBool("Sprint", false);
         }
 
         if (crouchBool) nowSpeed = crouchSpeed;
@@ -561,16 +500,9 @@ public class Player : MonoBehaviour
                     crouchBool = true;
                     UncrouchCheck();
                 }
-
-                timedelta = 0;
             }
         }
-        else
-        {
-            timedelta += Time.deltaTime;
-        }
 
-        _animator.SetBool("Crouch", crouchBool);
         //Crouch height
         if (!crouchBool)
             camHeight = camInitialHeight;
@@ -597,23 +529,8 @@ public class Player : MonoBehaviour
                 CStick = GPCam * 2;
                 break;
         }
-
-        //Anims
-        _animator.SetFloat("Velocity Z", Mathf.Min(JoyStick.y * 10, 1), 0.1f, Time.deltaTime);
-        _animator.SetFloat("Velocity X", Mathf.Min(JoyStick.x * 10, 1), 0.1f, Time.deltaTime);
+        
         JoyStick = JoyStick.normalized;
-    }
-
-    private void AnimCheck()
-    {
-        if (!CharCont.isGrounded)
-            groundedTimeAnim = 0;
-        else
-            groundedTimeAnim += Time.deltaTime;
-        if (groundedTimeAnim > 0.1f)
-            _animator.SetBool("Grounded", true);
-        else
-            _animator.SetBool("Grounded", false);
     }
 
     private void CamZoomCheck()
@@ -622,10 +539,6 @@ public class Player : MonoBehaviour
         {
             if (!Input.GetKey(KeyCode.LeftAlt))
             {
-                if (Input.GetAxis("Mouse ScrollWheel") != 0)
-                    timedelta = 0;
-                else
-                    timedelta += Time.deltaTime;
                 smoothScroll += Input.GetAxis("Mouse ScrollWheel") * 25f;
                 smoothScroll = Mathf.Clamp(smoothScroll, minFov, maxFov);
             }
@@ -637,110 +550,6 @@ public class Player : MonoBehaviour
         }
 
         PlayerCamScript.fieldOfView = Mathf.Lerp(PlayerCamScript.fieldOfView, smoothScroll, Time.deltaTime * 5);
-    }
-
-    public void DisplayMessage(Texture2D image, byte todarkness, byte tospeed)
-    {
-        SetFade(todarkness, tospeed);
-        GameObject sm = transform.Find("Player UI").Find("System Message").gameObject;
-        sm.SetActive(true);
-        sm.transform.Find("Message").GetComponent<RawImage>().texture = image;
-        sm.GetComponent<Animator>().Play("SystemMessage");
-    }
-
-    public void OpenItemWheel()
-    {
-        GameObject iw = transform.Find("Player UI").Find("Item Wheel").gameObject;
-        if (iw.activeSelf)
-        {
-            AdvanceItemWheel();
-        }
-        else
-        {
-            List<string> theItemList;
-            int currItem = LoadItemWheelItems(out theItemList);
-            if (theItemList.Count > 1)
-            {
-                iw.SetActive(true);
-                iw.GetComponent<Animator>().Play("New State", 0, 0);
-                iw.transform.Find("Middle").GetComponent<Image>().sprite = itemNameToIcon(theItemList[currItem]);
-                iw.transform.Find("Bottom").GetComponent<Image>().sprite =
-                    itemNameToIcon(theItemList[(int)realModulo(currItem + 1, theItemList.Count)]);
-                iw.transform.Find("Top").GetComponent<Image>().sprite =
-                    itemNameToIcon(theItemList[(int)realModulo(currItem - 1, theItemList.Count)]);
-                iw.transform.Find("Name").GetComponent<Text>().text = theItemList[currItem];
-            }
-        }
-    }
-
-    private void AdvanceItemWheel()
-    {
-        GameObject iw = transform.Find("Player UI").Find("Item Wheel").gameObject;
-        if (itemWheelCooldown <= 0)
-        {
-            itemWheelCooldown = 0.5f;
-            List<string> theItemList;
-            int currItem = LoadItemWheelItems(out theItemList);
-            if (theItemList.Count > 1)
-            {
-                AudioSource sc = GameObject.Find("GlobalAudio").GetComponent<AudioSource>();
-                sc.clip = (AudioClip)Resources.Load("ItemWheel");
-                sc.Play();
-                iw.SetActive(true);
-                currentItem = theItemList[(int)realModulo(currItem + 1, theItemList.Count)];
-                iw.GetComponent<Animator>().Play("ItemWheel", 0, 0);
-            }
-        }
-    }
-
-    public void GatherItemWheelIcons()
-    {
-        List<string> theItemList;
-        int currItem = LoadItemWheelItems(out theItemList);
-        if (theItemList.Count > 1)
-        {
-            GameObject iw = transform.Find("Player UI").Find("Item Wheel").gameObject;
-            iw.transform.Find("Middle").GetComponent<Image>().sprite = itemNameToIcon(theItemList[currItem]);
-            iw.transform.Find("Bottom").GetComponent<Image>().sprite =
-                itemNameToIcon(theItemList[(int)realModulo(currItem + 1, theItemList.Count)]);
-            iw.transform.Find("Top").GetComponent<Image>().sprite =
-                itemNameToIcon(theItemList[(int)realModulo(currItem - 1, theItemList.Count)]);
-            iw.transform.Find("Name").GetComponent<Text>().text = theItemList[currItem];
-        }
-    }
-
-    private Sprite itemNameToIcon(string name)
-    {
-        for (int i = 0; i < itemList.Length; i++)
-            if (itemList[i].itemName == name)
-                return itemList[i].icon;
-
-        return null;
-    }
-
-    private int LoadItemWheelItems(out List<string> list)
-    {
-        list = new List<string>();
-        int currItem = 0;
-        for (int i = 0; i < itemList.Length; i++)
-            if (itemList[i].unlockString == "")
-                list.Add(itemList[i].itemName);
-            else if (PlayerPrefs.GetInt(itemList[i].unlockString) == 1) list.Add(itemList[i].itemName);
-
-        for (int i = 0; i < list.Count; i++)
-            if (list[i] == currentItem)
-                currItem = i;
-
-        return currItem;
-    }
-
-    public void FromUiToNormal(int tospeed)
-    {
-        playerState = PlayerState.normal;
-        SetFade(0, (byte)tospeed);
-        AudioSource sc = GameObject.Find("GlobalAudio").GetComponent<AudioSource>();
-        sc.clip = (AudioClip)Resources.Load("SystemClose");
-        sc.Play();
     }
 
     public void SetFade(byte todarkness, byte tospeed)
