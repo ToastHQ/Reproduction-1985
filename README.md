@@ -14,8 +14,9 @@
     - [Prerequisites](#prerequisites)
     - [Setting up](#setting-up)
 3. [Contributing](#contributing)
-4. [License](#license)
-5. [Acknowledgments](#acknowledgments)
+4. [Roadmap](#roadmap)
+5. [License](#license)
+6. [Acknowledgments](#acknowledgments)
 
 
 ## About
@@ -54,6 +55,43 @@ No releases have been published at this time. Please check back later.
 There are two branches currently
 1. **main**: This is the stable version of the software, usually in line with the latest release. May not contain the latest features. Should be used for minor changes or if you just want to use the software via the source code.
 2. **dev**: This is the bleeding-edge version of the software, this will contain all the latest changes. It's recommended to work on new features here.
+
+## Roadmap
+- [x] Switch from HDRP to URP
+- [ ] Prop system for stages, allowing for more customisation on stages (e.g organ fronts, etc)
+- [ ] Launcher-style main menu
+- [ ] New flow management system
+    
+- [ ] **Maps**   
+  - [ ] **3-Stage**  
+    - [x] All materials converted to URP (no pink missing shaders)
+    - [ ] General Props implemented fully
+    - [ ] Spotlights prop
+    - [ ] **Characters**
+      - [ ] CathodePlayer's Helen (unknown location, was publically released in [Animatronic Game Hub](https://discord.gg/WRQvaw6EM9))
+      - [ ] Munch Jr.
+  - [ ] **Cyberamics (Pizza Time Players)**
+    - [ ] All materials converted to URP (no pink missing shaders)
+    - [ ] Band Board prop
+    - [ ] Spotlights prop
+    - [ ] **Characters**
+      - [ ] CathodePlayer's PTT Cyberamics (unknown location, was publically released in [Animatronic Game Hub](https://discord.gg/WRQvaw6EM9))
+      - [ ] ReminaProd's extra Warblettes variants (from [Reel to Real Ultimate Mod](https://github.com/ReminaProd/RR-Engine-Ultimate-Mod))
+  - [ ] **Cyberamics (Munch's Make Believe Band)**  
+      - [ ] All materials converted to URP (no pink missing shaders)
+      - [ ] **Characters**
+        - [ ] CathodePlayer's MMBB Cyberamics (unknown location, was publically released in [Animatronic Game Hub](https://discord.gg/WRQvaw6EM9))
+        - [ ] ReminaProd's MMBB Stages (from [Reel to Real Ultimate Mod](https://github.com/ReminaProd/RR-Engine-Ultimate-Mod))
+  - [ ] **Winchester**  
+      - [ ] All materials converted to URP (no pink missing shaders)
+  - [ ] **Kooser**  
+      - [ ] All materials converted to URP (no pink missing shaders)
+  - [ ] **Awesome Adventure Machine**  
+      - [ ] All materials converted to URP (no pink missing shaders)
+  - [ ] **Tully**  
+      - [ ] All materials converted to URP (no pink missing shaders)
+  - [ ] **Studio C**  
+      - [ ] All materials converted to URP (no pink missing shaders)
 
 ## License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
