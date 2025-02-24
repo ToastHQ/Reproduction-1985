@@ -2,8 +2,7 @@
   <img width="400" src="/Branding/pd-dark.svg" alt="Material Bread logo">
   <p align="center">
     Animatronic Show Simulation Software<br/>
-    <a href="https://github.com/rosebytee/duofur/issues/new?labels=bug&template=bug-report---.md">Report Bug</a> &middot;
-    <a href="https://github.com/rosebytee/duofur/issues/new?labels=enhancement&template=feature-request---.md">Suggest Feature</a>
+    <a href="https://discord.gg/U6Cs7njpFJ">Discord Server</a>
   </p>
 </div>
 
