@@ -33,7 +33,7 @@ TBA
 ## Contributing
 
 > [!NOTE]
-> It's recommended not to create your own independent "mod" but rather to contribute to the project directly. This means that if we were to implement large, game-changing features, we wouldn't have to worry about the impact on forks.
+> It's recommended not to create your own independent "mod" but rather to contribute to the project directly. This means that if we were to implement large, game-changing features, we wouldn't have to worry about the impact on mods.
 
 ### Branches
 There are two branches currently
