@@ -23,6 +23,8 @@
 Project Duofur is an animatronic simulation software based in Unity. Most of its code currently derives from [RR Engine Vanilla Enhanced](https://github.com/EnderSkippy/RR-Engine-Vanilla-Enhanced), a fork of the long-abandoned RR Engine (aka Reel to Real). This project aims to continue it and add needed features.
 
 ## Getting Started
+> [!NOTE]
+> Most maps are not ready at this time. The 3-Stage map is the most stable and ideally should be used as a base.
 This is instructions on how to install and setup the software. Only the source code method can be used if you intend on [contributing to the software.](#contributing)
 
 ### Gamejolt (for general users)
