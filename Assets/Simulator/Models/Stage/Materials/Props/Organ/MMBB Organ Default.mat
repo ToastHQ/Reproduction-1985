@@ -1,21 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2436318973930632747
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 13
-  hdPluginSubTargetMaterialVersions:
-    m_Keys: []
-    m_Values: 
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -23,23 +7,25 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CU Curtain
+  m_Name: MMBB Organ Default
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _METALLICSPECGLOSSMAP
-  - _NORMALMAP
+  - _ALPHAPREMULTIPLY_ON
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _DISABLE_SSR_TRANSPARENT
-  - _MASKMAP
+  - _ENABLE_FOG_ON_TRANSPARENT
   - _NORMALMAP_TANGENT_SPACE
+  - _REFRACTION_THIN
+  - _TRANSMITTANCECOLORMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: Opaque
+    RenderType: Transparent
   disabledShaderPasses:
   - DistortionVectors
   - MOTIONVECTORS
@@ -47,7 +33,8 @@ Material:
   - TransparentBackface
   - RayTracingPrepass
   - ForwardEmissiveForDeferred
-  - TransparentDepthPrepass
+  - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -57,11 +44,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: 044a2dec848227c42b496bf9bd07f063, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b16f6c78f88e984d94c28bd0dd1c8c9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 044a2dec848227c42b496bf9bd07f063, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b16f6c78f88e984d94c28bd0dd1c8c9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -73,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 7f9041c735bb8504d845897b36ec1b16, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
@@ -121,19 +108,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 044a2dec848227c42b496bf9bd07f063, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b16f6c78f88e984d94c28bd0dd1c8c9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 3a15ce1c5e988e643bd99abc38c8c8c6, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 3a15ce1c5e988e643bd99abc38c8c8c6, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 7f9041c735bb8504d845897b36ec1b16, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -177,7 +164,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TransmittanceColorMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3b16f6c78f88e984d94c28bd0dd1c8c9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -200,17 +187,17 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
     - _AlphaClip: 0
-    - _AlphaCutoff: 0.229
+    - _AlphaCutoff: 0
     - _AlphaCutoffEnable: 0
     - _AlphaCutoffPostpass: 0.5
     - _AlphaCutoffPrepass: 0.5
-    - _AlphaCutoffShadow: 0.193
-    - _AlphaDstBlend: 0
+    - _AlphaCutoffShadow: 1
+    - _AlphaDstBlend: 10
     - _AlphaRemapMax: 1
     - _AlphaRemapMin: 0
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 0
-    - _AlphaToMaskInspectorValue: 0
+    - _AlphaToMaskInspectorValue: 1
     - _Anisotropy: 0
     - _Blend: 0
     - _BlendMode: 0
@@ -222,7 +209,7 @@ Material:
     - _Cull: 2
     - _CullMode: 2
     - _CullModeForward: 2
-    - _Cutoff: 0.229
+    - _Cutoff: 0
     - _DepthOffsetEnable: 0
     - _DetailAlbedoMapScale: 1
     - _DetailAlbedoScale: 1
@@ -251,9 +238,9 @@ Material:
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 1
-    - _DstBlend: 0
-    - _DstBlend2: 0
-    - _DstBlendAlpha: 0
+    - _DstBlend: 10
+    - _DstBlend2: 10
+    - _DstBlendAlpha: 10
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
@@ -283,11 +270,11 @@ Material:
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
     - _Metallic: 0
-    - _MetallicRemapMax: 1
+    - _MetallicRemapMax: 0
     - _MetallicRemapMin: 0
     - _Mode: 0
     - _NormalMapSpace: 0
-    - _NormalScale: 0.91
+    - _NormalScale: 1
     - _ObjectSpaceUVMapping: 0
     - _ObjectSpaceUVMappingEmissive: 0
     - _OcclusionStrength: 1
@@ -304,11 +291,11 @@ Material:
     - _ReceiveShadows: 1
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
-    - _RefractionModel: 0
+    - _RefractionModel: 3
     - _SSRefractionProjectionModel: 0
-    - _Smoothness: 0.5
-    - _SmoothnessRemapMax: 0.3251974
-    - _SmoothnessRemapMin: 0.09547737
+    - _Smoothness: 0
+    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
@@ -317,19 +304,19 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _StencilRef: 0
-    - _StencilRefDepth: 8
+    - _StencilRefDepth: 16
     - _StencilRefDistortionVec: 4
-    - _StencilRefGBuffer: 10
-    - _StencilRefMV: 40
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 32
     - _StencilWriteMask: 6
-    - _StencilWriteMaskDepth: 9
+    - _StencilWriteMaskDepth: 25
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 15
     - _StencilWriteMaskMV: 41
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
-    - _Surface: 0
-    - _SurfaceType: 0
+    - _Surface: 1
+    - _SurfaceType: 1
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
     - _Thickness: 1
@@ -339,7 +326,7 @@ Material:
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
     - _TransparentDepthPrepassEnable: 1
-    - _TransparentSortPriority: 1
+    - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UVBase: 0
@@ -349,11 +336,11 @@ Material:
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 1
     - _WorkflowMode: 1
-    - _ZTestDepthEqualForOpaque: 3
+    - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestModeDistortion: 4
     - _ZTestTransparent: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
@@ -374,7 +361,23 @@ Material:
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &682086199198438575
+--- !u!114 &4232026379392931516
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
+--- !u!114 &8988010443260358497
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

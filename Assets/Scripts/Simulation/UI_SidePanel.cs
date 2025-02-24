@@ -700,7 +700,7 @@ public class UI_SidePanel : MonoBehaviour
                 for (int i = 0; i < thefile.characters.Length; i++)
                 {
                     GameObject theCharacter = null;
-                    foreach (Transform child in showPanelUI.stages[showPanelUI.currentStage].animatronics.transform)
+                    foreach (Transform child in showPanelUI.stages[showPanelUI.currentStage].animatronicsContainer.transform)
                         if (thefile.characters[i] != null)
                         {
                             // I don't know what the fuck this does. You're on your own.

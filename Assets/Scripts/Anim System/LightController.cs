@@ -1,15 +1,34 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
+/// <summary>
+/// Light controller script. This allows many properties of a Light to be manipulated by the show controller.
+/// </summary>
+
+[RequireComponent(typeof(Light))]
 public class LightController : MonoBehaviour
 {
-    public int lightBit;
+    [FormerlySerializedAs("lightBit")]
+    public int bit;
     public char topOrBottom;
+    
+    [Range(0.01f, 1f)] public float fadeSpeed;
 
-    [Range(0.01f, .3f)] public float fadeSpeed;
-
+    
     public float intensity;
+    [Obsolete("Intensity Multiplier should not be used, use Intensity instead")]
     public float intensityMultiplier = 1.0f;
+
+    public enum SpecialMode
+    {
+        None = 0,
+        Helicopter,
+        CuStar,
+        EmissiveMaterial,
+    }
+    public SpecialMode specialMode;
+    
     public bool strobe;
     public bool flash;
 
@@ -20,8 +39,6 @@ public class LightController : MonoBehaviour
     public Color emissiveMatColor = Color.white;
     public bool invertBit;
     public bool materialStars;
-    public bool helicopter;
-    public bool chuckStar;
     public Texture2D[] starCookies;
     private float acceleration;
     private Mack_Valves bitChart;
@@ -61,9 +78,9 @@ public class LightController : MonoBehaviour
             try
             {
                 bool onOff = false;
-                if (topOrBottom == 'T' && bitChart.topDrawer[lightBit - 1])
+                if (topOrBottom == 'T' && bitChart.topDrawer[bit - 1])
                     onOff = true;
-                else if (topOrBottom == 'B' && bitChart.bottomDrawer[lightBit - 1]) onOff = true;
+                else if (topOrBottom == 'B' && bitChart.bottomDrawer[bit - 1]) onOff = true;
                 if (invertBit) onOff = !onOff;
                 if (flash)
                 {
@@ -123,7 +140,7 @@ public class LightController : MonoBehaviour
                     if (!onOff && emissiveObject.activeSelf) emissiveObject.SetActive(false);
                 }
 
-                if (helicopter)
+                if (specialMode == SpecialMode.Helicopter)
                 {
                     if (onOff)
                     {
@@ -141,7 +158,7 @@ public class LightController : MonoBehaviour
                     transform.Rotate(new Vector3(0, 0, speed * Time.deltaTime * 8.0f));
                 }
 
-                if (chuckStar)
+                if (specialMode == SpecialMode.CuStar)
                 {
                     //Acceleration = time between patterns
                     //Flashcheck = pattern swap

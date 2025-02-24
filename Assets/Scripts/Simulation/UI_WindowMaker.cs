@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UI_WindowMaker : MonoBehaviour
 {
+    UI_PlayRecord _uiPlayRecord;
+    
     public GameObject Viewport;
     
     [HideInInspector]
@@ -14,7 +16,7 @@ public class UI_WindowMaker : MonoBehaviour
     private GameObject TwoWindow;
     private GameObject PlayWindow;
     private GameObject NewRecordWindow;
-    private GameObject RecordIconsWindow;
+    private GameObject GridWindow;
     private GameObject MoveTestWindow;
     private GameObject CharacterCustomizeWindow;
     private GameObject StageCustomizeWindow;
@@ -33,13 +35,15 @@ public class UI_WindowMaker : MonoBehaviour
 
     private void Awake()
     {
+        _uiPlayRecord = GetComponent<UI_PlayRecord>();
+        
         Loading = Viewport.transform.Find("Loading Window").gameObject;
         ErrorWindow = Viewport.transform.Find("Error Window").gameObject;
         ThreeWindow = Viewport.transform.Find("3 Window").gameObject;
         TwoWindow = Viewport.transform.Find("2 Window").gameObject;
         PlayWindow = Viewport.transform.Find("Play Window").gameObject;
         NewRecordWindow = Viewport.transform.Find("New Record Window").gameObject;
-        RecordIconsWindow = Viewport.transform.Find("Record Icons Window").gameObject;
+        GridWindow = Viewport.transform.Find("Grid Window").gameObject;
         MoveTestWindow = Viewport.transform.Find("Move Test Window").gameObject;
         CharacterCustomizeWindow = Viewport.transform.Find("Character Customise Window").gameObject;
         StageCustomizeWindow = Viewport.transform.Find("Stage Customise Window").gameObject;
@@ -116,12 +120,12 @@ public class UI_WindowMaker : MonoBehaviour
     public void MakeRecordIconsWindow()
     {
         DisableWindows();
-        RecordIconsWindow.SetActive(true);
+        GridWindow.SetActive(true);
 
         for (int i = 0; i < 24; i++)
             if (i < recordingGroups.Length)
             {
-                GameObject button = RecordIconsWindow.transform.Find("Button (" + i + ")").gameObject;
+                GameObject button = GridWindow.transform.Find("Button (" + i + ")").gameObject;
                 button.SetActive(true);
                 button.GetComponent<Image>().sprite = recordingGroups[i].groupIcon;
                 button.transform.GetChild(0).GetComponent<Button3D>().funcName = "RecordingGroupMenu";
@@ -131,33 +135,42 @@ public class UI_WindowMaker : MonoBehaviour
             }
             else
             {
-                RecordIconsWindow.transform.Find("Button (" + i + ")").gameObject.SetActive(false);
+                GridWindow.transform.Find("Button (" + i + ")").gameObject.SetActive(false);
             }
 
-        RecordIconsWindow.transform.Find("Back Button").GetComponent<Button3D>().funcWindow = 4;
+        GridWindow.transform.Find("Back Button").GetComponent<Button3D>().funcWindow = 4;
     }
 
-    public void MakeCharacterCustomizeIconsWindow(CharacterSelector[] characters)
+    public void MakeCharacterCustomizeIconsWindow()
     {
         DisableWindows();
-        RecordIconsWindow.SetActive(true);
-
+        GridWindow.SetActive(true);
+        
+        
         int currentButton = 0;
         for (int i = 0; i < 24; i++)
-            if (i < characters.Length && characters[i].allCostumes.Length > 1)
+            if (i < _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics.Length && _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics[i].costumes.Length > 1)
             {
-                GameObject button = RecordIconsWindow.transform.Find("Button (" + currentButton + ")").gameObject;
+                GameObject button = GridWindow.transform.Find("Button (" + currentButton + ")").gameObject;
                 button.SetActive(true);
                 button.transform.GetChild(0).GetComponent<Button3D>().funcName = "CharacterCustomMenu";
                 button.transform.GetChild(0).GetComponent<Button3D>().funcWindow = i;
                 button.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text =
-                    characters[i].characterName;
+                    _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics[i].name;
                 currentButton++;
             }
 
         for (int i = currentButton; i < 24; i++)
-            RecordIconsWindow.transform.Find("Button (" + i + ")").gameObject.SetActive(false);
-        RecordIconsWindow.transform.Find("Back Button").GetComponent<Button3D>().funcWindow = 8;
+            GridWindow.transform.Find("Button (" + i + ")").gameObject.SetActive(false);
+        GridWindow.transform.Find("Back Button").GetComponent<Button3D>().funcWindow = 8;
+        
+    }
+    
+    public void MakePropCustomizeIconsWindow()
+    {
+        DisableWindows();
+        GridWindow.SetActive(true);
+        
     }
 
     public void MakeMoveTestWindow(int currentGroup)
@@ -182,43 +195,38 @@ public class UI_WindowMaker : MonoBehaviour
         MoveTestWindow.transform.Find("Back Button").GetComponent<Button3D>().funcWindow = 21;
     }
 
-    public void MakeCharacterCustomizeWindow(CharacterSelector[] characters, int current)
+    public void MakeCharacterCustomizeWindow(int current)
     {
+        
+        
         DisableWindows();
         CharacterCustomizeWindow.SetActive(true);
-        if (characters[current].currentCostume == characters[current].allCostumes.Length - 1)
+        
+        AnimatronicData currentAnimatronic = _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics[current];
+        
+        if (currentAnimatronic.currentCostume == currentAnimatronic.costumes.Length - 1)
             CharacterCustomizeWindow.transform.Find("Down").gameObject.SetActive(false);
         else
             CharacterCustomizeWindow.transform.Find("Down").gameObject.SetActive(true);
-        if (characters[current].currentCostume == -1)
+        if (currentAnimatronic.currentCostume == -1)
             CharacterCustomizeWindow.transform.Find("Up").gameObject.SetActive(false);
         else
             CharacterCustomizeWindow.transform.Find("Up").gameObject.SetActive(true);
-        if (characters[current].currentCostume != -1)
+        if (currentAnimatronic.currentCostume != -1)
         {
             CharacterCustomizeWindow.transform.Find("Full Costume").gameObject.GetComponent<Text>().text =
-                characters[current].allCostumes.Length.ToString();
+                currentAnimatronic.costumes.Length.ToString();
             CharacterCustomizeWindow.transform.Find("Current Costume").gameObject.GetComponent<Text>().text =
-                (1 + characters[current].currentCostume).ToString();
+                (1 + currentAnimatronic.currentCostume).ToString();
             CharacterCustomizeWindow.transform.Find("Name").gameObject.GetComponent<Text>().text =
-                characters[current].allCostumes[characters[current].currentCostume].costumeName;
-            CharacterCustomizeWindow.transform.Find("Type").gameObject.GetComponent<Text>().text = characters[current]
-                .allCostumes[characters[current].currentCostume].costumeType.ToString();
-            CharacterCustomizeWindow.transform.Find("Description").gameObject.GetComponent<Text>().text =
-                characters[current].allCostumes[characters[current].currentCostume].costumeDesc;
-            CharacterCustomizeWindow.transform.Find("Year").gameObject.GetComponent<Text>().text =
-                characters[current].allCostumes[characters[current].currentCostume].yearOfCostume;
-            CharacterCustomizeWindow.transform.Find("Down").gameObject.GetComponent<Button3D>().funcWindow = current;
-            CharacterCustomizeWindow.transform.Find("Up").gameObject.GetComponent<Button3D>().funcWindow = current;
-            CharacterCustomizeWindow.transform.Find("Icon").gameObject.GetComponent<RawImage>().texture =
-                characters[current].allCostumes[characters[current].currentCostume].costumeIcon.texture;
+                currentAnimatronic.costumes[currentAnimatronic.currentCostume].name;
         }
         else
         {
             CharacterCustomizeWindow.transform.Find("Full Costume").gameObject.GetComponent<Text>().text =
-                characters[current].allCostumes.Length.ToString();
+                currentAnimatronic.costumes.Length.ToString();
             CharacterCustomizeWindow.transform.Find("Current Costume").gameObject.GetComponent<Text>().text =
-                (1 + characters[current].currentCostume).ToString();
+                (1 + currentAnimatronic.currentCostume).ToString();
             CharacterCustomizeWindow.transform.Find("Name").gameObject.GetComponent<Text>().text = "None";
             CharacterCustomizeWindow.transform.Find("Type").gameObject.GetComponent<Text>().text = "";
             CharacterCustomizeWindow.transform.Find("Description").gameObject.GetComponent<Text>().text =
@@ -226,15 +234,15 @@ public class UI_WindowMaker : MonoBehaviour
             CharacterCustomizeWindow.transform.Find("Year").gameObject.GetComponent<Text>().text = "";
             CharacterCustomizeWindow.transform.Find("Down").gameObject.GetComponent<Button3D>().funcWindow = current;
             CharacterCustomizeWindow.transform.Find("Up").gameObject.GetComponent<Button3D>().funcWindow = current;
-            CharacterCustomizeWindow.transform.Find("Icon").gameObject.GetComponent<RawImage>().texture =
-                characters[current].allCostumes[characters[current].currentCostume + 1].costumeIcon.texture;
         }
+        
     }
 
     public void MakeStageCustomizeWindow(StageSelector[] stages, int current)
     {
         DisableWindows();
         StageCustomizeWindow.SetActive(true);
+        
         StageCustomizeWindow.transform.Find("Full Costume").gameObject.GetComponent<Text>().text =
             stages.Length.ToString();
         StageCustomizeWindow.transform.Find("Current Costume").gameObject.GetComponent<Text>().text =

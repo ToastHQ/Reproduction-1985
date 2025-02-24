@@ -18,13 +18,6 @@ public class UI_PlayRecord : MonoBehaviour
     [HideInInspector] public int currentStage;
 
     private UI_WindowMaker _uiWindowMaker;
-    
-    //Characters
-    public CharacterSelector[] characters;
-    public bool CharSwapCheck;
-    [HideInInspector] public bool swap;
-
-    [Space(20)]
 
     //Inspector Objects
     [Header("Inspector Objects")]
@@ -71,7 +64,7 @@ public class UI_PlayRecord : MonoBehaviour
         for (int i = 0; i < stages.Length; i++) stages[i].Startup();
 
         //Spawn in current Characters
-        RecreateAllCharacters("");
+        RecreateAllAnimatronics();
 
         SwitchWindow(1);
     }
@@ -293,11 +286,11 @@ public class UI_PlayRecord : MonoBehaviour
                 case 8:
                     //Customize Screen
                     _uiWindowMaker
-                        .MakeTwoWindow(icons[8], icons[9], 1, 16, 9, "Edit Stage", "Edit Characters");
+                        .MakeThreeWindow(icons[8], icons[9], icons[9], 1, 16, 9, 28, "Edit Stage", "Edit Characters", "Edit Props");
                     break;
                 case 9:
-                    //Edit Character Screen
-                    _uiWindowMaker.MakeCharacterCustomizeIconsWindow(characters);
+                    //Edit Character Icons Screen
+                    _uiWindowMaker.MakeCharacterCustomizeIconsWindow();
                     break;
                 case 11:
                     //Recording Groups Screen (Or New Recording Screen)
@@ -331,7 +324,8 @@ public class UI_PlayRecord : MonoBehaviour
                     _uiWindowMaker.MakeDeleteMoveMenu(1);
                     break;
                 case 28:
-                    // Unused
+                    // Edit Prop Icons Screen
+                    _uiWindowMaker.MakePropCustomizeIconsWindow();
                     break;
                 case 29:
                     //Segment Window 1
@@ -384,7 +378,7 @@ public class UI_PlayRecord : MonoBehaviour
     /// <param name="input"></param>
     public void CharacterCustomMenu(int input)
     {
-        _uiWindowMaker.MakeCharacterCustomizeWindow(characters, input);
+        _uiWindowMaker.MakeCharacterCustomizeWindow(input);
     }
 
     /// <summary>
@@ -401,11 +395,10 @@ public class UI_PlayRecord : MonoBehaviour
     /// <param name="input"></param>
     public void CostumeUp(int input)
     {
-        if (characters[input].currentCostume > -1)
+        if (stages[currentStage].animatronics[input].currentCostume > -1)
         {
-            characters[input].currentCostume--;
-            RecreateAllCharacters(characters[input].characterName);
-            _uiWindowMaker.MakeCharacterCustomizeWindow(characters, input);
+            stages[currentStage].animatronics[input].currentCostume--;
+            _uiWindowMaker.MakeCharacterCustomizeWindow(input);
         }
     }
 
@@ -415,11 +408,10 @@ public class UI_PlayRecord : MonoBehaviour
     /// <param name="input"></param>
     public void CostumeDown(int input)
     {
-        if (characters[input].currentCostume < characters[input].allCostumes.Length - 1)
+        if (stages[currentStage].animatronics[input].currentCostume < stages[currentStage].animatronics[input].costumes.Length - 1)
         {
-            characters[input].currentCostume++;
-            RecreateAllCharacters(characters[input].characterName);
-            _uiWindowMaker.MakeCharacterCustomizeWindow(characters, input);
+            stages[currentStage].animatronics[input].currentCostume++;
+            _uiWindowMaker.MakeCharacterCustomizeWindow(input);
         }
     }
 
@@ -442,7 +434,7 @@ public class UI_PlayRecord : MonoBehaviour
                     if (!stages[i].stage.activeSelf) stages[i].stage.SetActive(true);
                 }
 
-            RecreateAllCharacters("");
+            RecreateAllAnimatronics();
             _uiWindowMaker.MakeStageCustomizeWindow(stages, currentStage);
         }
     }
@@ -466,73 +458,18 @@ public class UI_PlayRecord : MonoBehaviour
                     if (!stages[i].stage.activeSelf) stages[i].stage.SetActive(true);
                 }
 
-            RecreateAllCharacters("");
+            RecreateAllAnimatronics();
             _uiWindowMaker.MakeStageCustomizeWindow(stages, currentStage);
         }
     }
 
-    public void RecreateAllCharacters(string singleCharacter)
+    
+    
+    /// <summary>
+    /// Setup all animatronics in a stage
+    /// </summary>
+    public void RecreateAllAnimatronics()
     {
-        /*
-        if (singleCharacter == "")
-        {
-            //Destroy current Characters
-            foreach (Transform child in characterHolder.transform) Destroy(child.gameObject);
-
-            //Create current Characters
-            int g = 0;
-            for (int i = 0; i < stages[currentStage].stageCharacters.Length; i++)
-            for (int e = 0; e < characters.Length; e++)
-                if (stages[currentStage].stageCharacters[i].characterName == characters[e].characterName)
-                    if (characters[e].currentCostume != -1)
-                    {
-                        GameObject newChar = Instantiate(characters[e].mainCharacter);
-                        newChar.name = characters[e].characterName;
-                        newChar.transform.parent = characterHolder.transform;
-                        newChar.transform.localPosition = stages[currentStage].stageCharacters[i].characterPos +
-                                                          characters[e].allCostumes[characters[e].currentCostume]
-                                                              .offsetPos;
-                        newChar.transform.localRotation =
-                            Quaternion.Euler(stages[currentStage].stageCharacters[i].characterRot);
-                        newChar.transform.GetChild(0).GetComponent<Character_Valves>().mackValves = mackValves;
-                        newChar.transform.GetChild(0).GetComponent<Character_Valves>().StartUp();
-                        g++;
-
-                        //Delete other costumes
-                        foreach (Transform mesh in newChar.transform.GetChild(0).transform)
-                            if (!(mesh.gameObject.name ==
-                                  characters[e].allCostumes[characters[e].currentCostume].costumeName) &&
-                                mesh.gameObject.name != "Armature")
-                                Destroy(mesh.gameObject);
-                    }
-        }
-        else
-        */
-        {
-            Array.Clear(characters, 0, characters.Length);
-
-            foreach (Transform character in stages[currentStage].animatronics.transform)
-            {
-                CharacterSelector characterData = new()
-                {
-                    characterName = character.name,
-                    currentCostume = 0,
-                    allCostumes = new CharacterCostume[character.GetComponentsInChildren<SkinnedMeshRenderer>().Length]
-                };
-                
-                SkinnedMeshRenderer[] meshRenderers = character.GetComponentsInChildren<SkinnedMeshRenderer>();
-
-                for (int i = 0; i < meshRenderers.Length; i++)
-                {
-                    characterData.allCostumes[i] = new CharacterCostume()
-                    {
-                        costumeName = meshRenderers[i].gameObject.name
-                    };
-                }
-
-                character.GetComponentInChildren<Character_Valves>().StartUp(); // Start up the character once setup
-            }
-        }
 
         sidePanel.FlowLoad(-1);
     }

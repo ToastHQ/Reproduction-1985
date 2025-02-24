@@ -82,7 +82,10 @@ public class Character_Valves : MonoBehaviour
 
     private void OnDisable()
     {
-        ui.characterEvent.RemoveListener(CreateMovements);
+        if (ui != null)
+        {
+            ui.characterEvent.RemoveListener(CreateMovements);
+        }
     }
 
     public void StartUp()

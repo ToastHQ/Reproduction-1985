@@ -7186,7 +7186,7 @@ GameObject:
   - component: {fileID: 2001297119264782257}
   - component: {fileID: 4189343610228576107}
   m_Layer: 5
-  m_Name: Record Icons Window
+  m_Name: Grid Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22597,25 +22597,11 @@ MonoBehaviour:
     stageDate: 1988
     stageIcon: {fileID: 21300000, guid: 10d368067afc05b4eab38e01c96f2e4e, type: 3}
     stageType: 0
-    stageCharacters:
-    - characterName: Freddy Fazbear
-      characterPos: {x: 1.6849, y: 0.623, z: 4.885}
-      characterRot: {x: 0, y: 0, z: 0}
-    - characterName: Bonnie
-      characterPos: {x: 2.532, y: 0.623, z: 4.437}
-      characterRot: {x: 0, y: -13.2, z: 0}
-    - characterName: Chica
-      characterPos: {x: 0.73, y: 0.623, z: 4.437}
-      characterRot: {x: 0, y: 13.2, z: 0}
-    - characterName: Foxy
-      characterPos: {x: 7.774, y: 0.6238, z: 9.863}
-      characterRot: {x: 0, y: -90, z: 0}
-    - characterName: Parrot
-      characterPos: {x: 1.689919, y: 0.7322977, z: 4.774248}
-      characterRot: {x: 0, y: 0, z: 0}
     curtain: {fileID: 0}
     curtainValves: {fileID: 0}
     lights: {fileID: 0}
+    animatronicsContainer: {fileID: 0}
+    animatronics: []
     lightValves: []
     tableValves: []
     texController: {fileID: 0}
@@ -22648,22 +22634,11 @@ MonoBehaviour:
     stageDate: 1993
     stageIcon: {fileID: 21300000, guid: 92780d6c72a63134cbd499de8f2e3385, type: 3}
     stageType: 0
-    stageCharacters:
-    - characterName: Freddy Fazbear
-      characterPos: {x: 1.722, y: 0.857, z: 4.367}
-      characterRot: {x: 0, y: 0, z: 0}
-    - characterName: Bonnie
-      characterPos: {x: 2.996, y: 0.857, z: 4.367}
-      characterRot: {x: 0, y: 0, z: 0}
-    - characterName: Chica
-      characterPos: {x: 0.448, y: 0.854, z: 4.367}
-      characterRot: {x: 0, y: 0, z: 0}
-    - characterName: Foxy
-      characterPos: {x: 8.311, y: 0.6238, z: 9.863}
-      characterRot: {x: 0, y: -90, z: 0}
     curtain: {fileID: 0}
     curtainValves: {fileID: 0}
     lights: {fileID: 0}
+    animatronicsContainer: {fileID: 0}
+    animatronics: []
     lightValves: []
     tableValves: []
     texController: {fileID: 0}
@@ -22692,10 +22667,11 @@ MonoBehaviour:
     stageDate: N/A
     stageIcon: {fileID: 21300000, guid: 41df27413f5fdac4285d7b63d8d18b44, type: 3}
     stageType: 3
-    stageCharacters: []
     curtain: {fileID: 0}
     curtainValves: {fileID: 0}
     lights: {fileID: 0}
+    animatronicsContainer: {fileID: 0}
+    animatronics: []
     lightValves: []
     tableValves: []
     texController: {fileID: 0}
@@ -22715,263 +22691,6 @@ MonoBehaviour:
       tvs: []
       curtainSubState: 0
   currentStage: 0
-  characters:
-  - characterName: Freddy Fazbear
-    mainCharacter: {fileID: 742297155413522573, guid: 1008c4f7a4f222342bea29977de920cf, type: 3}
-    icon: {fileID: 21300000, guid: 6bd1377a685f9eb4ea91b6d1ffdcc94d, type: 3}
-    currentCostume: 0
-    allCostumes:
-    - costumeName: Default
-      costumeDesc: The default Freddy Fazbear costume. Seen throughout the life of
-        the show.
-      costumeIcon: {fileID: 21300000, guid: e699de9c7bbf74c439a520ae0ced27b2, type: 3}
-      yearOfCostume: 1990
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Cosmeticless
-      costumeDesc: Freddy without his cosmetics on, exposing his inner mech and shells
-        holding his outer fabric.
-      costumeIcon: {fileID: 21300000, guid: 5a76442ca81ab1c429803dd5998dc1c4, type: 3}
-      yearOfCostume: 1988
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Mech
-      costumeDesc: Freddy with only his inner mech visible. The mech is a mix of
-        an aluminum frame, hinges, and pneumatic cylinders that control the movements.
-        Normally there would also be clusters of air hoses coming out of each cylinder,
-        but these have been removed for visual clarity.
-      costumeIcon: {fileID: 21300000, guid: 1c9b20dab4c308a43a75c6de6bce1bf9, type: 3}
-      yearOfCostume: 1988
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Beta
-      costumeDesc: The design of Freddy seen in the early days of the restaurant.
-        He originally had more orange fur, with lesser contrast between the lighter
-        parts.
-      costumeIcon: {fileID: 21300000, guid: e75d8cb615b037c4d9ba4856ed55e922, type: 3}
-      yearOfCostume: 1988
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Blacklight
-      costumeDesc: A costume seen in the early days of the restaurant. It was for
-        'Glow Night', where kids were encouraged to bring glow sticks, glow bracelets,
-        and anything that lit up. The costume itself was specially designed from
-        a third party to glow in the dark. The event was shut down however after
-        multiple seizure incidents, glowstick fluid getting into the drink dispenser,
-        and Fazbear Entertainment's own glow sticks sold having an 'odd, hazardous
-        chemical mixture that wasn't glowing for the reason you think'.
-      costumeIcon: {fileID: 21300000, guid: 7fb41338463a0a0418d432447b68683d, type: 3}
-      yearOfCostume: March 1989
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Sliced
-      costumeDesc: A sliced up version of Freddy that exposes half of his mech and
-        half of his costume/shells. "I said I'd give my all, but they only wanted
-        half!"
-      costumeIcon: {fileID: 21300000, guid: 82a3ecd5766ec724ebdef44b8ce81622, type: 3}
-      yearOfCostume: N/A
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Found
-      costumeDesc: 'The original Freddy animatronic, which had passed through many
-        hands and storage units, before being taken back by Fazbear Entertainment
-        and restored for use here. '
-      costumeIcon: {fileID: 21300000, guid: 5d204d559e15f2545a5946d227e0daff, type: 3}
-      yearOfCostume: Present
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-  - characterName: Bonnie
-    mainCharacter: {fileID: 5117819404652978800, guid: 64682bbac5df72246846f9a0ff7ab9ef, type: 3}
-    icon: {fileID: 21300000, guid: e1d80a54933c84f4a8afef2f84177034, type: 3}
-    currentCostume: 0
-    allCostumes:
-    - costumeName: Default
-      costumeDesc: The default Bonnie costume. Seen throughout the life of the show.
-      costumeIcon: {fileID: 21300000, guid: ba49784a8fc0d8a48b7d09da6261411c, type: 3}
-      yearOfCostume: 1990
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Cosmeticless
-      costumeDesc: Bonnie without his cosmetics on, exposing his inner mech and shells
-        holding his outer fabric.
-      costumeIcon: {fileID: 21300000, guid: 1900cc45398d01d48932c6f11c8cc8f4, type: 3}
-      yearOfCostume: 1988
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Mech
-      costumeDesc: Bonnie with only his inner mech visible. The mech is a mix of
-        an aluminum frame, hinges, and pnematic cylinders that control the movements.
-        Normally there would also be clusters of air hoses coming out of each cylinder,
-        but these have been removed for visual clarity.
-      costumeIcon: {fileID: 21300000, guid: 85e0084179d11434f9f780e34fb91db3, type: 3}
-      yearOfCostume: 1988
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Beta
-      costumeDesc: The design of Bonnie seen in the early days of the restaurant.
-        He originally had a black bow-tie, blue-ish fur, and a differently colored
-        guitar.
-      costumeIcon: {fileID: 21300000, guid: da9ffb2b009295d44af78efb2a86c684, type: 3}
-      yearOfCostume: 1988
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Blacklight
-      costumeDesc: A costume seen in the early days of the restaurant. It was for
-        'Glow Night', where kids were encouraged to bring glow sticks, glow bracelets,
-        and anything that lit up. The costume itself was specially designed from
-        a third party to glow in the dark. The event was shut down however after
-        multiple seizure incidents, glowstick fluid getting into the drink dispenser,
-        and Fazbear Entertainment's own glow sticks sold having an 'odd, hazardous
-        chemical mixture that wasn't glowing for the reason you think'.
-      costumeIcon: {fileID: 21300000, guid: bcd1eb38a4191a3498ee3c4af4e97254, type: 3}
-      yearOfCostume: March 1989
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Sliced
-      costumeDesc: A sliced up version of Bonnie that exposes half of his mech and
-        half of his costume/shells. "I said I'd give my all, but they only wanted
-        half!"
-      costumeIcon: {fileID: 21300000, guid: f78063af66027534080ac9f7d55461e1, type: 3}
-      yearOfCostume: N/A
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Found
-      costumeDesc: 'The original Bonnie animatronic, which had passed through many
-        hands and storage units, before being taken back by Fazbear Entertainment
-        and restored for use here. '
-      costumeIcon: {fileID: 21300000, guid: ee48b6924b23f504c9102f1dd1b0d6c7, type: 3}
-      yearOfCostume: Present
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-  - characterName: Chica
-    mainCharacter: {fileID: 2085339353035133600, guid: 6d269b2146360cb448539891f08ffe92, type: 3}
-    icon: {fileID: 21300000, guid: 8d914425ac27ede40bd63771f529e6d6, type: 3}
-    currentCostume: 0
-    allCostumes:
-    - costumeName: Default
-      costumeDesc: The default Chica costume. Seen throughout the life of the show.
-      costumeIcon: {fileID: 21300000, guid: 67b03f4dd4648ed489eb328d61bc8011, type: 3}
-      yearOfCostume: 1990
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Cosmeticless
-      costumeDesc: Chica without her cosmetics on, exposing her inner mech and shells
-        holding her outer fabric.
-      costumeIcon: {fileID: 21300000, guid: 78b773e267a45144b9bd817c89878cff, type: 3}
-      yearOfCostume: 1988
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Mech
-      costumeDesc: Chica with only her inner mech visible. The mech is a mix of an
-        aluminum frame, hinges, and pneumatic cylinders that control the movements.
-        Normally there would also be clusters of air hoses coming out of each cylinder,
-        but these have been removed for visual clarity.
-      costumeIcon: {fileID: 21300000, guid: 44388da1b68235a4b8d418ba8b600d85, type: 3}
-      yearOfCostume: 1988
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Beta
-      costumeDesc: The design of Chica seen in the early days of the restaurant.
-        Her beak and legs were more orange, she had an upper row of teeth, her eyes
-        were pink like Bonnie's, and her cupcake was originally golden.
-      costumeIcon: {fileID: 21300000, guid: 1b5e37fab50bb3d46b144834472f40b7, type: 3}
-      yearOfCostume: 1988
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Blacklight
-      costumeDesc: A costume seen in the early days of the restaurant. It was for
-        'Glow Night', where kids were encouraged to bring glow sticks, glow bracelets,
-        and anything that lit up. The costume itself was specially designed from
-        a third party to glow in the dark. The event was shut down however after
-        multiple seizure incidents, glowstick fluid getting into the drink dispenser,
-        and Fazbear Entertainment's own glow sticks sold having an 'odd, hazardous
-        chemical mixture that wasn't glowing for the reason you think'.
-      costumeIcon: {fileID: 21300000, guid: fcc48e8b921a7824a9635e9391370b95, type: 3}
-      yearOfCostume: March 1989
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Sliced
-      costumeDesc: A sliced up version of Chica that exposes half of her mech and
-        half of her costume/shells. "I said I'd give my all, but they only wanted
-        half!"
-      costumeIcon: {fileID: 21300000, guid: 02ad7926bef56d745a7abb85081067c7, type: 3}
-      yearOfCostume: N/A
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: '"The Bite"'
-      costumeDesc: "An incident most traumatized employees refer to as 'The Bite'.
-        That day a kid had gotten on stage and too close to Chica. Even after staff
-        and parents began screaming for her to get away, it was too late. She shoved
-        a large slice of Fazbear Stuffed Crust Pizza\u2122 into Chica's mouth, staining
-        a large area of the suit and bib in red sauce and grease. No employee had
-        the guts to go and clean the cheesy crime scene, so they left it alone. Only
-        after parents began to complain of a smell coming from the stage, and misinterpreting
-        the stains as somehow blood, that the employees shut down the show. After
-        a month of exhaustive cleaning, everything was up and running again."
-      costumeIcon: {fileID: 21300000, guid: 0c4fa59fd964abe4e886fc49fce6b8fc, type: 3}
-      yearOfCostume: ???
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Found
-      costumeDesc: 'The original Chica animatronic, which had passed through many
-        hands and storage units, before being taken back by Fazbear Entertainment
-        and restored for use here. '
-      costumeIcon: {fileID: 21300000, guid: d028bc324a839f4449e389b22dd9cbfd, type: 3}
-      yearOfCostume: Present
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-  - characterName: Foxy
-    mainCharacter: {fileID: 6515301167463795622, guid: 5b0e3b761bfc4bb4d8f96b22256840dd, type: 3}
-    icon: {fileID: 21300000, guid: 877e67ed3f80bc34180bfcf3dc3f0442, type: 3}
-    currentCostume: 0
-    allCostumes:
-    - costumeName: Default
-      costumeDesc: The default Foxy costume. Seen throughout the life of the show.
-      costumeIcon: {fileID: 21300000, guid: f0694f14beebca64fa86fe45fdd3f796, type: 3}
-      yearOfCostume: 1990
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Cosmeticless
-      costumeDesc: Foxy without his cosmetics on, exposing his inner mech and shells
-        holding his outer fabric.
-      costumeIcon: {fileID: 21300000, guid: a9898b358f422a849a332ac8147a04c6, type: 3}
-      yearOfCostume: 1988
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Mech
-      costumeDesc: Foxy with only his inner mech visible. The mech is a mix of an
-        aluminum frame, hinges, and pneumatic cylinders that control the movements.
-        Normally there would also be clusters of air hoses coming out of each cylinder,
-        but these have been removed for visual clarity.
-      costumeIcon: {fileID: 21300000, guid: 00602c4d65e2c3048a890f5afcc07ebf, type: 3}
-      yearOfCostume: 1988
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-    - costumeName: Blacklight
-      costumeDesc: A costume seen in the early days of the restaurant. It was for
-        'Glow Night', where kids were encouraged to bring glow sticks, glow bracelets,
-        and anything that lit up. The costume itself was specially designed from
-        a third party to glow in the dark. The event was shut down however after
-        multiple seizure incidents, glowstick fluid getting into the drink dispenser,
-        and Fazbear Entertainment's own glow sticks sold having an 'odd, hazardous
-        chemical mixture that wasn't glowing for the reason you think'.
-      costumeIcon: {fileID: 21300000, guid: 7ac79685afc0d6641a2c12c6d4e23e76, type: 3}
-      yearOfCostume: March 1989
-      costumeType: 2
-      offsetPos: {x: 0, y: 0, z: 0}
-  - characterName: Parrot
-    mainCharacter: {fileID: 4106324544396516412, guid: 0a52cb1b928426c418913ac3c931193c, type: 3}
-    icon: {fileID: 21300000, guid: 8d914425ac27ede40bd63771f529e6d6, type: 3}
-    currentCostume: 0
-    allCostumes:
-    - costumeName: Mech
-      costumeDesc: 
-      costumeIcon: {fileID: 21300000, guid: 67b03f4dd4648ed489eb328d61bc8011, type: 3}
-      yearOfCostume: 1988
-      costumeType: 0
-      offsetPos: {x: 0, y: 0, z: 0}
-  CharSwapCheck: 0
-  swap: 0
   speakerR:
   - {fileID: 0}
   - {fileID: 0}
@@ -22991,7 +22710,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e342deb9dcb6f04429185901a3344fb0, type: 3}
   - {fileID: 21300000, guid: 67f1f2d91e5580042bb7cd8fd6ab0607, type: 3}
   - {fileID: 21300000, guid: 7bd43d4eb42f93347a6a6e8d16f7d9d5, type: 3}
-  characterHolder: {fileID: 0}
   mackValves: {fileID: 0}
   creator: {fileID: 0}
   sidePanel: {fileID: 0}
