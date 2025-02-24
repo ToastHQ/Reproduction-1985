@@ -8,7 +8,6 @@
 
 ---
 
-
 ### Contents
 1. [About](#about)
 2. [Getting Started](#getting-started)
