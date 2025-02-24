@@ -52,6 +52,7 @@ No releases have been published at this time. Please check back later.
 
 > [!WARNING]
 > Be advised that maintaining your own independent "mod" of the software will be a challenging task if you intend on staying up to date with the latest features. It's easier to contribute to the main repository instead.
+> If you do choose to maintain your own mod, please make sure you keep it up to date with the base to ensure proper compatibility.
 
 ### Branches
 There are two branches currently
@@ -63,6 +64,7 @@ There are two branches currently
 - [ ] Prop system for stages, allowing for more customisation on stages (e.g organ fronts, etc)
 - [ ] Launcher-style main menu
 - [ ] New flow management system
+- [ ] Improve the existing .*shw format's security & performance
     
 - [ ] **Maps**   
   - [ ] **3-Stage**  
