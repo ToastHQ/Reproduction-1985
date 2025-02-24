@@ -32,7 +32,7 @@ TBA
 ## Contributing
 
 > [!NOTE]
-> It's recommended not to create your own independent "mod" but rather to contribute to the project directly. This means that if we were to implement large, game-changing features, we wouldn't have to worry about the impact on mods.
+> Be advised that maintaining your own fork of the repository will require decent knowledge of github if you intend on staying up to date with features.
 
 ### Branches
 There are two branches currently
