@@ -56,7 +56,7 @@ No releases have been published at this time. Please check back later.
 
 ### Branches
 There are two branches currently
-1. **main**: This is the stable version of the software, usually in line with the latest release. May not contain the latest features. Should be used for minor changes or if you just want to use the software via the source code.
+1. **main**: This is the stable version of the software, usually in line with the latest release. May not contain the latest features. Should only really be used if you are using the software via the source code method.
 2. **dev**: This is the bleeding-edge version of the software, this will contain all the latest changes. It's recommended to work on new features here.
 
 ## Roadmap
