@@ -18,14 +18,12 @@ public class UI_WindowMaker : MonoBehaviour
     private GameObject NewRecordWindow;
     private GameObject GridWindow;
     private GameObject MoveTestWindow;
-    private GameObject CharacterCustomizeWindow;
-    private GameObject StageCustomizeWindow;
+    private GameObject CustomiseWindow;
     private GameObject DeleteOne;
 
     public int deletePage;
     
     public MovementRecordings[] recordingGroups;
-    public ShowtapeYear[] allShowtapes;
 
     [Header("Topbar")] 
     public TMP_Text Clock;
@@ -45,8 +43,7 @@ public class UI_WindowMaker : MonoBehaviour
         NewRecordWindow = Viewport.transform.Find("New Record Window").gameObject;
         GridWindow = Viewport.transform.Find("Grid Window").gameObject;
         MoveTestWindow = Viewport.transform.Find("Move Test Window").gameObject;
-        CharacterCustomizeWindow = Viewport.transform.Find("Character Customise Window").gameObject;
-        StageCustomizeWindow = Viewport.transform.Find("Stage Customise Window").gameObject;
+        CustomiseWindow = Viewport.transform.Find("Customise Window").gameObject;
         DeleteOne = Viewport.transform.Find("Delete One Window").gameObject;
     }
 
@@ -121,48 +118,61 @@ public class UI_WindowMaker : MonoBehaviour
     {
         DisableWindows();
         GridWindow.SetActive(true);
+        GameObject templateButton = GridWindow.transform.Find("Container/Template").gameObject;
 
-        for (int i = 0; i < 24; i++)
-            if (i < recordingGroups.Length)
+        foreach (Transform child in templateButton.transform.parent.transform) // Clear all buttons except the template
+        {
+            if (child != templateButton.transform)
             {
-                GameObject button = GridWindow.transform.Find("Button (" + i + ")").gameObject;
-                button.SetActive(true);
-                button.GetComponent<Image>().sprite = recordingGroups[i].groupIcon;
-                button.transform.GetChild(0).GetComponent<Button3D>().funcName = "RecordingGroupMenu";
-                button.transform.GetChild(0).GetComponent<Button3D>().funcWindow = i;
-                button.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text =
-                    recordingGroups[i].groupName;
+                Destroy(child.gameObject);
             }
-            else
-            {
-                GridWindow.transform.Find("Button (" + i + ")").gameObject.SetActive(false);
-            }
-
-        GridWindow.transform.Find("Back Button").GetComponent<Button3D>().funcWindow = 4;
+        }
+        
+        for (int i = 0; i < recordingGroups.Length; i++)
+        {
+            GameObject button = Instantiate(templateButton, templateButton.transform.parent);
+            button.SetActive(true);
+            button.name = recordingGroups[i].groupName;
+            button.transform.Find("Icon").gameObject.SetActive(true);
+            button.transform.Find("Icon").GetComponent<Image>().sprite = recordingGroups[i].groupIcon;
+            button.GetComponent<Button3D>().funcName = "RecordingGroupMenu";
+            button.GetComponent<Button3D>().funcWindow = i;
+            button.transform.Find("Text").GetComponent<TMP_Text>().text = recordingGroups[i].groupName;
+            
+        }
+        
+        templateButton.SetActive(false);
+        GridWindow.transform.Find("Back").GetComponent<Button3D>().funcWindow = 4;
     }
 
     public void MakeCharacterCustomizeIconsWindow()
     {
         DisableWindows();
         GridWindow.SetActive(true);
-        
-        
-        int currentButton = 0;
-        for (int i = 0; i < 24; i++)
-            if (i < _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics.Length && _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics[i].costumes.Length > 1)
-            {
-                GameObject button = GridWindow.transform.Find("Button (" + currentButton + ")").gameObject;
-                button.SetActive(true);
-                button.transform.GetChild(0).GetComponent<Button3D>().funcName = "CharacterCustomMenu";
-                button.transform.GetChild(0).GetComponent<Button3D>().funcWindow = i;
-                button.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text =
-                    _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics[i].name;
-                currentButton++;
-            }
+        GameObject templateButton = GridWindow.transform.Find("Container/Template").gameObject;
 
-        for (int i = currentButton; i < 24; i++)
-            GridWindow.transform.Find("Button (" + i + ")").gameObject.SetActive(false);
-        GridWindow.transform.Find("Back Button").GetComponent<Button3D>().funcWindow = 8;
+        foreach (Transform child in templateButton.transform.parent.transform) // Clear all buttons except the template
+        {
+            if (child != templateButton.transform)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+        
+        for (int i = 0; i < _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics.Length; i++)
+        {
+            GameObject button = Instantiate(templateButton, templateButton.transform.parent);
+            button.SetActive(true);
+            button.name = _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics[i].name;
+            button.transform.Find("Icon").gameObject.SetActive(false);
+            button.GetComponent<Button3D>().funcName = "CharacterCustomMenu";
+            button.GetComponent<Button3D>().funcWindow = i;
+            button.transform.Find("Text").GetComponent<TMP_Text>().text = _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics[i].name;
+            
+        }
+        
+        templateButton.SetActive(false);
+        GridWindow.transform.Find("Back").GetComponent<Button3D>().funcWindow = 4;
         
     }
     
@@ -200,40 +210,32 @@ public class UI_WindowMaker : MonoBehaviour
         
         
         DisableWindows();
-        CharacterCustomizeWindow.SetActive(true);
+        CustomiseWindow.SetActive(true);
         
         AnimatronicData currentAnimatronic = _uiPlayRecord.stages[_uiPlayRecord.currentStage].animatronics[current];
         
         if (currentAnimatronic.currentCostume == currentAnimatronic.costumes.Length - 1)
-            CharacterCustomizeWindow.transform.Find("Down").gameObject.SetActive(false);
+            CustomiseWindow.transform.Find("Down").gameObject.SetActive(false);
         else
-            CharacterCustomizeWindow.transform.Find("Down").gameObject.SetActive(true);
+            CustomiseWindow.transform.Find("Down").gameObject.SetActive(true);
         if (currentAnimatronic.currentCostume == -1)
-            CharacterCustomizeWindow.transform.Find("Up").gameObject.SetActive(false);
+            CustomiseWindow.transform.Find("Up").gameObject.SetActive(false);
         else
-            CharacterCustomizeWindow.transform.Find("Up").gameObject.SetActive(true);
+            CustomiseWindow.transform.Find("Up").gameObject.SetActive(true);
         if (currentAnimatronic.currentCostume != -1)
         {
-            CharacterCustomizeWindow.transform.Find("Full Costume").gameObject.GetComponent<Text>().text =
-                currentAnimatronic.costumes.Length.ToString();
-            CharacterCustomizeWindow.transform.Find("Current Costume").gameObject.GetComponent<Text>().text =
-                (1 + currentAnimatronic.currentCostume).ToString();
-            CharacterCustomizeWindow.transform.Find("Name").gameObject.GetComponent<Text>().text =
+            CustomiseWindow.transform.Find("Total").gameObject.GetComponent<TMP_Text>().text = ((1 + currentAnimatronic.currentCostume) + "/" + currentAnimatronic.costumes.Length);
+            CustomiseWindow.transform.Find("Name").gameObject.GetComponent<TMP_Text>().text =
                 currentAnimatronic.costumes[currentAnimatronic.currentCostume].name;
         }
         else
         {
-            CharacterCustomizeWindow.transform.Find("Full Costume").gameObject.GetComponent<Text>().text =
-                currentAnimatronic.costumes.Length.ToString();
-            CharacterCustomizeWindow.transform.Find("Current Costume").gameObject.GetComponent<Text>().text =
-                (1 + currentAnimatronic.currentCostume).ToString();
-            CharacterCustomizeWindow.transform.Find("Name").gameObject.GetComponent<Text>().text = "None";
-            CharacterCustomizeWindow.transform.Find("Type").gameObject.GetComponent<Text>().text = "";
-            CharacterCustomizeWindow.transform.Find("Description").gameObject.GetComponent<Text>().text =
+            CustomiseWindow.transform.Find("Total").gameObject.GetComponent<TMP_Text>().text = "";
+            CustomiseWindow.transform.Find("Name").gameObject.GetComponent<TMP_Text>().text = "Hidden";
+            CustomiseWindow.transform.Find("Description").gameObject.GetComponent<TMP_Text>().text =
                 "No character is present.";
-            CharacterCustomizeWindow.transform.Find("Year").gameObject.GetComponent<Text>().text = "";
-            CharacterCustomizeWindow.transform.Find("Down").gameObject.GetComponent<Button3D>().funcWindow = current;
-            CharacterCustomizeWindow.transform.Find("Up").gameObject.GetComponent<Button3D>().funcWindow = current;
+            CustomiseWindow.transform.Find("Down").gameObject.GetComponent<Button3D>().funcWindow = current;
+            CustomiseWindow.transform.Find("Up").gameObject.GetComponent<Button3D>().funcWindow = current;
         }
         
     }
@@ -241,24 +243,15 @@ public class UI_WindowMaker : MonoBehaviour
     public void MakeStageCustomizeWindow(StageSelector[] stages, int current)
     {
         DisableWindows();
-        StageCustomizeWindow.SetActive(true);
+        CustomiseWindow.SetActive(true);
         
-        StageCustomizeWindow.transform.Find("Full Costume").gameObject.GetComponent<Text>().text =
-            stages.Length.ToString();
-        StageCustomizeWindow.transform.Find("Current Costume").gameObject.GetComponent<Text>().text =
-            (1 + current).ToString();
-        StageCustomizeWindow.transform.Find("Name").gameObject.GetComponent<Text>().text = stages[current].stageName;
-        StageCustomizeWindow.transform.Find("Type").gameObject.GetComponent<Text>().text =
-            stages[current].stageType.ToString();
-        StageCustomizeWindow.transform.Find("Description").gameObject.GetComponent<Text>().text =
-            stages[current].stageDesc;
-        StageCustomizeWindow.transform.Find("Year").gameObject.GetComponent<Text>().text = stages[current].stageDate;
-        StageCustomizeWindow.transform.Find("Type").gameObject.GetComponent<Text>().text =
-            stages[current].stageType.ToString();
-        StageCustomizeWindow.transform.Find("Down").gameObject.GetComponent<Button3D>().funcWindow = current;
-        StageCustomizeWindow.transform.Find("Up").gameObject.GetComponent<Button3D>().funcWindow = current;
-        StageCustomizeWindow.transform.Find("Icon").gameObject.GetComponent<RawImage>().texture =
-            stages[current].stageIcon.texture;
+        CustomiseWindow.transform.Find("Total").gameObject.GetComponent<TMP_Text>().text =
+            ((1 + current) + "/" + stages.Length);
+        CustomiseWindow.transform.Find("Name").gameObject.GetComponent<TMP_Text>().text = stages[current].stageName;
+        CustomiseWindow.transform.Find("Down").gameObject.GetComponent<Button3D>().funcWindow = current;
+        CustomiseWindow.transform.Find("Up").gameObject.GetComponent<Button3D>().funcWindow = current;
+        CustomiseWindow.transform.Find("Icon").gameObject.GetComponent<Image>().sprite =
+            stages[current].stageIcon;
     }
 
     public void MakeDeleteMoveMenu(int page)
@@ -326,19 +319,4 @@ public class UI_WindowMaker : MonoBehaviour
         public bool drawer;
         public int[] index;
     }
-}
-
-[Serializable]
-public class ShowtapeYear
-{
-    public ShowTapeSelector[] groups;
-}
-
-[Serializable]
-public class ShowTapeSelector
-{
-    public string showtapeName;
-    public string showtapeDate;
-    public string showtapeLength;
-    public string ytLink;
 }
