@@ -30,7 +30,6 @@ public class Button3D : MonoBehaviour
     public uisound uiSound = uisound.tap;
     public bool ignoreCollider;
     private bool click;
-    private bool highlighted;
     private AudioSource sc;
 
     private void Start()
@@ -82,11 +81,6 @@ public class Button3D : MonoBehaviour
     private void OnDisable()
     {
         click = false;
-    }
-
-    public void Highlight(string name)
-    {
-        highlighted = true;
     }
 
     public void StartClick(string name)

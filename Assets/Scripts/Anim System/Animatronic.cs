@@ -1,8 +1,18 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
+using UnityEngine.Playables;
 
-public class Character_Valves : MonoBehaviour
+/// <summary>
+/// This script controls movements & more for the animatronic the script is attached to. Formerly known as Character_Valves.cs 
+/// </summary>
+public class Animatronic : MonoBehaviour
 {
+    [Header("General")] 
+    [Range(0, 1)]
+    public float PSIScale = 1;
+    public Movement[] movements; 
     public enum DualPressureState
     {
         off,
@@ -15,10 +25,7 @@ public class Character_Valves : MonoBehaviour
         Cyber,
         CyberSwinger
     }
-
-    [HideInInspector] public GameObject mackValves;
-
-    public float[] invertChart;
+    
 
     [HideInInspector] public List<int> cylParamHash = new();
 
@@ -34,17 +41,7 @@ public class Character_Valves : MonoBehaviour
 
     public int headOutBit;
     public int headInBit;
-
-    [Header("Flows")] public float PSIScale = 1;
-
-    public float[] gravityScale;
-    public float[] gravityScaleOut;
-    public float[] flowControlOut;
-    public float[] flowControlIn;
-    public float[] smashControlOut;
-    public float[] smashControlIn;
-    public float[] smashSpeedOut;
-    public float[] smashSpeedIn;
+    
     private Mack_Valves bitChart;
 
     private Animator characterValves;
@@ -52,31 +49,24 @@ public class Character_Valves : MonoBehaviour
     private List<int> cylParamId = new();
 
     private float headSwingAccel;
-    private float[] heavyChartIn;
-    private float[] heavyChartOut;
-    private GameObject mv;
 
     private bool numeratorLoop;
     private int[] smashIteration;
     private bool[] smashState;
-    private UI_PlayRecord ui;
+    private DF_ShowManager ui;
+    
+    // Playables
+    private PlayableGraph _graph;
+    private AnimationMixerPlayable _mixer;
+    private AnimationPlayableOutput _output;
 
     private void Awake()
     {
-        //Create Charts
-        heavyChartOut = new float[flowControlIn.Length];
-        heavyChartIn = new float[flowControlIn.Length];
-        invertChart = new float[flowControlIn.Length];
-        smashIteration = new int[flowControlIn.Length];
-        smashState = new bool[flowControlIn.Length];
-        smashControlIn = new float[flowControlIn.Length];
-        smashControlOut = new float[flowControlIn.Length];
-        smashSpeedIn = new float[flowControlIn.Length];
-        smashSpeedOut = new float[flowControlIn.Length];
-        for (int i = 0; i < invertChart.Length; i++)
+        if (movements.Length == 0)
         {
-            invertChart[i] = 1;
-            smashIteration[i] = 1;
+            Debug.LogWarning($"No movements assigned to {gameObject.name} so disabling. Please assign at least one in the inspector.");
+            ui.characterEvent.RemoveListener(CreateMovements);
+
         }
     }
 
@@ -100,7 +90,7 @@ public class Character_Valves : MonoBehaviour
         Debug.Log("Startup Performed on " + name);
         characterValves = GetComponent<Animator>();
 
-        ui = GameObject.Find("UI").GetComponent<UI_PlayRecord>();
+        ui = GameObject.Find("UI").GetComponent<DF_ShowManager>();
         ui.characterEvent.AddListener(CreateMovements);
         bitChart = GameObject.Find("Mack Valves").GetComponent<Mack_Valves>();
         GameObject.Find("UI Side Panel").GetComponent<UI_SidePanel>().FlowUpdater(gameObject);
@@ -194,44 +184,44 @@ public class Character_Valves : MonoBehaviour
                 if (state)
                 {
                     //Outwards Movement Calculation
-                    heavyChartOut[i] = Mathf.Min(heavyChartOut[i] + flowControlOut[i] * flowControlOut[i] / 2f,
-                        1f + (1f - flowControlOut[i]) * 0.3f);
-                    heavyChartIn[i] = 0f;
-                    currentValvePos += valvePSI * flowControlOut[i] * heavyChartOut[i] * gravityScaleOut[i] *
-                                       invertChart[i];
-                    smash = smashControlOut[i];
-                    smashSpeed = smashSpeedOut[i];
+                    movements[i].weightOut = Mathf.Min(movements[i].weightOut + movements[i].flowControlOut * movements[i].flowControlOut / 2f,
+                        1f + (1f - movements[i].flowControlOut) * 0.3f);
+                    movements[i].weightIn = 0f;
+                    currentValvePos += valvePSI * movements[i].flowControlOut * movements[i].weightOut * movements[i].gravityScaleOut *
+                                       movements[i].invert;
+                    smash = movements[i].smashOut;
+                    smashSpeed = movements[i].smashSpeedOut;
                 }
                 else
                 {
                     //Inwards Movement Calculation
-                    heavyChartIn[i] = Mathf.Min(heavyChartIn[i] + flowControlIn[i] * flowControlIn[i] / 2f,
-                        1f + (1f - flowControlIn[i]) * 0.3f);
-                    heavyChartOut[i] = 0f;
-                    currentValvePos -= valvePSI * flowControlIn[i] * heavyChartIn[i] * gravityScale[i] * invertChart[i];
-                    smash = smashControlIn[i];
-                    smashSpeed = smashSpeedIn[i];
+                    movements[i].weightIn = Mathf.Min(movements[i].weightIn + movements[i].flowControlIn * movements[i].flowControlIn / 2f,
+                        1f + (1f - movements[i].flowControlIn) * 0.3f);
+                    movements[i].weightOut = 0f;
+                    currentValvePos -= valvePSI * movements[i].flowControlIn * movements[i].weightIn * movements[i].gravityScale * movements[i].invert;
+                    smash = movements[i].smashIn;
+                    smashSpeed = movements[i].smashSpeedIn;
                 }
 
                 if (smashState[i] != state)
                 {
                     smashState[i] = state;
                     smashIteration[i] = 1;
-                    invertChart[i] = 1;
+                    movements[i].invert = 1;
                 }
 
                 //Smash Calculation
-                if (invertChart[i] < 1) invertChart[i] = Mathf.Min(invertChart[i] + timeDeltaTime * smashSpeed, 1f);
+                if (movements[i].invert == 1) movements[i].invert = Mathf.Min(movements[i].invert + timeDeltaTime * smashSpeed, 1f);
                 if (currentValvePos < 0 && smash != 0 && smashIteration[i] < 4)
                 {
-                    invertChart[i] = -smash * (Mathf.Abs(currentValvePos + 1) / smashIteration[i] / timeDeltaTime);
+                    movements[i].invert = -smash * (Mathf.Abs(currentValvePos + 1) / smashIteration[i] / timeDeltaTime);
                     smashState[i] = state;
                     smashIteration[i]++;
                 }
 
                 if (currentValvePos > 1 && smash != 0 && smashIteration[i] < 4)
                 {
-                    invertChart[i] = -smash * (currentValvePos / smashIteration[i] / timeDeltaTime);
+                    movements[i].invert = -smash * (currentValvePos / smashIteration[i] / timeDeltaTime);
                     smashState[i] = state;
                     smashIteration[i]++;
                 }
@@ -295,11 +285,11 @@ public class Character_Valves : MonoBehaviour
                 hash = cylParamHash[layerid];
                 i = cylParamId[layerid];
                 currentAnimState = characterValves.GetFloat(hash);
-                heavyChartIn[i] = Mathf.Min(heavyChartIn[i] + flowControlIn[i] * flowControlIn[i] / 2f,
-                    1f + (1f - flowControlIn[i]) * 0.3f * timeDeltatime);
-                heavyChartOut[i] = 0f;
+                movements[i].weightIn = Mathf.Min(movements[i].weightIn + movements[i].flowControlIn * movements[i].flowControlIn / 2f,
+                    1f + (1f - movements[i].flowControlIn) * 0.3f * timeDeltatime);
+                movements[i].weightOut = 0f;
                 currentAnimState -=
-                    finalPSIScale * flowControlIn[i] * heavyChartIn[i] * timeDeltatime * gravityScale[i];
+                    finalPSIScale * movements[i].flowControlIn * movements[i].weightIn * timeDeltatime * movements[i].gravityScale;
             }
 
             //Recheck
@@ -323,22 +313,22 @@ public class Character_Valves : MonoBehaviour
             if (dpr) finalPSIScale *= 0.75f;
             if (state && !nothing)
             {
-                heavyChartOut[i] = Mathf.Min(heavyChartOut[i] + flowControlOut[i] * flowControlOut[i] / 2f,
-                    1f + (1f - flowControlOut[i]) * 0.3f * timeDeltatime);
-                heavyChartIn[i] = 0f;
-                currentAnimState += finalPSIScale * flowControlOut[i] * heavyChartOut[i] * timeDeltatime *
-                                    gravityScaleOut[i];
-                headSwingAccel += finalPSIScale * flowControlOut[i] * heavyChartOut[i] * timeDeltatime *
-                                  gravityScaleOut[i];
+                movements[i].weightOut = Mathf.Min(movements[i].weightOut + movements[i].flowControlOut * movements[i].flowControlOut / 2f,
+                    1f + (1f - movements[i].flowControlOut) * 0.3f * timeDeltatime);
+                movements[i].weightIn = 0f;
+                currentAnimState += finalPSIScale * movements[i].flowControlOut * movements[i].weightOut * timeDeltatime *
+                                    movements[i].gravityScaleOut;
+                headSwingAccel += finalPSIScale * movements[i].flowControlOut * movements[i].weightOut * timeDeltatime *
+                                  movements[i].gravityScaleOut;
             }
             else if (!state && !nothing)
             {
-                heavyChartIn[i] = Mathf.Min(heavyChartIn[i] + flowControlIn[i] * flowControlIn[i] / 2f,
-                    1f + (1f - flowControlIn[i]) * 0.3f * timeDeltatime);
-                heavyChartOut[i] = 0f;
+                movements[i].weightIn = Mathf.Min(movements[i].weightIn + movements[i].flowControlIn * movements[i].flowControlIn / 2f,
+                    1f + (1f - movements[i].flowControlIn) * 0.3f * timeDeltatime);
+                movements[i].weightOut = 0f;
                 currentAnimState -=
-                    finalPSIScale * flowControlIn[i] * heavyChartIn[i] * timeDeltatime * gravityScale[i];
-                headSwingAccel -= finalPSIScale * flowControlIn[i] * heavyChartIn[i] * timeDeltatime * gravityScale[i];
+                    finalPSIScale * movements[i].flowControlIn * movements[i].weightIn * timeDeltatime * movements[i].gravityScale;
+                headSwingAccel -= finalPSIScale * movements[i].flowControlIn * movements[i].weightIn * timeDeltatime * movements[i].gravityScale;
             }
         }
 
@@ -346,4 +336,69 @@ public class Character_Valves : MonoBehaviour
         currentAnimState = Mathf.Min(Mathf.Max(currentAnimState, 0f), 1f);
         characterValves.SetFloat(hash, currentAnimState);
     }
+    
+    /// <summary>
+    /// Sets up the graph, mixer, output and clips for the new Playables system
+    /// Playables is a dynamic replacement for manually creating AnimationControllers for animatronics
+    /// </summary>
+    public void SetupPlayables()
+    {
+        _graph = PlayableGraph.Create("AdditiveAnimationGraph");
+        _mixer = AnimationMixerPlayable.Create(_graph, movements.Length);
+        _output = AnimationPlayableOutput.Create(_graph, "AnimationOutput", GetComponent<Animator>());
+        _output.SetSourcePlayable(_mixer);
+
+        for (int i = 0; i < movements.Length; i++)
+        {
+            var playable = AnimationClipPlayable.Create(_graph, movements[i].animation);
+            playable.SetApplyFootIK(false);
+            _graph.Connect(playable, i, _mixer, i);
+            _mixer.SetInputWeight(i, 0);
+        }
+    }
+}
+
+/// <summary>
+/// This contains all the data about the animatronic's movement. Replaces the deprecated arrays in the Animatronic.cs (formerly known as Character_Valves.cs) script
+/// </summary>
+[Serializable]
+public class Movement
+{
+    [Header("General")] 
+    public string name;
+
+    public AnimationClip animation;
+    public int bit = 1;
+    public Drawer drawer;
+    
+    [Header("Sounds")] 
+    public bool valves;
+    public bool squeaks;
+    public bool airLeaks;
+    
+    [Header("Flows")]
+    [Range(0, 1)] public float flowControlOut = 1f;
+    [Range(0, 1)] public float flowControlIn = 1f;
+    [Space(10)]
+    [Range(0, 1)] public float gravityScale = 1f;
+    [Range(0, 1)] public float gravityScaleOut = 1f;
+    [Space(10)]
+    [Range(0, 1)] public float smashOut;
+    [Range(0, 1)] public float smashIn;
+    [Range(0, 1)] public float smashSpeedOut;
+    [Range(0, 1)] public float smashSpeedIn;
+    [Space(10)]
+    [Range(0, 1)] public float weightOut;
+    [Range(0, 1)] public float weightIn;
+    [Space(10)]
+    // Genuinely have no clue why this has to be a float instead of a bool.
+    // The code is just too confusing, so I'm leaving it here as a float
+    // unless someone wants to try turn it into a bool
+    public float invert; 
+}
+
+public enum Drawer
+{
+    Top,
+    Bottom,
 }

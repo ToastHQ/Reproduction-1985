@@ -12,7 +12,7 @@ public class FloatEvent : UnityEvent<float>
 {
 }
 
-public class UI_ShowtapeManager : MonoBehaviour
+public class DF_ShowtapeManager : MonoBehaviour
 {
     public enum LoopVers
     {
@@ -25,7 +25,7 @@ public class UI_ShowtapeManager : MonoBehaviour
     [Header("Inspector Objects")] public Mack_Valves mack;
 
     public InputHandler inputHandler;
-    [HideInInspector] public UI_RshwCreator creator;
+    [HideInInspector] public DF_ShowtapeCreator creator;
     public AudioSource referenceSpeaker;
     [HideInInspector] public float refSpeakerVol;
     public VideoPlayer referenceVideo;
@@ -77,7 +77,7 @@ public class UI_ShowtapeManager : MonoBehaviour
 
     private void Start()
     {
-        creator = GetComponent<UI_RshwCreator>();
+        creator = GetComponent<DF_ShowtapeCreator>();
         referenceVideo = GetComponent<VideoPlayer>();
         refSpeakerVol = referenceSpeaker.volume;
     }
@@ -246,9 +246,6 @@ public class UI_ShowtapeManager : MonoBehaviour
         if (fileExtention == "")
         {
             ExtensionFilter[] extensions;
-            if (GameVersion.gameName == "Faz-Anim")
-                extensions = new[] { new ExtensionFilter("Show Files", "fshw", "tshw", "mshw") };
-
             extensions = new[] { new ExtensionFilter("Show Files", "cshw", "sshw", "rshw", "nshw") };
 
             paths = StandaloneFileBrowser.OpenFilePanel("Browse Showtape Audio", "", extensions, false);
@@ -356,7 +353,7 @@ public class UI_ShowtapeManager : MonoBehaviour
 
     public void DeleteMove(int bitDelete)
     {
-        int combinedNewInput = bitDelete + 24 * GetComponent<UI_WindowMaker>().deletePage;
+        int combinedNewInput = bitDelete + 24 * GetComponent<DF_WindowManager>().deletePage;
         Debug.Log("Deleting Move: " + combinedNewInput);
 
 
@@ -371,7 +368,7 @@ public class UI_ShowtapeManager : MonoBehaviour
             //Check if null
             if (showtapeSegmentPaths[0] != "")
             {
-                rshwFormat thefile = rshwFormat.ReadFromFile(showtapeSegmentPaths[0]);
+                shwFormat thefile = shwFormat.ReadFromFile(showtapeSegmentPaths[0]);
                 speakerClip = OpenWavParser.ByteArrayToAudioClip(thefile.audioData);
                 var newSignals = new List<BitArray>();
                 int countlength = 0;

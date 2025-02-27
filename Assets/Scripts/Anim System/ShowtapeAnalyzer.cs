@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class ShowtapeAnalyzer : MonoBehaviour
 {
-    public UI_ShowtapeManager manager;
+    public DF_ShowtapeManager manager;
     public TimelineEditor editor;
     public GameObject loadingScreen;
     public GameObject analyzeScreen;
@@ -541,8 +541,6 @@ public class ShowtapeAnalyzer : MonoBehaviour
         if (manager.fileExtention == "")
         {
             ExtensionFilter[] extensions;
-            if (GameVersion.gameName == "Faz-Anim")
-                extensions = new[] { new ExtensionFilter("Show Files", "fshw", "tshw", "mshw") };
 
             extensions = new[] { new ExtensionFilter("Show Files", "cshw", "sshw", "rshw", "nshw") };
 
@@ -557,7 +555,7 @@ public class ShowtapeAnalyzer : MonoBehaviour
             if (paths[0] != "")
             {
                 //Load File
-                rshwFormat thefile = rshwFormat.ReadFromFile(paths[0]);
+                shwFormat thefile = shwFormat.ReadFromFile(paths[0]);
                 yield return null;
                 var newSignals = new List<BitArray>();
                 int countlength = 0;

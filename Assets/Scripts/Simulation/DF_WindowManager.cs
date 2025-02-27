@@ -3,9 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_WindowMaker : MonoBehaviour
+public class DF_WindowManager : MonoBehaviour
 {
-    UI_PlayRecord _uiPlayRecord;
+    DF_ShowManager _uiPlayRecord;
     
     public GameObject Viewport;
     
@@ -33,7 +33,7 @@ public class UI_WindowMaker : MonoBehaviour
 
     private void Awake()
     {
-        _uiPlayRecord = GetComponent<UI_PlayRecord>();
+        _uiPlayRecord = GetComponent<DF_ShowManager>();
         
         Loading = Viewport.transform.Find("Loading Window").gameObject;
         ErrorWindow = Viewport.transform.Find("Error Window").gameObject;

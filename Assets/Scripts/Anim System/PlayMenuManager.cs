@@ -12,7 +12,7 @@ public class PlayMenuManager : MonoBehaviour
     public GameObject loopPlayGraphic;
     public GameObject loopSongGraphic;
     public GameObject finishButton;
-    public UI_PlayRecord playUI;
+    public DF_ShowManager playUI;
     public Text nowTimeText;
     public Text endTimeText;
     public TMP_Text authorText;
@@ -43,17 +43,17 @@ public class PlayMenuManager : MonoBehaviour
 
             switch (playUI.manager.songLoopSetting)
             {
-                case UI_ShowtapeManager.LoopVers.noLoop:
+                case DF_ShowtapeManager.LoopVers.noLoop:
                     if (!loopGraphic.activeSelf) loopGraphic.SetActive(true);
                     if (loopPlayGraphic.activeSelf) loopPlayGraphic.SetActive(false);
                     if (loopSongGraphic.activeSelf) loopSongGraphic.SetActive(false);
                     break;
-                case UI_ShowtapeManager.LoopVers.loopPlaylist:
+                case DF_ShowtapeManager.LoopVers.loopPlaylist:
                     if (loopGraphic.activeSelf) loopGraphic.SetActive(false);
                     if (!loopPlayGraphic.activeSelf) loopPlayGraphic.SetActive(true);
                     if (loopSongGraphic.activeSelf) loopSongGraphic.SetActive(false);
                     break;
-                case UI_ShowtapeManager.LoopVers.loopSong:
+                case DF_ShowtapeManager.LoopVers.loopSong:
                     if (loopGraphic.activeSelf) loopGraphic.SetActive(false);
                     if (loopPlayGraphic.activeSelf) loopPlayGraphic.SetActive(false);
                     if (!loopSongGraphic.activeSelf) loopSongGraphic.SetActive(true);

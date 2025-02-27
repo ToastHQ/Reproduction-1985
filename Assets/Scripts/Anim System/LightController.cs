@@ -17,8 +17,7 @@ public class LightController : MonoBehaviour
 
     
     public float intensity;
-    [Obsolete("Intensity Multiplier should not be used, use Intensity instead")]
-    public float intensityMultiplier = 1.0f;
+    
 
     public enum SpecialMode
     {
@@ -55,6 +54,12 @@ public class LightController : MonoBehaviour
 
     private bool errorOccured;
 
+    
+    [Header("Deprecated - Use Intensity instead")]
+    [Obsolete("Intensity Multiplier should not be used, use Intensity instead")]
+    public float intensityMultiplier;
+
+
     private void Start()
     {
         bitChart = transform.root.Find("Mack Valves").GetComponent<Mack_Valves>();
@@ -69,6 +74,11 @@ public class LightController : MonoBehaviour
                 }
 
         if (materialStars) emissiveObject.SetActive(false);
+        
+        if (intensityMultiplier != 0)
+        {
+            intensity = intensity * intensityMultiplier;
+        }
     }
 
     public void CreateMovements(float num3)
@@ -127,12 +137,12 @@ public class LightController : MonoBehaviour
                 nextTime = Mathf.Min(Mathf.Max(nextTime, 0), 1);
                 if (!materialLight)
                 {
-                    currentLight.intensity = intensity * nextTime * intensityMultiplier;
+                    currentLight.intensity = intensity * nextTime;
                 }
                 else if (!materialStars)
                 {
                     emissiveTexture.SetColor("_EmissiveColor",
-                        emissiveMatColor * nextTime * emissiveMultiplier * intensityMultiplier);
+                        emissiveMatColor * nextTime * emissiveMultiplier);
                 }
                 else
                 {
@@ -187,7 +197,7 @@ public class LightController : MonoBehaviour
 
                         //Modulate light intensity by sine wave
                         currentLight.intensity = Mathf.Clamp(Mathf.Sin(speed * Mathf.PI * 2 - Mathf.PI / 2.0f) + 1, 0.5f, 1) *
-                                                 intensity * intensityMultiplier * nextTime;
+                                                 intensity * nextTime;
 
                         //Advance Speed
                         speed += Time.deltaTime * 15;
@@ -201,7 +211,7 @@ public class LightController : MonoBehaviour
                         textureSet = true;
                         //Modulate light intensity by sine wave
                         currentLight.intensity =
-                            (Mathf.Sin(speed * 40 - 0.5f) + 1) * intensity * intensityMultiplier * nextTime;
+                            (Mathf.Sin(speed * 40 - 0.5f) + 1) * intensity * nextTime;
                     }
                 }
             }

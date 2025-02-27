@@ -76,7 +76,7 @@ public class StageSelector
 
                 animatronics[i] = animatronicData;
 
-                animatronic.GetComponentInChildren<Character_Valves>().StartUp(); // Start up the character once setup
+                animatronic.GetComponentInChildren<Animatronic>().StartUp(); // Start up the character once setup
             }
         }
         

@@ -5,7 +5,7 @@ using eToile;
 using SFB;
 using UnityEngine;
 
-public class UI_RshwCreator : MonoBehaviour
+public class DF_ShowtapeCreator : MonoBehaviour
 {
     public enum addWavResult
     {
@@ -14,13 +14,13 @@ public class UI_RshwCreator : MonoBehaviour
         uncompressed
     }
 
-    private UI_ShowtapeManager manager;
-    private UI_PlayRecord playRecord;
+    private DF_ShowtapeManager manager;
+    private DF_ShowManager playRecord;
 
     private void Awake()
     {
-        playRecord = GetComponent<UI_PlayRecord>();
-        manager = GetComponent<UI_ShowtapeManager>();
+        playRecord = GetComponent<DF_ShowManager>();
+        manager = GetComponent<DF_ShowtapeManager>();
     }
 
     public addWavResult AddWav()
@@ -50,7 +50,6 @@ public class UI_RshwCreator : MonoBehaviour
         }
 
         return addWavResult.noSource;
-        Cursor.lockState = lockState;
     }
 
     public void AddWavSpecial()
@@ -95,7 +94,7 @@ public class UI_RshwCreator : MonoBehaviour
             manager.audioVideoPause.Invoke();
             manager.recordMovements = false;
             manager.playMovements = false;
-            rshwFormat shw = new() { audioData = OpenWavParser.AudioClipToByteArray(manager.speakerClip) };
+            shwFormat shw = new() { audioData = OpenWavParser.AudioClipToByteArray(manager.speakerClip) };
             var converted = new List<int>();
             for (int i = 0; i < manager.rshwData.Length; i++)
             {
@@ -135,7 +134,7 @@ public class UI_RshwCreator : MonoBehaviour
                 {
                     manager.showtapeSegmentPaths = new string[1];
                     manager.showtapeSegmentPaths[0] = path;
-                    rshwFormat shw = new() { audioData = OpenWavParser.AudioClipToByteArray(manager.speakerClip) };
+                    shwFormat shw = new() { audioData = OpenWavParser.AudioClipToByteArray(manager.speakerClip) };
                     var converted = new List<int>();
                     for (int i = 0; i < manager.rshwData.Length; i++)
                     {
@@ -201,7 +200,7 @@ public class UI_RshwCreator : MonoBehaviour
             //Add code for opening .rshw file
             manager.curtainOpen.Invoke();
             yield return null;
-            rshwFormat thefile = rshwFormat.ReadFromFile(url);
+            shwFormat thefile = shwFormat.ReadFromFile(url);
             yield return null;
             manager.speakerClip = OpenWavParser.ByteArrayToAudioClip(thefile.audioData);
             yield return null;
@@ -289,7 +288,7 @@ public class UI_RshwCreator : MonoBehaviour
             //Check if null
             if (manager.showtapeSegmentPaths[0] != "")
             {
-                rshwFormat thefile = rshwFormat.ReadFromFile(manager.showtapeSegmentPaths[0]);
+                shwFormat thefile = shwFormat.ReadFromFile(manager.showtapeSegmentPaths[0]);
                 var newSignals = new List<BitArray>();
                 int countlength = 0;
                 if (thefile.signalData[0] != 0)

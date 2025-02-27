@@ -2,8 +2,11 @@ using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
+/// <summary>
+/// 
+/// </summary>
 [Serializable]
-public class rshwFormat
+public class shwFormat
 {
     public byte[] audioData { get; set; }
     public int[] signalData { get; set; }
@@ -18,7 +21,7 @@ public class rshwFormat
         }
     }
 
-    public static rshwFormat ReadFromFile(string filepath)
+    public static shwFormat ReadFromFile(string filepath)
     {
         BinaryFormatter formatter = new();
         using (FileStream stream = File.OpenRead(filepath))
@@ -28,7 +31,7 @@ public class rshwFormat
                 stream.Position = 0;
                 try
                 {
-                    return (rshwFormat)formatter.Deserialize(stream);
+                    return (shwFormat)formatter.Deserialize(stream);
                 }
                 catch (Exception)
                 {
@@ -43,3 +46,4 @@ public class rshwFormat
         }
     }
 }
+

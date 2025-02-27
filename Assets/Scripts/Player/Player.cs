@@ -111,7 +111,6 @@ public class Player : MonoBehaviour
     private bool crouchBool;
     private bool crouchGamepad;
     private Vector2 CStick;
-    private bool fixedcamera = false;
     private bool fixedUpdatelowerFPS;
     private bool flashGamepad;
     private float flashsmoothScroll = 63;
@@ -119,7 +118,6 @@ public class Player : MonoBehaviour
     //New Input
     [SerializeField] private Controller gamepad;
 
-    private bool holdGamepad;
     private Vector2 JoyStick;
     private int JumpFrames;
     private bool jumpGamepad;
@@ -150,8 +148,6 @@ public class Player : MonoBehaviour
         gamepad.Gamepad.Run.performed += ctx => runGamepad = true;
         gamepad.Gamepad.Crouch.canceled += ctx => crouchGamepad = false;
         gamepad.Gamepad.Crouch.performed += ctx => crouchGamepad = true;
-        gamepad.Gamepad.Hold.canceled += ctx => holdGamepad = false;
-        gamepad.Gamepad.Hold.performed += ctx => holdGamepad = true;
         gamepad.Gamepad.Horizontal.performed += ctx => GPJoy.x = ctx.ReadValue<float>();
         gamepad.Gamepad.Vertical.performed += ctx => GPJoy.y = ctx.ReadValue<float>();
         gamepad.Gamepad.Horizontal.canceled += ctx => GPJoy.x = 0;
@@ -182,9 +178,6 @@ public class Player : MonoBehaviour
         {
             //Cam Zoom
             if (enableCamZoom) CamZoomCheck();
-
-            bool camMove = true;
-
             CameraMove(CStick);
         }
 
@@ -405,7 +398,6 @@ public class Player : MonoBehaviour
             {
                 cursor.SetActive(true);
                 cursorText.text = hitcol.buttonText;
-                hitcol.Highlight(gameObject.name);
 
                 switch (mouseCheck())
                 {

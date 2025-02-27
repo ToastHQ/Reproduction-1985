@@ -8,17 +8,17 @@ public class InputHandler : MonoBehaviour
 
     [HideInInspector] public bool[] keypadInvert = new bool[33];
 
-    public UI_WindowMaker.MovementRecordings editorKeys = new();
+    public DF_WindowManager.MovementRecordings editorKeys = new();
     private InputDataObj frameInputs;
     private int invertcooldown;
-    private UI_WindowMaker programmingGroups;
+    private DF_WindowManager programmingGroups;
 
     // Update is called once per frame
     private void Awake()
     {
-        editorKeys.inputNames = new UI_WindowMaker.inputNames[0];
+        editorKeys.inputNames = new DF_WindowManager.inputNames[0];
         frameInputs = new InputDataObj();
-        programmingGroups = UI.GetComponent<UI_WindowMaker>();
+        programmingGroups = UI.GetComponent<DF_WindowManager>();
     }
 
     public InputDataObj InputCheck()

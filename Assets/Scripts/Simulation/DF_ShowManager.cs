@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class UI_PlayRecord : MonoBehaviour
+public class DF_ShowManager : MonoBehaviour
 {
     public enum SignalChange
     {
@@ -17,7 +17,7 @@ public class UI_PlayRecord : MonoBehaviour
 
     [HideInInspector] public int currentStage;
 
-    private UI_WindowMaker _uiWindowMaker;
+    private DF_WindowManager _uiWindowMaker;
 
     //Inspector Objects
     [Header("Inspector Objects")]
@@ -26,17 +26,15 @@ public class UI_PlayRecord : MonoBehaviour
     public AudioSource[] speakerL;
     public Sprite[] icons;
     [HideInInspector] public GameObject mackValves;
-    [HideInInspector] public UI_RshwCreator creator;
+    [HideInInspector] public DF_ShowtapeCreator creator;
     public UI_SidePanel sidePanel;
-    public Text ffSpeed;
     public Text AddSource;
     public Text Uncompress;
-    public Text ticketText;
     [HideInInspector] public VideoPlayer videoplayer;
     [HideInInspector] public GameObject thePlayer;
     public SignalChange signalChange;
 
-    public UI_ShowtapeManager manager;
+    public DF_ShowtapeManager manager;
     public FloatEvent characterEvent = new();
 
     private InputHandler inputHandlercomp;
@@ -57,8 +55,8 @@ public class UI_PlayRecord : MonoBehaviour
         mack = mackValves.GetComponent<Mack_Valves>();
         manager.inputHandler = inputHandlercomp;
         videoplayer = GetComponent<VideoPlayer>();
-        creator = GetComponent<UI_RshwCreator>();
-        _uiWindowMaker = gameObject.GetComponent<UI_WindowMaker>();
+        creator = GetComponent<DF_ShowtapeCreator>();
+        _uiWindowMaker = gameObject.GetComponent<DF_WindowManager>();
 
         //Start up stages
         for (int i = 0; i < stages.Length; i++) stages[i].Startup();
@@ -180,14 +178,6 @@ public class UI_PlayRecord : MonoBehaviour
 
                 switch (stages[currentStage].tvs[i].tvSettings)
                 {
-                    case ShowTV.tvSetting.offOnly:
-                        break;
-                        if (bitOff)
-                            for (int e = 0; e < stages[currentStage].tvs[i].tvs.Length; e++)
-                                stages[currentStage].tvs[i].tvs[e].material.SetColor("_BaseColor", Color.black);
-                        else
-                            for (int e = 0; e < stages[currentStage].tvs[i].tvs.Length; e++)
-                                stages[currentStage].tvs[i].tvs[e].material.SetColor("_BaseColor", Color.white);
                     case ShowTV.tvSetting.onOnly:
                         if (!bitOn)
                             for (int e = 0; e < stages[currentStage].tvs[i].tvs.Length; e++)

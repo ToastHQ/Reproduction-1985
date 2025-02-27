@@ -29,7 +29,7 @@ public class UI_SidePanel : MonoBehaviour
 
     //Other
     public GameObject areaLights;
-    public UI_PlayRecord showPanelUI;
+    public DF_ShowManager showPanelUI;
     public Static staticUI;
 
     public float[] copyPasteValues = new float[8];
@@ -121,7 +121,7 @@ public class UI_SidePanel : MonoBehaviour
 
     public void StageVolume(int input)
     {
-        var yea = FindObjectsOfType(typeof(InstrumentSound)) as InstrumentSound[];
+        var yea = GetComponentsInChildren<InstrumentSound>();
         for (int i = 0; i < yea.Length; i++)
         {
             yea[i].volume = Mathf.Min(Mathf.Max(yea[i].volume + input * .05f, 0), 1);
@@ -131,23 +131,23 @@ public class UI_SidePanel : MonoBehaviour
 
     public void SignalSwap(int input)
     {
-        if (showPanelUI.signalChange == UI_PlayRecord.SignalChange.normal)
+        if (showPanelUI.signalChange == DF_ShowManager.SignalChange.normal)
         {
             signalSwapText.text = "On";
             switch (input)
             {
                 case 0:
-                    showPanelUI.signalChange = UI_PlayRecord.SignalChange.PreCU;
+                    showPanelUI.signalChange = DF_ShowManager.SignalChange.PreCU;
                     break;
                 case 1:
-                    showPanelUI.signalChange = UI_PlayRecord.SignalChange.PrePTT;
+                    showPanelUI.signalChange = DF_ShowManager.SignalChange.PrePTT;
                     break;
             }
         }
         else
         {
             signalSwapText.text = "Off";
-            showPanelUI.signalChange = UI_PlayRecord.SignalChange.normal;
+            showPanelUI.signalChange = DF_ShowManager.SignalChange.normal;
         }
     }
 
@@ -447,29 +447,19 @@ public class UI_SidePanel : MonoBehaviour
                     if (theCharacter != null)
                     {
                         int extra = thefile.characters[i].flowsIn.Length / 2;
-                        Character_Valves cv = theCharacter.transform.GetComponent<Character_Valves>();
-                        if (extra < cv.flowControlIn.Length)
-                            //Old File Format
-                            for (int e = 0; e < cv.flowControlIn.Length; e++)
-                            {
-                                cv.flowControlIn[e] = thefile.characters[i].flowsIn[e] / 1000f;
-                                cv.flowControlOut[e] = thefile.characters[i].flowsOut[e] / 1000f;
-                                cv.gravityScale[e] = thefile.characters[i].weightIn[e] / 1000f;
-                                cv.gravityScaleOut[e] = thefile.characters[i].weightOut[e] / 1000f;
-                            }
-                        else
-                            //New File Format
-                            for (int e = 0; e < extra; e++)
-                            {
-                                cv.flowControlIn[e] = thefile.characters[i].flowsIn[e] / 1000f;
-                                cv.flowControlOut[e] = thefile.characters[i].flowsOut[e] / 1000f;
-                                cv.gravityScale[e] = thefile.characters[i].weightIn[e] / 1000f;
-                                cv.gravityScaleOut[e] = thefile.characters[i].weightOut[e] / 1000f;
-                                cv.smashControlIn[e] = thefile.characters[i].flowsIn[e + extra] / 1000f;
-                                cv.smashControlOut[e] = thefile.characters[i].flowsOut[e + extra] / 1000f;
-                                cv.smashSpeedIn[e] = thefile.characters[i].weightIn[e + extra] / 1000f;
-                                cv.smashSpeedOut[e] = thefile.characters[i].weightOut[e + extra] / 1000f;
-                            }
+                        Animatronic cv = theCharacter.transform.GetComponent<Animatronic>();
+
+                        for (int e = 0; e < extra; e++)
+                        {
+                            cv.movements[e].flowControlIn = thefile.characters[i].flowsIn[e] / 1000f;
+                            cv.movements[e].flowControlOut = thefile.characters[i].flowsOut[e] / 1000f;
+                            cv.movements[e].gravityScale = thefile.characters[i].weightIn[e] / 1000f;
+                            cv.movements[e].gravityScaleOut = thefile.characters[i].weightOut[e] / 1000f;
+                            cv.movements[e].smashIn = thefile.characters[i].flowsIn[e + extra] / 1000f;
+                            cv.movements[e].smashOut = thefile.characters[i].flowsOut[e + extra] / 1000f;
+                            cv.movements[e].smashSpeedIn = thefile.characters[i].weightIn[e + extra] / 1000f;
+                            cv.movements[e].smashSpeedOut = thefile.characters[i].weightOut[e + extra] / 1000f;
+                        }
                     }
                 }
             }
@@ -478,7 +468,7 @@ public class UI_SidePanel : MonoBehaviour
     public string SearchBitChartName(int bit, bool drawer)
     {
         if (drawer) bit += 150;
-        UI_WindowMaker windowMaker = showPanelUI.GetComponent<UI_WindowMaker>();
+        DF_WindowManager windowMaker = showPanelUI.GetComponent<DF_WindowManager>();
         for (int i = 0; i < windowMaker.recordingGroups.Length; i++)
         for (int e = 0; e < windowMaker.recordingGroups[i].inputNames.Length; e++)
         {
@@ -771,29 +761,18 @@ public class UI_SidePanel : MonoBehaviour
                     else
                     {
                         int extra = thefile.characters[i].flowsIn.Length / 2;
-                        Character_Valves cv = theCharacter.transform.GetChild(0).GetComponent<Character_Valves>();
-                        if (extra < cv.flowControlIn.Length)
-                            //Old File Format
-                            for (int e = 0; e < cv.flowControlIn.Length; e++)
-                            {
-                                cv.flowControlIn[e] = thefile.characters[i].flowsIn[e] / 1000f;
-                                cv.flowControlOut[e] = thefile.characters[i].flowsOut[e] / 1000f;
-                                cv.gravityScale[e] = thefile.characters[i].weightIn[e] / 1000f;
-                                cv.gravityScaleOut[e] = thefile.characters[i].weightOut[e] / 1000f;
-                            }
-                        else
-                            //New File Format
-                            for (int e = 0; e < extra; e++)
-                            {
-                                cv.flowControlIn[e] = thefile.characters[i].flowsIn[e] / 1000f;
-                                cv.flowControlOut[e] = thefile.characters[i].flowsOut[e] / 1000f;
-                                cv.gravityScale[e] = thefile.characters[i].weightIn[e] / 1000f;
-                                cv.gravityScaleOut[e] = thefile.characters[i].weightOut[e] / 1000f;
-                                cv.smashControlIn[e] = thefile.characters[i].flowsIn[e + extra] / 1000f;
-                                cv.smashControlOut[e] = thefile.characters[i].flowsOut[e + extra] / 1000f;
-                                cv.smashSpeedIn[e] = thefile.characters[i].weightIn[e + extra] / 1000f;
-                                cv.smashSpeedOut[e] = thefile.characters[i].weightOut[e + extra] / 1000f;
-                            }
+                        Animatronic cv = theCharacter.transform.GetChild(0).GetComponent<Animatronic>();
+                        for (int e = 0; e < extra; e++)
+                        {
+                            cv.movements[e].flowControlIn = thefile.characters[i].flowsIn[e] / 1000f;
+                            cv.movements[e].flowControlOut = thefile.characters[i].flowsOut[e] / 1000f;
+                            cv.movements[e].gravityScale = thefile.characters[i].weightIn[e] / 1000f;
+                            cv.movements[e].gravityScaleOut = thefile.characters[i].weightOut[e] / 1000f;
+                            cv.movements[e].smashIn = thefile.characters[i].flowsIn[e + extra] / 1000f;
+                            cv.movements[e].smashOut = thefile.characters[i].flowsOut[e + extra] / 1000f;
+                            cv.movements[e].smashSpeedIn = thefile.characters[i].weightIn[e + extra] / 1000f;
+                            cv.movements[e].smashSpeedOut = thefile.characters[i].weightOut[e + extra] / 1000f;
+                        }
                     }
                 }
             }

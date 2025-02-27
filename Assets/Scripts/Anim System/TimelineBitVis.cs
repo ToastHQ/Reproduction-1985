@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class TimelineBitVis : MonoBehaviour
 {
-    public UI_ShowtapeManager uiShowtapeManager;
+    public DF_ShowtapeManager uiShowtapeManager;
     public TimelineEditor timelineEditor;
     public GameObject bitPrefab;
     public GameObject holderPrefab;
@@ -15,17 +15,17 @@ public class TimelineBitVis : MonoBehaviour
 
     public void RepaintBitGroups()
     {
-        uiShowtapeManager.inputHandler.editorKeys = new UI_WindowMaker.MovementRecordings();
+        uiShowtapeManager.inputHandler.editorKeys = new DF_WindowManager.MovementRecordings();
         for (int i = 0; i < transform.childCount; i++)
             if (transform.GetChild(i).gameObject.activeSelf)
                 Destroy(transform.GetChild(i).gameObject);
 
         holder = new GameObject[Mathf.Min(timelineEditor.tlRecordGroup.Length, maximumHolders)];
-        var temp = new List<UI_WindowMaker.inputNames>();
+        var temp = new List<DF_WindowManager.inputNames>();
         for (int i = 0; i < Mathf.Min(timelineEditor.tlRecordGroup.Length, maximumHolders); i++)
             if (timelineEditor.holderOffset + i < timelineEditor.tlRecordGroup.Length)
             {
-                temp.Add(new UI_WindowMaker.inputNames());
+                temp.Add(new DF_WindowManager.inputNames());
                 temp[temp.Count - 1].index = new int[1];
                 if (timelineEditor.tlRecordGroup[i + timelineEditor.holderOffset].bit > 150)
                 {

@@ -8827,7 +8827,6 @@ GameObject:
   m_Component:
   - component: {fileID: 361558175}
   - component: {fileID: 361558179}
-  - component: {fileID: 361558178}
   - component: {fileID: 361558177}
   - component: {fileID: 361558176}
   m_Layer: 0
@@ -8892,7 +8891,7 @@ MonoBehaviour:
   fadeSpeed: 0.151
   intensity: 10.79038
   intensityMultiplier: 1
-  specialMode: 0
+  specialMode: 2
   strobe: 0
   flash: 0
   materialLight: 0
@@ -8908,18 +8907,6 @@ MonoBehaviour:
   - {fileID: 2800000, guid: fa4c6e0b09380524ca78f145a560823f, type: 3}
   - {fileID: 2800000, guid: 570f0cb3ca076e24ab49829ebb842c85, type: 3}
   - {fileID: 2800000, guid: 2548b18dcb4fb384eb00d83f73d3b4fd, type: 3}
---- !u!114 &361558178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361558174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &361558179
 Light:
   m_ObjectHideFlags: 0
@@ -8932,12 +8919,12 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 0.49
+  m_Range: 0.5
   m_SpotAngle: 161
   m_InnerSpotAngle: 8
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -10558,7 +10545,6 @@ GameObject:
   m_Component:
   - component: {fileID: 478846561}
   - component: {fileID: 478846565}
-  - component: {fileID: 478846564}
   - component: {fileID: 478846563}
   - component: {fileID: 478846562}
   m_Layer: 0
@@ -10623,7 +10609,7 @@ MonoBehaviour:
   fadeSpeed: 0.151
   intensity: 10.79038
   intensityMultiplier: 1
-  specialMode: 0
+  specialMode: 2
   strobe: 0
   flash: 0
   materialLight: 0
@@ -10639,18 +10625,6 @@ MonoBehaviour:
   - {fileID: 2800000, guid: fa4c6e0b09380524ca78f145a560823f, type: 3}
   - {fileID: 2800000, guid: 570f0cb3ca076e24ab49829ebb842c85, type: 3}
   - {fileID: 2800000, guid: 2548b18dcb4fb384eb00d83f73d3b4fd, type: 3}
---- !u!114 &478846564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 478846560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &478846565
 Light:
   m_ObjectHideFlags: 0
@@ -10663,12 +10637,12 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 0.49
+  m_Range: 0.5
   m_SpotAngle: 140.7
   m_InnerSpotAngle: 8
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -23176,7 +23150,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1085682229}
   - component: {fileID: 1085682233}
-  - component: {fileID: 1085682232}
   - component: {fileID: 1085682231}
   - component: {fileID: 1085682230}
   m_Layer: 0
@@ -23241,7 +23214,7 @@ MonoBehaviour:
   fadeSpeed: 0.151
   intensity: 10.79038
   intensityMultiplier: 1
-  specialMode: 0
+  specialMode: 2
   strobe: 0
   flash: 0
   materialLight: 0
@@ -23257,18 +23230,6 @@ MonoBehaviour:
   - {fileID: 2800000, guid: fa4c6e0b09380524ca78f145a560823f, type: 3}
   - {fileID: 2800000, guid: 570f0cb3ca076e24ab49829ebb842c85, type: 3}
   - {fileID: 2800000, guid: 2548b18dcb4fb384eb00d83f73d3b4fd, type: 3}
---- !u!114 &1085682232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085682228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &1085682233
 Light:
   m_ObjectHideFlags: 0
@@ -23281,12 +23242,12 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 0.49
+  m_Range: 0.5
   m_SpotAngle: 140.7
   m_InnerSpotAngle: 8
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -27298,7 +27259,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1251814807}
   - component: {fileID: 1251814811}
-  - component: {fileID: 1251814810}
   - component: {fileID: 1251814809}
   - component: {fileID: 1251814808}
   m_Layer: 0
@@ -27363,7 +27323,7 @@ MonoBehaviour:
   fadeSpeed: 0.151
   intensity: 10.79038
   intensityMultiplier: 1
-  specialMode: 0
+  specialMode: 2
   strobe: 0
   flash: 0
   materialLight: 0
@@ -27379,18 +27339,6 @@ MonoBehaviour:
   - {fileID: 2800000, guid: fa4c6e0b09380524ca78f145a560823f, type: 3}
   - {fileID: 2800000, guid: 570f0cb3ca076e24ab49829ebb842c85, type: 3}
   - {fileID: 2800000, guid: 2548b18dcb4fb384eb00d83f73d3b4fd, type: 3}
---- !u!114 &1251814810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251814806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &1251814811
 Light:
   m_ObjectHideFlags: 0
@@ -27403,12 +27351,12 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 0.49
+  m_Range: 0.5
   m_SpotAngle: 140.7
   m_InnerSpotAngle: 8
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -29849,7 +29797,7 @@ MonoBehaviour:
   fadeSpeed: 0.0381
   intensity: 2
   intensityMultiplier: 150
-  specialMode: 0
+  specialMode: 1
   strobe: 0
   flash: 0
   materialLight: 0
@@ -34496,7 +34444,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1564282056}
   - component: {fileID: 1564282060}
-  - component: {fileID: 1564282059}
   - component: {fileID: 1564282058}
   - component: {fileID: 1564282057}
   m_Layer: 0
@@ -34561,7 +34508,7 @@ MonoBehaviour:
   fadeSpeed: 0.151
   intensity: 10.79038
   intensityMultiplier: 1
-  specialMode: 0
+  specialMode: 2
   strobe: 0
   flash: 0
   materialLight: 0
@@ -34577,18 +34524,6 @@ MonoBehaviour:
   - {fileID: 2800000, guid: fa4c6e0b09380524ca78f145a560823f, type: 3}
   - {fileID: 2800000, guid: 570f0cb3ca076e24ab49829ebb842c85, type: 3}
   - {fileID: 2800000, guid: 2548b18dcb4fb384eb00d83f73d3b4fd, type: 3}
---- !u!114 &1564282059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564282055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &1564282060
 Light:
   m_ObjectHideFlags: 0
@@ -34601,12 +34536,12 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 0.49
+  m_Range: 0.5
   m_SpotAngle: 140.7
   m_InnerSpotAngle: 8
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
