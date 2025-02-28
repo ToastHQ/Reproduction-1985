@@ -40,7 +40,7 @@ public class LightController : MonoBehaviour
     public bool materialStars;
     public Texture2D[] starCookies;
     private float acceleration;
-    private Mack_Valves bitChart;
+    private MacValves bitChart;
     private Light currentLight;
     private int currentTextureSet;
 
@@ -62,7 +62,7 @@ public class LightController : MonoBehaviour
 
     private void Start()
     {
-        bitChart = transform.root.Find("Mack Valves").GetComponent<Mack_Valves>();
+        bitChart = transform.root.Find("Mac Valves").GetComponent<MacValves>();
         if (!materialLight)
             currentLight = GetComponent<Light>();
         else

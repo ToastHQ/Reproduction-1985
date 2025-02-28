@@ -13,14 +13,14 @@ public class Curtain_Valves : MonoBehaviour
     public bool curtainOverride;
     private readonly List<int> cylindersBottom = new();
     private readonly List<int> cylindersTop = new();
-    private Mack_Valves bitChart;
+    private MacValves bitChart;
 
     private Animator characterValves;
 
     private void Start()
     {
         characterValves = GetComponent<Animator>();
-        bitChart = mackValves.GetComponent<Mack_Valves>();
+        bitChart = mackValves.GetComponent<MacValves>();
         for (int e = 0; e < characterValves.layerCount; e++)
         {
             string temp = characterValves.GetLayerName(e);

@@ -22,7 +22,7 @@ public class DF_ShowtapeManager : MonoBehaviour
     }
 
     //Inspector Objects
-    [Header("Inspector Objects")] public Mack_Valves mack;
+    [Header("Inspector Objects")] public MacValves mack;
 
     public InputHandler inputHandler;
     [HideInInspector] public DF_ShowtapeCreator creator;
@@ -368,7 +368,7 @@ public class DF_ShowtapeManager : MonoBehaviour
             //Check if null
             if (showtapeSegmentPaths[0] != "")
             {
-                shwFormat thefile = shwFormat.ReadFromFile(showtapeSegmentPaths[0]);
+                rshwFormat thefile = rshwFormat.ReadFromFile(showtapeSegmentPaths[0]);
                 speakerClip = OpenWavParser.ByteArrayToAudioClip(thefile.audioData);
                 var newSignals = new List<BitArray>();
                 int countlength = 0;

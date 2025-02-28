@@ -44,7 +44,7 @@ public class DF_ShowManager : MonoBehaviour
 
     //Show Data
     [Header("Show Data")]
-    private Mack_Valves mack;
+    private MacValves mack;
 
 
     private void Awake()
@@ -52,7 +52,7 @@ public class DF_ShowManager : MonoBehaviour
         //Initialize Objects
         thePlayer = GameObject.Find("Player");
         inputHandlercomp = mackValves.GetComponent<InputHandler>();
-        mack = mackValves.GetComponent<Mack_Valves>();
+        mack = mackValves.GetComponent<MacValves>();
         manager.inputHandler = inputHandlercomp;
         videoplayer = GetComponent<VideoPlayer>();
         creator = GetComponent<DF_ShowtapeCreator>();
@@ -60,9 +60,6 @@ public class DF_ShowManager : MonoBehaviour
 
         //Start up stages
         for (int i = 0; i < stages.Length; i++) stages[i].Startup();
-
-        //Spawn in current Characters
-        RecreateAllAnimatronics();
 
         SwitchWindow(1);
     }
@@ -424,7 +421,6 @@ public class DF_ShowManager : MonoBehaviour
                     if (!stages[i].stage.activeSelf) stages[i].stage.SetActive(true);
                 }
 
-            RecreateAllAnimatronics();
             _uiWindowMaker.MakeStageCustomizeWindow(stages, currentStage);
         }
     }
@@ -448,20 +444,8 @@ public class DF_ShowManager : MonoBehaviour
                     if (!stages[i].stage.activeSelf) stages[i].stage.SetActive(true);
                 }
 
-            RecreateAllAnimatronics();
             _uiWindowMaker.MakeStageCustomizeWindow(stages, currentStage);
         }
-    }
-
-    
-    
-    /// <summary>
-    /// Setup all animatronics in a stage
-    /// </summary>
-    public void RecreateAllAnimatronics()
-    {
-
-        sidePanel.FlowLoad(-1);
     }
 
     /// <summary>

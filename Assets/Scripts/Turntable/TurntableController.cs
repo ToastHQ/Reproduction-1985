@@ -20,7 +20,7 @@ public class TurntableController : MonoBehaviour
     public RotationEnum turnTableType;
     public float rotationSpeed;
     public float smoothSpeed = 0.1f;
-    private Mack_Valves bitChart;
+    private MacValves bitChart;
 
     private bool forceClose;
     private float multiplier;
@@ -47,7 +47,7 @@ public class TurntableController : MonoBehaviour
             startPosition = -270;
         }
 
-        bitChart = mackValves.GetComponent<Mack_Valves>();
+        bitChart = mackValves.GetComponent<MacValves>();
     }
 
     public void CreateMovements(float num3)

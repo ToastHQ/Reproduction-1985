@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
 
     [Header("Crouch")] public bool enableCrouch;
 
-    public float camInitialHeight = 0.657f;
+    public float camInitialHeight;
     public float camCrouchHeight;
     public GameObject feet;
     public GameObject unCrouch;
@@ -131,6 +131,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        camHeight = PlayerCamScript.transform.position.y;
         camHeight = camInitialHeight;
         smoothScroll = PlayerCamScript.fieldOfView;
         Cursor.lockState = CursorLockMode.Locked;
@@ -160,6 +161,7 @@ public class Player : MonoBehaviour
         gamepad.Gamepad.FlashZoom.canceled += ctx => GPZoom.y = 0;
         gamepad.Gamepad.CamHorizontal.canceled += ctx => GPCam.x = 0;
         gamepad.Gamepad.CamVertical.canceled += ctx => GPCam.y = 0;
+        Application.targetFrameRate = 0;
     }
 
     private void Update()

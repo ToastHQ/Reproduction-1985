@@ -3106,7 +3106,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5215550095897422185}
@@ -16925,10 +16925,8 @@ MonoBehaviour:
   mackValves: {fileID: 0}
   creator: {fileID: 0}
   sidePanel: {fileID: 0}
-  ffSpeed: {fileID: 0}
   AddSource: {fileID: 5215550095055788273}
   Uncompress: {fileID: 5215550095840363343}
-  ticketText: {fileID: 0}
   videoplayer: {fileID: 0}
   thePlayer: {fileID: 0}
   signalChange: 0

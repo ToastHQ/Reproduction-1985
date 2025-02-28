@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TextureController : MonoBehaviour
 {
-    public Mack_Valves bitChart;
+    public MacValves bitChart;
     public List<int> texBits;
     public List<Texture2D> texes;
     public List<bool> boolChecks;

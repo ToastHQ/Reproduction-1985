@@ -94,7 +94,7 @@ public class DF_ShowtapeCreator : MonoBehaviour
             manager.audioVideoPause.Invoke();
             manager.recordMovements = false;
             manager.playMovements = false;
-            shwFormat shw = new() { audioData = OpenWavParser.AudioClipToByteArray(manager.speakerClip) };
+            rshwFormat shw = new() { audioData = OpenWavParser.AudioClipToByteArray(manager.speakerClip) };
             var converted = new List<int>();
             for (int i = 0; i < manager.rshwData.Length; i++)
             {
@@ -134,7 +134,7 @@ public class DF_ShowtapeCreator : MonoBehaviour
                 {
                     manager.showtapeSegmentPaths = new string[1];
                     manager.showtapeSegmentPaths[0] = path;
-                    shwFormat shw = new() { audioData = OpenWavParser.AudioClipToByteArray(manager.speakerClip) };
+                    rshwFormat shw = new() { audioData = OpenWavParser.AudioClipToByteArray(manager.speakerClip) };
                     var converted = new List<int>();
                     for (int i = 0; i < manager.rshwData.Length; i++)
                     {
@@ -200,7 +200,7 @@ public class DF_ShowtapeCreator : MonoBehaviour
             //Add code for opening .rshw file
             manager.curtainOpen.Invoke();
             yield return null;
-            shwFormat thefile = shwFormat.ReadFromFile(url);
+            rshwFormat thefile = rshwFormat.ReadFromFile(url);
             yield return null;
             manager.speakerClip = OpenWavParser.ByteArrayToAudioClip(thefile.audioData);
             yield return null;
@@ -288,7 +288,7 @@ public class DF_ShowtapeCreator : MonoBehaviour
             //Check if null
             if (manager.showtapeSegmentPaths[0] != "")
             {
-                shwFormat thefile = shwFormat.ReadFromFile(manager.showtapeSegmentPaths[0]);
+                rshwFormat thefile = rshwFormat.ReadFromFile(manager.showtapeSegmentPaths[0]);
                 var newSignals = new List<BitArray>();
                 int countlength = 0;
                 if (thefile.signalData[0] != 0)

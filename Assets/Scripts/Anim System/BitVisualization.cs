@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class BitVisualization : MonoBehaviour
 {
     public Texture2D texture;
-    public Mack_Valves mackvalves;
+    public MacValves mackvalves;
     public Color32[] colors;
     public Color offColor;
     public Color onColor;

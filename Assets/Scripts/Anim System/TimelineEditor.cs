@@ -15,7 +15,7 @@ public class TimelineEditor : MonoBehaviour
     public ShowtapeAnalyzer analyzer;
     public BitVisualization bitvis;
     public TimelineBitVis timelineBitVis;
-    public Mack_Valves mackValves;
+    public MacValves mackValves;
     public Dropdown file;
     public Dropdown edit;
     public Dropdown analysis;
@@ -530,8 +530,8 @@ public class TimelineEditor : MonoBehaviour
                         windowMaker = ui.GetComponent<DF_WindowManager>();
                         playRecord = ui.GetComponent<DF_ShowManager>();
                         sidePanel = playRecord.sidePanel;
-                        Mack_Valves mv = GameObject.Find("Studio C").transform.Find("Mack Valves").gameObject
-                            .GetComponent<Mack_Valves>();
+                        MacValves mv = GameObject.Find("Studio C").transform.Find("Mack Valves").gameObject
+                            .GetComponent<MacValves>();
                         mackValves = mv;
                         uiShowtapeManager.mack = mv;
                         uiShowtapeManager.inputHandler = mv.gameObject.GetComponent<InputHandler>();
@@ -561,8 +561,8 @@ public class TimelineEditor : MonoBehaviour
                         windowMaker = ui.GetComponent<DF_WindowManager>();
                         playRecord = ui.GetComponent<DF_ShowManager>();
                         sidePanel = playRecord.sidePanel;
-                        Mack_Valves mv = GameObject.Find("RFE").transform.Find("Mack Valves").gameObject
-                            .GetComponent<Mack_Valves>();
+                        MacValves mv = GameObject.Find("RFE").transform.Find("Mack Valves").gameObject
+                            .GetComponent<MacValves>();
                         mackValves = mv;
                         uiShowtapeManager.mack = mv;
                         uiShowtapeManager.inputHandler = mv.gameObject.GetComponent<InputHandler>();
@@ -592,8 +592,8 @@ public class TimelineEditor : MonoBehaviour
                         windowMaker = ui.GetComponent<DF_WindowManager>();
                         playRecord = ui.GetComponent<DF_ShowManager>();
                         sidePanel = playRecord.sidePanel;
-                        Mack_Valves mv = GameObject.Find("Cyberamics").transform.Find("Mack Valves").gameObject
-                            .GetComponent<Mack_Valves>();
+                        MacValves mv = GameObject.Find("Cyberamics").transform.Find("Mack Valves").gameObject
+                            .GetComponent<MacValves>();
                         mackValves = mv;
                         uiShowtapeManager.mack = mv;
                         uiShowtapeManager.inputHandler = mv.gameObject.GetComponent<InputHandler>();
@@ -623,8 +623,8 @@ public class TimelineEditor : MonoBehaviour
                         windowMaker = ui.GetComponent<DF_WindowManager>();
                         playRecord = ui.GetComponent<DF_ShowManager>();
                         sidePanel = playRecord.sidePanel;
-                        Mack_Valves mv = GameObject.Find("NRAE").transform.Find("Mack Valves").gameObject
-                            .GetComponent<Mack_Valves>();
+                        MacValves mv = GameObject.Find("NRAE").transform.Find("Mack Valves").gameObject
+                            .GetComponent<MacValves>();
                         mackValves = mv;
                         uiShowtapeManager.mack = mv;
                         uiShowtapeManager.inputHandler = mv.gameObject.GetComponent<InputHandler>();

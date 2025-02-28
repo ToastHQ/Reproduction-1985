@@ -555,7 +555,7 @@ public class ShowtapeAnalyzer : MonoBehaviour
             if (paths[0] != "")
             {
                 //Load File
-                shwFormat thefile = shwFormat.ReadFromFile(paths[0]);
+                rshwFormat thefile = rshwFormat.ReadFromFile(paths[0]);
                 yield return null;
                 var newSignals = new List<BitArray>();
                 int countlength = 0;

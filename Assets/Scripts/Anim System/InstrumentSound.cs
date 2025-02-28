@@ -12,12 +12,12 @@ public class InstrumentSound : MonoBehaviour
     public bool swapDrawer;
     public int swapBit;
     private bool readyToGo;
-    private Mack_Valves valves;
+    private MacValves valves;
 
     private void Awake()
     {
         StartCoroutine(AwakeCoroutine());
-        if (soundSwap) valves = GameObject.Find("Mack Valves").GetComponent<Mack_Valves>();
+        if (soundSwap) valves = GameObject.Find("Mac Valves").GetComponent<MacValves>();
     }
 
     private void OnTriggerEnter(Collider other)
