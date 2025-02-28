@@ -1,15 +1,33 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
+/// <summary>
+/// Light controller script. This allows many properties of a Light to be manipulated by the show controller.
+/// </summary>
+
+[RequireComponent(typeof(Light))]
 public class LightController : MonoBehaviour
 {
-    public int lightBit;
+    [FormerlySerializedAs("lightBit")]
+    public int bit;
     public char topOrBottom;
+    
+    [Range(0.01f, 1f)] public float fadeSpeed;
 
-    [Range(0.01f, .3f)] public float fadeSpeed;
-
+    
     public float intensity;
-    public float intensityMultiplier = 1.0f;
+    
+
+    public enum SpecialMode
+    {
+        None = 0,
+        Helicopter,
+        CuStar,
+        EmissiveMaterial,
+    }
+    public SpecialMode specialMode;
+    
     public bool strobe;
     public bool flash;
 
@@ -20,11 +38,9 @@ public class LightController : MonoBehaviour
     public Color emissiveMatColor = Color.white;
     public bool invertBit;
     public bool materialStars;
-    public bool helicopter;
-    public bool chuckStar;
     public Texture2D[] starCookies;
     private float acceleration;
-    private Mack_Valves bitChart;
+    private MacValves bitChart;
     private Light currentLight;
     private int currentTextureSet;
 
@@ -38,9 +54,15 @@ public class LightController : MonoBehaviour
 
     private bool errorOccured;
 
+    
+    [Header("Deprecated - Use Intensity instead")]
+    [Obsolete("Intensity Multiplier should not be used, use Intensity instead")]
+    public float intensityMultiplier;
+
+
     private void Start()
     {
-        bitChart = transform.root.Find("Mack Valves").GetComponent<Mack_Valves>();
+        bitChart = transform.root.Find("Mac Valves").GetComponent<MacValves>();
         if (!materialLight)
             currentLight = GetComponent<Light>();
         else
@@ -52,6 +74,11 @@ public class LightController : MonoBehaviour
                 }
 
         if (materialStars) emissiveObject.SetActive(false);
+        
+        if (intensityMultiplier != 0)
+        {
+            intensity = intensity * intensityMultiplier;
+        }
     }
 
     public void CreateMovements(float num3)
@@ -61,9 +88,9 @@ public class LightController : MonoBehaviour
             try
             {
                 bool onOff = false;
-                if (topOrBottom == 'T' && bitChart.topDrawer[lightBit - 1])
+                if (topOrBottom == 'T' && bitChart.topDrawer[bit - 1])
                     onOff = true;
-                else if (topOrBottom == 'B' && bitChart.bottomDrawer[lightBit - 1]) onOff = true;
+                else if (topOrBottom == 'B' && bitChart.bottomDrawer[bit - 1]) onOff = true;
                 if (invertBit) onOff = !onOff;
                 if (flash)
                 {
@@ -110,12 +137,12 @@ public class LightController : MonoBehaviour
                 nextTime = Mathf.Min(Mathf.Max(nextTime, 0), 1);
                 if (!materialLight)
                 {
-                    currentLight.intensity = intensity * nextTime * intensityMultiplier;
+                    currentLight.intensity = intensity * nextTime;
                 }
                 else if (!materialStars)
                 {
                     emissiveTexture.SetColor("_EmissiveColor",
-                        emissiveMatColor * nextTime * emissiveMultiplier * intensityMultiplier);
+                        emissiveMatColor * nextTime * emissiveMultiplier);
                 }
                 else
                 {
@@ -123,7 +150,7 @@ public class LightController : MonoBehaviour
                     if (!onOff && emissiveObject.activeSelf) emissiveObject.SetActive(false);
                 }
 
-                if (helicopter)
+                if (specialMode == SpecialMode.Helicopter)
                 {
                     if (onOff)
                     {
@@ -141,7 +168,7 @@ public class LightController : MonoBehaviour
                     transform.Rotate(new Vector3(0, 0, speed * Time.deltaTime * 8.0f));
                 }
 
-                if (chuckStar)
+                if (specialMode == SpecialMode.CuStar)
                 {
                     //Acceleration = time between patterns
                     //Flashcheck = pattern swap
@@ -170,7 +197,7 @@ public class LightController : MonoBehaviour
 
                         //Modulate light intensity by sine wave
                         currentLight.intensity = Mathf.Clamp(Mathf.Sin(speed * Mathf.PI * 2 - Mathf.PI / 2.0f) + 1, 0.5f, 1) *
-                                                 intensity * intensityMultiplier * nextTime;
+                                                 intensity * nextTime;
 
                         //Advance Speed
                         speed += Time.deltaTime * 15;
@@ -184,7 +211,7 @@ public class LightController : MonoBehaviour
                         textureSet = true;
                         //Modulate light intensity by sine wave
                         currentLight.intensity =
-                            (Mathf.Sin(speed * 40 - 0.5f) + 1) * intensity * intensityMultiplier * nextTime;
+                            (Mathf.Sin(speed * 40 - 0.5f) + 1) * intensity * nextTime;
                     }
                 }
             }

@@ -9,13 +9,13 @@ using UnityEngine.Video;
 
 public class TimelineEditor : MonoBehaviour
 {
-    public UI_ShowtapeManager uiShowtapeManager;
+    public DF_ShowtapeManager uiShowtapeManager;
     public UI_SidePanel sidePanel;
     public WaveformVisualizer waveformVisualizer;
     public ShowtapeAnalyzer analyzer;
     public BitVisualization bitvis;
     public TimelineBitVis timelineBitVis;
-    public Mack_Valves mackValves;
+    public MacValves mackValves;
     public Dropdown file;
     public Dropdown edit;
     public Dropdown analysis;
@@ -39,10 +39,10 @@ public class TimelineEditor : MonoBehaviour
     public Text fileName;
     public Text extraInfoText;
 
-    public UI_WindowMaker windowMaker;
-    public UI_PlayRecord playRecord;
+    public DF_WindowManager windowMaker;
+    public DF_ShowManager playRecord;
 
-    public UI_RshwCreator creator;
+    public DF_ShowtapeCreator creator;
 
     //Timeline Zoom View
     public float viewZoomMin;
@@ -190,11 +190,7 @@ public class TimelineEditor : MonoBehaviour
                     uiShowtapeManager.recordMovements = true;
                     break;
                 case 4:
-                    if (GameVersion.gameName != "Faz-Anim")
-                        SceneManager.LoadScene("Title RR");
-                    else
                         SceneManager.LoadScene("Title Screen");
-
                     break;
             }
 
@@ -531,17 +527,17 @@ public class TimelineEditor : MonoBehaviour
                     if (ui != null)
                     {
                         ui = ui.transform.Find("Show Selector").transform.Find("UI").gameObject;
-                        windowMaker = ui.GetComponent<UI_WindowMaker>();
-                        playRecord = ui.GetComponent<UI_PlayRecord>();
+                        windowMaker = ui.GetComponent<DF_WindowManager>();
+                        playRecord = ui.GetComponent<DF_ShowManager>();
                         sidePanel = playRecord.sidePanel;
-                        Mack_Valves mv = GameObject.Find("Studio C").transform.Find("Mack Valves").gameObject
-                            .GetComponent<Mack_Valves>();
+                        MacValves mv = GameObject.Find("Studio C").transform.Find("Mack Valves").gameObject
+                            .GetComponent<MacValves>();
                         mackValves = mv;
                         uiShowtapeManager.mack = mv;
                         uiShowtapeManager.inputHandler = mv.gameObject.GetComponent<InputHandler>();
                         bitvis.mackvalves = mv;
                         cameraFeeds = GameObject.Find("Studio C").transform.Find("Cameras").gameObject;
-                        ui.GetComponent<UI_ShowtapeManager>().enabled = false;
+                        ui.GetComponent<DF_ShowtapeManager>().enabled = false;
                         ui.transform.position = new Vector3(0, -100, 0);
                         sidePanel.transform.position = new Vector3(0, -100, 0);
                         CamFeedCreate();
@@ -562,17 +558,17 @@ public class TimelineEditor : MonoBehaviour
                     if (ui != null)
                     {
                         ui = ui.transform.Find("Show Selector").transform.Find("UI").gameObject;
-                        windowMaker = ui.GetComponent<UI_WindowMaker>();
-                        playRecord = ui.GetComponent<UI_PlayRecord>();
+                        windowMaker = ui.GetComponent<DF_WindowManager>();
+                        playRecord = ui.GetComponent<DF_ShowManager>();
                         sidePanel = playRecord.sidePanel;
-                        Mack_Valves mv = GameObject.Find("RFE").transform.Find("Mack Valves").gameObject
-                            .GetComponent<Mack_Valves>();
+                        MacValves mv = GameObject.Find("RFE").transform.Find("Mack Valves").gameObject
+                            .GetComponent<MacValves>();
                         mackValves = mv;
                         uiShowtapeManager.mack = mv;
                         uiShowtapeManager.inputHandler = mv.gameObject.GetComponent<InputHandler>();
                         bitvis.mackvalves = mv;
                         cameraFeeds = GameObject.Find("RFE").transform.Find("Cameras").gameObject;
-                        ui.GetComponent<UI_ShowtapeManager>().enabled = false;
+                        ui.GetComponent<DF_ShowtapeManager>().enabled = false;
                         ui.transform.position = new Vector3(0, -100, 0);
                         sidePanel.transform.position = new Vector3(0, -100, 0);
                         CamFeedCreate();
@@ -593,17 +589,17 @@ public class TimelineEditor : MonoBehaviour
                     if (ui != null)
                     {
                         ui = ui.transform.Find("Show Selector").transform.Find("UI").gameObject;
-                        windowMaker = ui.GetComponent<UI_WindowMaker>();
-                        playRecord = ui.GetComponent<UI_PlayRecord>();
+                        windowMaker = ui.GetComponent<DF_WindowManager>();
+                        playRecord = ui.GetComponent<DF_ShowManager>();
                         sidePanel = playRecord.sidePanel;
-                        Mack_Valves mv = GameObject.Find("Cyberamics").transform.Find("Mack Valves").gameObject
-                            .GetComponent<Mack_Valves>();
+                        MacValves mv = GameObject.Find("Cyberamics").transform.Find("Mack Valves").gameObject
+                            .GetComponent<MacValves>();
                         mackValves = mv;
                         uiShowtapeManager.mack = mv;
                         uiShowtapeManager.inputHandler = mv.gameObject.GetComponent<InputHandler>();
                         bitvis.mackvalves = mv;
                         cameraFeeds = GameObject.Find("Cyberamics").transform.Find("Cameras").gameObject;
-                        ui.GetComponent<UI_ShowtapeManager>().enabled = false;
+                        ui.GetComponent<DF_ShowtapeManager>().enabled = false;
                         ui.transform.position = new Vector3(0, -100, 0);
                         sidePanel.transform.position = new Vector3(0, -100, 0);
                         CamFeedCreate();
@@ -624,17 +620,17 @@ public class TimelineEditor : MonoBehaviour
                     if (ui != null)
                     {
                         ui = ui.transform.Find("Show Selector").transform.Find("UI").gameObject;
-                        windowMaker = ui.GetComponent<UI_WindowMaker>();
-                        playRecord = ui.GetComponent<UI_PlayRecord>();
+                        windowMaker = ui.GetComponent<DF_WindowManager>();
+                        playRecord = ui.GetComponent<DF_ShowManager>();
                         sidePanel = playRecord.sidePanel;
-                        Mack_Valves mv = GameObject.Find("NRAE").transform.Find("Mack Valves").gameObject
-                            .GetComponent<Mack_Valves>();
+                        MacValves mv = GameObject.Find("NRAE").transform.Find("Mack Valves").gameObject
+                            .GetComponent<MacValves>();
                         mackValves = mv;
                         uiShowtapeManager.mack = mv;
                         uiShowtapeManager.inputHandler = mv.gameObject.GetComponent<InputHandler>();
                         bitvis.mackvalves = mv;
                         cameraFeeds = GameObject.Find("NRAE").transform.Find("Cameras").gameObject;
-                        ui.GetComponent<UI_ShowtapeManager>().enabled = false;
+                        ui.GetComponent<DF_ShowtapeManager>().enabled = false;
                         ui.transform.position = new Vector3(0, -100, 0);
                         sidePanel.transform.position = new Vector3(0, -100, 0);
                         CamFeedCreate();

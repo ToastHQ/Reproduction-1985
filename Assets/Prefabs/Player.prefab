@@ -540,7 +540,7 @@ Transform:
   m_GameObject: {fileID: 3852793577529384422}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.657, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -844,7 +844,6 @@ GameObject:
   - component: {fileID: 3852793578409061699}
   - component: {fileID: 3852793578409061726}
   - component: {fileID: 3852793578409061697}
-  - component: {fileID: 3852793578409061727}
   - component: {fileID: 2885054147867749297}
   - component: {fileID: 9221124378273534543}
   m_Layer: 3
@@ -862,9 +861,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3852793578409061698}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 36.71, y: -1.059, z: 27.705}
-  m_LocalScale: {x: 1.245614, y: 1.245614, z: 1.245614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3852793577529384418}
@@ -873,7 +872,7 @@ Transform:
   - {fileID: 5076645860099521667}
   - {fileID: 9039335672552081696}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &3852793578409061726
 CharacterController:
   m_ObjectHideFlags: 0
@@ -892,7 +891,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.3
+  m_Height: 1
   m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -1047,35 +1046,6 @@ MonoBehaviour:
   GPJoy: {x: 0, y: 0}
   GPCam: {x: 0, y: 0}
   GPZoom: {x: 0, y: 0}
---- !u!114 &3852793578409061727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3852793578409061698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b5f8ff5a2fe544db5af1baa98c161b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sphereCastRadius: 0.3
-  layers:
-    serializedVersion: 2
-    m_Bits: 459265
-  lookObject: {fileID: 0}
-  pickupParent: {fileID: 3852793578746981977}
-  pickupParentLook: {fileID: 3852793578077514525}
-  currentlyPickedUpObject: {fileID: 0}
-  freeze: 0
-  minSpeed: 0
-  maxSpeed: 1500
-  maxDistance: 1
-  rotationSpeed: 100
-  holdingRotation: {x: 0, y: 0}
-  pickupLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!114 &2885054147867749297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2027,7 +1997,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 1719363347
   m_SortingOrder: 2

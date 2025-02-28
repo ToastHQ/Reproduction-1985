@@ -2,6 +2,9 @@ using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
+/// <summary>
+/// 
+/// </summary>
 [Serializable]
 public class rshwFormat
 {
@@ -43,3 +46,4 @@ public class rshwFormat
         }
     }
 }
+

@@ -7,12 +7,12 @@ public class AudioController : MonoBehaviour
     public List<AudioClip> soundClips;
     public List<bool> boolChecks;
     private AudioSource aud;
-    private Mack_Valves bitChart;
+    private MacValves bitChart;
 
     // Start is called before the first frame update
     private void Start()
     {
-        bitChart = GameObject.Find("Mack Valves").GetComponent<Mack_Valves>();
+        bitChart = GameObject.Find("Mac Valves").GetComponent<MacValves>();
         aud = GetComponent<AudioSource>();
     }
 

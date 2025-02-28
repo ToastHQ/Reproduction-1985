@@ -57,7 +57,7 @@ public class DebugMenu : MonoBehaviour
 
             // screen info
             GUILayout.Label("\n========= screen =========");
-            GUILayout.Label($"resolution: {Screen.currentResolution.width} x {Screen.currentResolution.height} @ {Screen.currentResolution.refreshRate} hz");
+            GUILayout.Label($"resolution: {Screen.currentResolution.width} x {Screen.currentResolution.height} @ {Screen.currentResolution.refreshRateRatio} hz");
             GUILayout.Label($"fullscreen: {Screen.fullScreen}");
             GUILayout.Label($"dpi: {Screen.dpi}");
             GUILayout.Label($"screen orientation: {Screen.orientation}");

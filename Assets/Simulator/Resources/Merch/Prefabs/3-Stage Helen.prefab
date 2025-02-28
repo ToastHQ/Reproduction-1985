@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9017051416378366193}
-  - component: {fileID: 296066162731368190}
   - component: {fileID: 7583077403560290607}
   m_Layer: 0
   m_Name: 3-Stage Helen
@@ -34,22 +33,6 @@ Transform:
   - {fileID: 1201565453771097372}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &296066162731368190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6399878732559516432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa7f3337049fd3e45a10136c51be64a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitOnPickup: 0.2
-  breakForce: 35
-  pickedUp: 0
-  playerInteractions: {fileID: 0}
 --- !u!65 &7583077403560290607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -290,7 +273,7 @@ Animator:
   m_GameObject: {fileID: 2010577705956286374}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 47fc1bd986ae29341a98bf5d7e82812a, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -314,98 +297,335 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649eaf629188b374b8fcda18fbf0a608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mackValves: {fileID: 0}
-  invertChart: []
-  cylParamHash: 
-  cylDrawer: 
-  cylBit: 
-  cylLayerId: 
+  PSIScale: 1
+  movements:
+  - name: Shoulder R
+    animation: {fileID: -2984444310896951120, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 18
+    drawer: 1
+    flowControlOut: 0.5
+    flowControlIn: 0.5
+    gravityScale: 0.4
+    gravityScaleOut: 0.4
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.15
+    invert: 1
+  - name: Shoulder L
+    animation: {fileID: -9003452450044033663, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 23
+    drawer: 1
+    flowControlOut: 0.5
+    flowControlIn: 0.5
+    gravityScale: 0.4
+    gravityScaleOut: 0.4
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.15
+    invert: 1
+  - name: Arm Twist R
+    animation: {fileID: 3995452154824446307, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 19
+    drawer: 1
+    flowControlOut: 0.5
+    flowControlIn: 0.5
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.15
+    invert: 1
+  - name: Arm R
+    animation: {fileID: 1423217702784814172, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 20
+    drawer: 1
+    flowControlOut: 0.5
+    flowControlIn: 0.5
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.15
+    invert: 1
+  - name: Wrist L
+    animation: {fileID: -1080981150467215828, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 24
+    drawer: 1
+    flowControlOut: 0.5
+    flowControlIn: 0.5
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.15
+    invert: 1
+  - name: Arm Twist L
+    animation: {fileID: -8991522383943760092, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 25
+    drawer: 1
+    flowControlOut: 0.5
+    flowControlIn: 0.5
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.15
+    invert: 1
+  - name: Ear L
+    animation: {fileID: 3589792099415168844, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 26
+    drawer: 1
+    flowControlOut: 1
+    flowControlIn: 1
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1
+    invert: 1
+  - name: Ear R
+    animation: {fileID: -5700021940034454182, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 27
+    drawer: 1
+    flowControlOut: 1
+    flowControlIn: 1
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1
+    invert: 1
+  - name: Head Left
+    animation: {fileID: 83207907464575627, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 28
+    drawer: 1
+    flowControlOut: 0.4
+    flowControlIn: 0.3
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.21
+    invert: 1
+  - name: Head Right
+    animation: {fileID: 3177541799068961987, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 29
+    drawer: 1
+    flowControlOut: 0.4
+    flowControlIn: 0.3
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.21
+    invert: 1
+  - name: Head Up
+    animation: {fileID: -4913389476121632529, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 30
+    drawer: 1
+    flowControlOut: 0.35
+    flowControlIn: 0.35
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.195
+    invert: 1
+  - name: Eyelid L
+    animation: {fileID: -8102774646436671295, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 31
+    drawer: 1
+    flowControlOut: 1
+    flowControlIn: 1
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1
+    invert: 1
+  - name: Eyelid R
+    animation: {fileID: 7165113696694872863, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 32
+    drawer: 1
+    flowControlOut: 1
+    flowControlIn: 1
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1
+    invert: 1
+  - name: Eyes Left
+    animation: {fileID: 433276810487897329, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 33
+    drawer: 1
+    flowControlOut: 1
+    flowControlIn: 1
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1
+    invert: 1
+  - name: Eyes Right
+    animation: {fileID: -3398162639280079445, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 34
+    drawer: 1
+    flowControlOut: 1
+    flowControlIn: 1
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1
+    invert: 1
+  - name: Mouth
+    animation: {fileID: 4223387270798655664, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 35
+    drawer: 1
+    flowControlOut: 1.5
+    flowControlIn: 1
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1
+    invert: 1
+  - name: Body Turn Left
+    animation: {fileID: 3617365225271917043, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 36
+    drawer: 1
+    flowControlOut: 0.3
+    flowControlIn: 0.3
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.21
+    invert: 1
+  - name: Body Turn Right
+    animation: {fileID: -8376643437477355781, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 37
+    drawer: 1
+    flowControlOut: 0.3
+    flowControlIn: 0.3
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.21
+    invert: 1
+  - name: Body Lean
+    animation: {fileID: -1718317249047265409, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+    bit: 38
+    drawer: 1
+    flowControlOut: 0.25
+    flowControlIn: 0.25
+    gravityScale: 1
+    gravityScaleOut: 1
+    smashOut: 0
+    smashIn: 0
+    smashSpeedOut: 0
+    smashSpeedIn: 0
+    smashIteration: 1
+    smashState: 0
+    weightOut: 0
+    weightIn: 1.225
+    invert: 1
+  valves: 1
+  squeaks: 1
+  airLeaks: 1
   dualPressureState: 1
   specialState: 0
   headOutBit: 0
   headInBit: 0
-  PSIScale: 1
-  gravityScale:
-  - 1.75
-  - 1.2
-  - 1
-  - 1.75
-  - 1.2
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 2.07
-  gravityScaleOut:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  flowControlOut:
-  - 0.4
-  - 0.55
-  - 0.45
-  - 0.4
-  - 0.55
-  - 0.45
-  - 1.5
-  - 1.5
-  - 0.4
-  - 0.4
-  - 0.3
-  - 0.9
-  - 0.9
-  - 1
-  - 1
-  - 1.55
-  - 0.35
-  - 0.35
-  - 0.31
-  flowControlIn:
-  - 0.3
-  - 0.5
-  - 0.47
-  - 0.3
-  - 0.5
-  - 0.47
-  - 1.4
-  - 1.4
-  - 0.39
-  - 0.39
-  - 0.53
-  - 0.8
-  - 0.8
-  - 0.9
-  - 0.9
-  - 0.84
-  - 0.3
-  - 0.3
-  - 0.2
-  smashControlOut: []
-  smashControlIn: []
-  smashSpeedOut: []
-  smashSpeedIn: []
