@@ -74,12 +74,12 @@ Once you have made the necessary changes in your fork, [open up a pull request](
 - [ ] Launcher-style main menu
 - [ ] New flow management system
 - [ ] Improve the existing .*shw format's security & performance
-- [ ] Valve Sounds
+- [x] Valve Sounds
     
 - [ ] **Maps**   
   - [ ] **3-Stage**  
     - [x] All materials converted to URP (no pink missing shaders)
-    - [ ] General Props implemented fully
+    - [x] General Props implemented fully
     - [ ] Spotlights prop
     - [ ] **Characters**
       - [ ] CathodePlayer's Helen (unknown location, was publically released in [Animatronic Game Hub](https://discord.gg/WRQvaw6EM9))
