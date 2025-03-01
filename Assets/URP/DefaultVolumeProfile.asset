@@ -33,10 +33,10 @@ MonoBehaviour:
     m_Value: 10
   aperture:
     m_OverrideState: 1
-    m_Value: 5.6
+    m_Value: 6
   focalLength:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 97
   bladeCount:
     m_OverrideState: 1
     m_Value: 5
@@ -551,6 +551,7 @@ MonoBehaviour:
   - {fileID: 762124488593107335}
   - {fileID: 4590258295167463118}
   - {fileID: -7894274608163144414}
+  - {fileID: 2168555183176504089}
 --- !u!114 &762124488593107335
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -588,13 +589,76 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.4
   response:
     m_OverrideState: 1
     m_Value: 0.8
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
+--- !u!114 &2168555183176504089
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd03cbbfa7b7fe4dbc3d7709b42d662, type: 3}
+  m_Name: ScreenSpaceGlobalIlluminationVolume
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 1
+  thicknessMode:
+    m_OverrideState: 1
+    m_Value: 1
+  depthBufferThickness:
+    m_OverrideState: 1
+    m_Value: 0.1
+  quality:
+    m_OverrideState: 1
+    m_Value: 0
+  fullResolutionSS:
+    m_OverrideState: 1
+    m_Value: 1
+  resolutionScaleSS:
+    m_OverrideState: 1
+    m_Value: 0.5
+  sampleCount:
+    m_OverrideState: 1
+    m_Value: 2
+  maxRaySteps:
+    m_OverrideState: 1
+    m_Value: 32
+  denoiseSS:
+    m_OverrideState: 1
+    m_Value: 1
+  denoiserAlgorithmSS:
+    m_OverrideState: 1
+    m_Value: 1
+  denoiseIntensitySS:
+    m_OverrideState: 1
+    m_Value: 0.95
+  denoiserRadiusSS:
+    m_OverrideState: 1
+    m_Value: 1
+  secondDenoiserPassSS:
+    m_OverrideState: 1
+    m_Value: 1
+  rayMiss:
+    m_OverrideState: 1
+    m_Value: 2
+  indirectDiffuseLightingMultiplier:
+    m_OverrideState: 1
+    m_Value: 2
+  indirectDiffuseRenderingLayers:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 0
+      m_Bits: 4294967295
 --- !u!114 &2783183012506209204
 MonoBehaviour:
   m_ObjectHideFlags: 3
