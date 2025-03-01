@@ -43,7 +43,7 @@ No releases have been published at this time. Please check back later.
 
 1. Setup Prerequisites
    - Make sure you are on a stable internet connection
-   - Install Unity 6 Long Term Support (6000.0.37f1). This can be done via the [Unity Hub](https://docs.unity3d.com/hub/manual/InstallHub.html)
+   - Install Unity 6 Long Term Support (6000.0.40f1). This can be done via the [Unity Hub](https://docs.unity3d.com/hub/manual/InstallHub.html)
    - Install a suitable git client, we recommend [Github Desktop](https://desktop.github.com/download/)
    - [Fork the repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) and then [clone your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#cloning-your-forked-repository) onto a drive with suitable space (25GB+)
 2. Open the project
