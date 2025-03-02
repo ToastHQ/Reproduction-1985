@@ -1,14 +1,2 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/UI%20Toolkit/Yaru.uss?fileID=7433441132597879392&amp;guid=c9cd08297395006e089a7e9d282f9aa7&amp;type=3#Yaru" />
-    <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: column; background-color: rgb(24, 24, 24);">
-        <ui:VisualElement name="Topbar" style="flex-grow: 1; flex-basis: auto; flex-shrink: 1; height: auto; max-height: 50px;">
-            <ui:VisualElement name="Tabs" style="flex-grow: 1; justify-content: center; align-items: center; align-content: auto; flex-direction: row;">
-                <ui:Tab label="Home" />
-                <ui:Tab label="Settings" />
-            </ui:VisualElement>
-        </ui:VisualElement>
-        <ui:VisualElement name="Main" style="flex-grow: 1;">
-            <ui:TabView />
-        </ui:VisualElement>
-    </ui:VisualElement>
 </ui:UXML>

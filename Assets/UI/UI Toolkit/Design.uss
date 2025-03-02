@@ -1,0 +1,122 @@
+.container {
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/UI/Fonts/Ubuntu/Ubuntu-Regular.ttf?fileID=12800000&guid=cfc5eed0bad77e0f198e594f963c0a74&type=3#Ubuntu-Regular");
+}
+
+.header {
+    flex-grow: 1;
+    background-color: rgb(11, 12, 12);
+    max-height: 50px;
+    align-items: auto;
+    align-content: stretch;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+    min-height: 50px;
+}
+
+.navbar {
+    flex-grow: 1;
+    max-height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgb(177, 180, 182);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.widthContainer {
+    flex-grow: 1;
+    width: 1024px;
+    max-width: 1024px;
+    align-self: center;
+    justify-content: center;
+    align-content: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-shrink: 1;
+    min-width: auto;
+}
+
+.unity-tab__header {
+    min-height: 50px;
+    font-size: 20px;
+    -unity-font-definition: url("project://database/Assets/UI/Fonts/Ubuntu/Ubuntu-Bold.ttf?fileID=12800000&guid=3b73378d4903035c1be9c89ee6335f17&type=3#Ubuntu-Bold");
+    align-self: auto;
+    align-content: auto;
+}
+
+.unity-tab__header:checked > .unity-tab__header-underline {
+    background-color: rgb(29, 112, 184);
+    height: 3px;
+}
+
+.unity-tab-view__header-container {
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(177, 180, 182);
+    flex-grow: 0;
+    flex-direction: row;
+    align-self: stretch;
+}
+
+.unity-tab-view__content {
+}
+
+.unity-tab-view {
+    align-items: stretch;
+    align-self: stretch;
+}
+
+.unity-tab-view__content-container {
+    align-self: stretch;
+    align-content: stretch;
+    width: auto;
+    max-width: none;
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.unity-tab {
+    width: 100%;
+}
+
+.unity-scroll-view__content-container {
+    align-content: auto;
+    flex-direction: column;
+    align-items: auto;
+    align-self: auto;
+    justify-content: center;
+}
+
+.unity-foldout {
+    width: 100%;
+    font-size: 16px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(177, 180, 182);
+}
+
+.unity-foldout__content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.splitter {
+    height: 1px;
+    background-color: rgb(177, 180, 182);
+    padding-top: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.unity-base-field__label {
+    width: 200px;
+}
+
+.unity-base-field__input {
+    margin-left: 0;
+}

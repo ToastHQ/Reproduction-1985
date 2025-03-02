@@ -5,13 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Intro Screen/Intro Screen.unity
-    guid: 32e12fb78186c524a95803cccb5ea44a
-  - enabled: 0
-    path: Assets/Scenes/Launcher/Title RR.unity
-    guid: 9b438a3370aa5164286652e843532b8e
   - enabled: 1
+    path: Assets/Scenes/Launcher/Launcher.unity
+    guid: 0def511cfb257fbf5932fa4e9fee40df
+  - enabled: 0
     path: Assets/Scenes/Maps/MAP 3-Stage Default/MAP 3-Stage Default.unity
     guid: f05b207fdd26b56c1a78ba96c58953f4
   m_configObjects:
