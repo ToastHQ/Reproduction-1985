@@ -23,35 +23,6 @@ public class DF_ShowtapeCreator : MonoBehaviour
         manager = GetComponent<DF_ShowtapeManager>();
     }
 
-    public addWavResult AddWav()
-    {
-        manager.speakerClip = null;
-        CursorLockMode lockState = Cursor.lockState;
-        Cursor.lockState = CursorLockMode.None;
-        Debug.Log("Adding Wav");
-        //Call File Browser
-        manager.wavPath = "";
-        manager.showtapeSegmentPaths[0] = "";
-        string[] paths = StandaloneFileBrowser.OpenFilePanel("Browse Showtape Audio", "", "wav", false);
-        if (paths.Length > 0)
-        {
-            if (paths[0] != "")
-            {
-                manager.wavPath = paths[0];
-                manager.speakerClip = OpenWavParser.ByteArrayToAudioClip(File.ReadAllBytes(paths[0]));
-                manager.audioVideoGetData.Invoke();
-                CreateBitArray();
-                if (manager.speakerClip == null) return addWavResult.uncompressed;
-
-                return addWavResult.noSource;
-            }
-
-            return addWavResult.none;
-        }
-
-        return addWavResult.noSource;
-    }
-
     public void AddWavSpecial()
     {
         CursorLockMode lockState = Cursor.lockState;

@@ -134,10 +134,18 @@ PrefabInstance:
       propertyPath: m_UpdateWhenOffscreen
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4561193470005248270, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -3468930774887861460, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3138288746687354429, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -2418447339448717214, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -154,6 +162,10 @@ PrefabInstance:
       propertyPath: m_UpdateWhenOffscreen
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1314584013615251059, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -1286807191621883367, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
       propertyPath: m_LightProbeUsage
       value: 0
@@ -182,6 +194,10 @@ PrefabInstance:
       propertyPath: m_UpdateWhenOffscreen
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -646609513654099797, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -501930538830631127, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -194,6 +210,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LooneyShowbiz
       objectReference: {fileID: 0}
+    - target: {fileID: 2849557189142416942, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
+    - target: {fileID: 3480069806281489118, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 4409317717735073646, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -218,6 +242,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7160063935013164114, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 7338094062480144537, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
       propertyPath: m_Name
       value: Armature
@@ -226,6 +254,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7756560348854094227, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 8046881494826360093, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
       propertyPath: m_LightProbeUsage
       value: 0
@@ -252,6 +284,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3177354655527030906}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3904234354093115745}
   m_SourcePrefab: {fileID: 100100000, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
 --- !u!1 &2367014237493161256 stripped
 GameObject:
@@ -311,6 +346,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyelid R
     animation: {fileID: 7165113696694872863, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
     bit: 42
@@ -328,6 +365,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyes Cross
     animation: {fileID: -6705907368276732199, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
     bit: 43
@@ -345,6 +384,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Head Turn
     animation: {fileID: 83207907464575627, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
     bit: 21
@@ -362,6 +403,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Raise
     animation: {fileID: 6209474720423992317, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
     bit: 22
@@ -379,6 +422,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 0.0675
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Mouth
     animation: {fileID: -2058056044862172881, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}
     bit: 17
@@ -396,6 +441,9 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 0.85
     invert: 1
+    previousState: 0
+    mid: 0
+  soundStyle: 0
   valves: 1
   squeaks: 1
   airLeaks: 1
@@ -403,6 +451,103 @@ MonoBehaviour:
   specialState: 0
   headOutBit: 0
   headInBit: 0
+--- !u!82 &3904234354093115745
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367014237493161256}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &3139715122803652498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8eac62f63f362ce4098c4b6205a09f19, type: 3}

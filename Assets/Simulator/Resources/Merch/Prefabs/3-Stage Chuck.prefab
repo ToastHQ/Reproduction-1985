@@ -110,18 +110,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5347320590037998503, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -4219790596598332819, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3876269419488600092, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -2418447339448717214, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2000668023247552991, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
+    - target: {fileID: -1841968786621955668, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -1578668517888099339, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1314584013615251059, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -1139427108516103099, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -130,6 +150,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -646609513654099797, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 919132149155446097, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
       propertyPath: m_Name
       value: RolfeandEarl
@@ -138,18 +162,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1790583001969871594, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 1949413299263851793, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3032275054078093960, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
+    - target: {fileID: 3817677691714222842, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 5313534015800884009, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5427055838945345560, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 7493558928055654926, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7629779435626316884, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 7796352373051542596, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -176,6 +220,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7193411275886756126}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1916554692125356974}
   m_SourcePrefab: {fileID: 100100000, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
 --- !u!4 &6096421464923653668 stripped
 Transform:
@@ -240,6 +287,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 0.7
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyelid L
     animation: {fileID: -8102774646436671295, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 2
@@ -257,6 +306,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 0.85
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyelid R
     animation: {fileID: 7165113696694872863, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 3
@@ -274,6 +325,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 0.85
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyes L
     animation: {fileID: 433276810487897329, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 4
@@ -291,6 +344,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyes R
     animation: {fileID: -3398162639280079445, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 5
@@ -308,6 +363,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Head L
     animation: {fileID: 83207907464575627, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 6
@@ -325,6 +382,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.18
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Head R
     animation: {fileID: 3177541799068961987, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 7
@@ -342,6 +401,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.18
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Head Up
     animation: {fileID: -4913389476121632529, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 8
@@ -359,6 +420,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.18
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Ear L
     animation: {fileID: 3589792099415168844, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 9
@@ -376,6 +439,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Ear R
     animation: {fileID: -5700021940034454182, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 10
@@ -393,6 +458,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Shoulder L
     animation: {fileID: -9003452450044033663, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 11
@@ -410,6 +477,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.12
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Arm L
     animation: {fileID: -8991522383943760092, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 12
@@ -427,6 +496,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.12
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Wrist L
     animation: {fileID: -1080981150467215828, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 13
@@ -444,6 +515,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.15
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Body Turn L
     animation: {fileID: 3057708023422154675, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 14
@@ -461,6 +534,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Body Turn R
     animation: {fileID: -7735774312874855075, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 15
@@ -478,6 +553,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Body Lean
     animation: {fileID: -1718317249047265409, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 16
@@ -495,6 +572,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Shoulder R
     animation: {fileID: -2984444310896951120, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 17
@@ -512,6 +591,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.12
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Arm R
     animation: {fileID: 1423217702784814172, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 18
@@ -529,6 +610,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.075
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Arm Twist R
     animation: {fileID: 3995452154824446307, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 19
@@ -546,6 +629,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.15
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Puppet Tilt
     animation: {fileID: -5905202996547947776, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 20
@@ -563,6 +648,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Puppet Mouth
     animation: {fileID: 617168707837980510, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 21
@@ -580,6 +667,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 0
+    previousState: 0
+    mid: 0
   - name: Puppet Eyebrow
     animation: {fileID: -400139838784463890, guid: d05d90e6f5f86b047b35e7fa71847eda, type: 3}
     bit: 22
@@ -597,6 +686,9 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 0
+    previousState: 0
+    mid: 0
+  soundStyle: 0
   valves: 1
   squeaks: 1
   airLeaks: 1
@@ -604,3 +696,100 @@ MonoBehaviour:
   specialState: 0
   headOutBit: 0
   headInBit: 0
+--- !u!82 &1916554692125356974
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6904308127028944030}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

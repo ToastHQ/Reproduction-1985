@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: rosebyte.xyz
   productName: Project Duofur
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 6b7c4d83994d3a937b319fd12fb70c14, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 0
@@ -142,8 +142,8 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
   preloadedAssets:
-  - {fileID: 5601843810378404734, guid: e985232ef48a1b748be3ccf81d9bfb2a, type: 2}
-  - {fileID: 7407940477989334947, guid: 2a11291a9fff6fc49bdde0367e131c15, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1

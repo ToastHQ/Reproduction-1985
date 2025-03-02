@@ -110,10 +110,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8678809451619450559, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+      propertyPath: 'm_Materials.Array.data[8]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -7453150189703121370, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6721954386865348526, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+      propertyPath: 'm_Materials.Array.data[6]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -6295341739367589697, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.0014378445
@@ -130,6 +138,10 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5347320590037998503, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -5180335593140051321, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -178,10 +190,18 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1314584013615251059, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -646609513654099797, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -646609513654099797, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -31949672583147123, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.0019318169
@@ -218,10 +238,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2921740940337504549, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+      propertyPath: 'm_Materials.Array.data[7]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 3817677691714222842, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3817677691714222842, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 4403476009689345256, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -252,6 +280,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1668135149249919760}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5317644208398861079}
   m_SourcePrefab: {fileID: 100100000, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
 --- !u!4 &1201565453771097372 stripped
 Transform:
@@ -316,6 +347,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.15
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Shoulder L
     animation: {fileID: -9003452450044033663, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 23
@@ -333,6 +366,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.15
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Arm Twist R
     animation: {fileID: 3995452154824446307, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 19
@@ -350,6 +385,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.15
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Arm R
     animation: {fileID: 1423217702784814172, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 20
@@ -367,6 +404,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.15
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Wrist L
     animation: {fileID: -1080981150467215828, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 24
@@ -384,6 +423,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.15
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Arm Twist L
     animation: {fileID: -8991522383943760092, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 25
@@ -401,6 +442,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.15
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Ear L
     animation: {fileID: 3589792099415168844, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 26
@@ -418,6 +461,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Ear R
     animation: {fileID: -5700021940034454182, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 27
@@ -435,6 +480,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Head Left
     animation: {fileID: 83207907464575627, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 28
@@ -452,6 +499,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Head Right
     animation: {fileID: 3177541799068961987, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 29
@@ -469,6 +518,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Head Up
     animation: {fileID: -4913389476121632529, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 30
@@ -486,6 +537,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.195
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyelid L
     animation: {fileID: -8102774646436671295, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 31
@@ -503,6 +556,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyelid R
     animation: {fileID: 7165113696694872863, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 32
@@ -520,6 +575,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyes Left
     animation: {fileID: 433276810487897329, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 33
@@ -537,6 +594,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyes Right
     animation: {fileID: -3398162639280079445, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 34
@@ -554,6 +613,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Mouth
     animation: {fileID: 4223387270798655664, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 35
@@ -571,6 +632,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Body Turn Left
     animation: {fileID: 3617365225271917043, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 36
@@ -588,6 +651,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Body Turn Right
     animation: {fileID: -8376643437477355781, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 37
@@ -605,6 +670,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Body Lean
     animation: {fileID: -1718317249047265409, guid: a25c2ad0d5516044c988353f8508def9, type: 3}
     bit: 38
@@ -622,6 +689,9 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.225
     invert: 1
+    previousState: 0
+    mid: 0
+  soundStyle: 0
   valves: 1
   squeaks: 1
   airLeaks: 1
@@ -629,3 +699,100 @@ MonoBehaviour:
   specialState: 0
   headOutBit: 0
   headInBit: 0
+--- !u!82 &5317644208398861079
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010577705956286374}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

@@ -122,6 +122,10 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5347320590037998503, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -4561193470005248270, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
       propertyPath: m_LightProbeUsage
       value: 0
@@ -130,6 +134,14 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3876269419488600092, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
+    - target: {fileID: -2994100033652938029, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -2418447339448717214, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -138,6 +150,10 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2000668023247552991, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -1578668517888099339, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -146,6 +162,10 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1314584013615251059, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: -1139427108516103099, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -154,10 +174,18 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -646609513654099797, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 919132149155446097, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
       propertyPath: m_Name
       value: BeachBear
       objectReference: {fileID: 0}
+    - target: {fileID: 999268332887894564, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 1949413299263851793, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -166,6 +194,10 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3817677691714222842, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 5313534015800884009, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -174,6 +206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Armature
       objectReference: {fileID: 0}
+    - target: {fileID: 7023813153764963596, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5332e488c3ecced56a04b0fa367c11f4, type: 2}
     - target: {fileID: 7493558928055654926, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -192,6 +228,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3043753760593942574}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2588739989627033511}
   m_SourcePrefab: {fileID: 100100000, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
 --- !u!1 &2809397597234210162 stripped
 GameObject:
@@ -251,6 +290,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyelid R
     animation: {fileID: 3124184821994342154, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 2
@@ -268,6 +309,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Eyes Cross
     animation: {fileID: -6705907368276732199, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 3
@@ -285,6 +328,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Head Left
     animation: {fileID: -1818950162399287984, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 6
@@ -302,6 +347,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Head Right
     animation: {fileID: 7402230198621166923, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 7
@@ -319,6 +366,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Head Up
     animation: {fileID: -4913389476121632529, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 8
@@ -336,6 +385,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.21
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Mouth
     animation: {fileID: 768535513267556900, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 16
@@ -353,6 +404,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 0.85
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Body Lean
     animation: {fileID: -7567656522128324632, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 15
@@ -370,6 +423,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.225
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Shoulder R
     animation: {fileID: -2953527778590845221, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 11
@@ -387,6 +442,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.225
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Arm Twist R
     animation: {fileID: -8973741374403628952, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 12
@@ -404,6 +461,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.24
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Wrist R
     animation: {fileID: 2766202887342132908, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 13
@@ -421,6 +480,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Hand R
     animation: {fileID: 7733244973078190657, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 14
@@ -438,6 +499,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.15
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Guitar Slide
     animation: {fileID: 434663305003526948, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 4
@@ -455,6 +518,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.18
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Guitar Raise
     animation: {fileID: -1383612497406154702, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 5
@@ -472,6 +537,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.225
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Leg L
     animation: {fileID: -3226468755154405012, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 9
@@ -489,6 +556,8 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1.18
     invert: 1
+    previousState: 0
+    mid: 0
   - name: Leg R
     animation: {fileID: 6388773446516638307, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
     bit: 10
@@ -506,6 +575,9 @@ MonoBehaviour:
     weightOut: 0
     weightIn: 1
     invert: 1
+    previousState: 0
+    mid: 0
+  soundStyle: 0
   valves: 1
   squeaks: 1
   airLeaks: 1
@@ -513,6 +585,103 @@ MonoBehaviour:
   specialState: 0
   headOutBit: 0
   headInBit: 0
+--- !u!82 &2588739989627033511
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2809397597234210162}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &3294150676498317256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d6eb24df996f53a4080c87b4e5ad3844, type: 3}
