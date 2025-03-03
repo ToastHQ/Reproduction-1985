@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: rosebyte.xyz
   productName: Project Duofur
-  defaultCursor: {fileID: 2800000, guid: 6b7c4d83994d3a937b319fd12fb70c14, type: 3}
+  defaultCursor: {fileID: 2800000, guid: a4610777e4f7a09b28677b548196acd0, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 0
