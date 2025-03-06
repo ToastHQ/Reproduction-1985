@@ -23,37 +23,7 @@
 Project Duofur is an animatronic simulation software based in Unity. Most of its code currently derives from [RR Engine Vanilla Enhanced](https://github.com/EnderSkippy/RR-Engine-Vanilla-Enhanced), a fork of the long-abandoned RR Engine (aka Reel to Real). This project aims to continue it and add needed features.
 
 ## Getting Started
-> [!NOTE]
-> Most maps are not ready at this time. The 3-Stage map is the most stable and ideally should be used as a base.
-This is instructions on how to install and setup the software. Only the source code method can be used if you intend on [contributing to the software.](#contributing)
-
-> [!IMPORTANT]
-> Read the [Legal Disclaimer](#legal-disclaimer) before you use this software.
-
-### Gamejolt
-*Recommended for general users of the software. Quickest method.*
-
-No releases have been published at this time. Please check back later.
-
-### Source Code
-*Recommended for experienced users & people intending on contributing to the software.*
-
-> [!NOTE]
-> It's recommended to have good knowledge of both Github and Unity before proceeding, else you are more likely to run into issues.
-
-1. Setup Prerequisites
-   - Make sure you are on a stable internet connection
-   - Install Unity 6 Long Term Support (6000.0.40f1). This can be done via the [Unity Hub](https://docs.unity3d.com/hub/manual/InstallHub.html)
-   - Install a suitable git client, we recommend [Github Desktop](https://desktop.github.com/download/)
-   - [Fork the repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) and then [clone your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#cloning-your-forked-repository) onto a drive with suitable space (25GB+)
-2. Open the project
-   - Switch to the relevant branch based on what you intend on doing. See [Branches](#branches) for more info.
-   - Open the Unity Hub and then click `Open > Add Project From Disk`
-   - Wait for the project to open, it will take a bit as it has to download & install all the packages.
-4. Get editing!
-   - As of right now, map scenes are stored in `Assets > Scenes > Maps`. Once you're in one *(we recommend the 3-Stage map as it is the most used)*, hit the play button and you'll be shortly loaded in!
-  
-Make sure you fetch changes regularly via your git client (e.g Github Desktop). Fetching changes will make sure you always have the latest version of the software.
+See the wiki for information
 
 ## Contributing
 
