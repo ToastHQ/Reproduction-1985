@@ -908,7 +908,7 @@ MonoBehaviour:
   cursorText: {fileID: 9109519927512681436}
   uiLayerMask:
     serializedVersion: 2
-    m_Bits: 33
+    m_Bits: 32
   pauseMenu: {fileID: 7721184935988952501}
 --- !u!114 &2885054147867749297
 MonoBehaviour:

@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/UI%20Toolkit/Design.uss?fileID=7433441132597879392&amp;guid=db6abca3d152003d1a5db431c66cc6b0&amp;type=3#Design" />
-    <ui:VisualElement class="container" style="flex-grow: 1;">
+    <ui:VisualElement name="Main" class="container" style="flex-grow: 1;">
         <ui:VisualElement name="Header" class="header" style="flex-grow: 1;">
             <ui:VisualElement name="widthContainer" class="widthContainer" style="flex-grow: 1;">
                 <ui:VisualElement name="Logo" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Logos/pd-mono.png?fileID=2800000&amp;guid=bd18daa29402a84fbaa42ba4a8e01656&amp;type=3#pd-mono&quot;); flex-direction: row; width: 100%; -unity-background-scale-mode: scale-to-fit; background-position-x: left 0; margin-bottom: 5px; margin-top: 5px;" />
@@ -9,8 +9,12 @@
         <ui:VisualElement name="Bar" style="flex-grow: 1; height: 10px; min-height: 10px; max-height: 10px; background-color: rgb(29, 112, 184);" />
         <ui:TabView>
             <ui:Tab label="Home" name="Home">
-                <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: row; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px;">
-                    <ui:TreeView />
+                <ui:VisualElement name="Container">
+                    <ui:VisualElement name="MainHeader" style="flex-grow: 1; background-color: rgb(29, 112, 184); color: rgb(255, 255, 255); padding-top: 15px; padding-bottom: 15px;">
+                        <ui:VisualElement name="widthContainer" class="widthContainer" style="flex-grow: 1; padding-right: 300px;">
+                            <ui:Label text="Welcome" style="-unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Ubuntu/Ubuntu-Bold.ttf?fileID=12800000&amp;guid=3b73378d4903035c1be9c89ee6335f17&amp;type=3#Ubuntu-Bold&quot;); font-size: 56px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:Tab>
             <ui:Tab label="Options" name="Options">
@@ -34,19 +38,17 @@
                 <ui:ScrollView>
                     <ui:VisualElement name="widthContainer" class="widthContainer" style="flex-grow: 1; width: 800px; max-width: 800px;">
                         <ui:VisualElement name="Logo" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Logos/pd-light.png?fileID=2800000&amp;guid=53383a5e77c662758acb1fd6c74d4512&amp;type=3#pd-light&quot;); width: 100%; height: 100px; -unity-background-scale-mode: scale-to-fit; margin-top: 25px; margin-bottom: 25px;" />
-                        <ui:Foldout text="Credits" name="Credits" value="false">
-                            <ui:VisualElement name="Split" style="flex-grow: 1; flex-direction: row; flex-basis: auto; align-self: auto; justify-content: center; align-items: auto; align-content: auto;">
-                                <ui:VisualElement name="Left" style="flex-grow: 1; width: 100%;">
-                                    <ui:Label text="&lt;b&gt;rosebyte&lt;/b&gt;&#10;Lead Developer" name="Left" style="flex-shrink: 1; -unity-text-align: upper-center; margin-bottom: 25px;" />
-                                    <ui:Label text="&lt;b&gt;EnderSkippy&lt;/b&gt;&#10;RR Vanilla Enhanced" name="Left" style="flex-shrink: 1; -unity-text-align: upper-center; margin-bottom: 25px;" />
-                                </ui:VisualElement>
-                                <ui:VisualElement name="Right" style="flex-grow: 1; width: 100%;">
-                                    <ui:Label text="&lt;b&gt;The64thGamer&lt;/b&gt;&#10;RR Engine" name="Right" style="flex-shrink: 1; -unity-text-align: upper-center; margin-bottom: 25px;" />
-                                    <ui:Label text="&lt;b&gt;Himitsu&lt;/b&gt;&#10;RR Codebase Improvements" name="Right" style="flex-shrink: 1; -unity-text-align: upper-center; margin-bottom: 25px;" />
-                                </ui:VisualElement>
+                        <ui:VisualElement name="Split" style="flex-grow: 1; flex-direction: row; flex-basis: auto; align-self: auto; justify-content: center; align-items: auto; align-content: auto; width: 100%;">
+                            <ui:VisualElement name="Left" style="flex-grow: 1; width: 100%;">
+                                <ui:Label text="&lt;b&gt;rosebyte&lt;/b&gt;&#10;Lead Developer" name="Left" style="flex-shrink: 1; -unity-text-align: upper-center; margin-bottom: 25px;" />
+                                <ui:Label text="&lt;b&gt;EnderSkippy&lt;/b&gt;&#10;RR Vanilla Enhanced" name="Left" style="flex-shrink: 1; -unity-text-align: upper-center; margin-bottom: 25px;" />
                             </ui:VisualElement>
-                            <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Logos/rosebyte-white.png?fileID=2800000&amp;guid=2897d00e111ca0854be3b39628ab889a&amp;type=3#rosebyte-white&quot;); height: 100px; -unity-background-image-tint-color: rgb(212, 53, 28); -unity-background-scale-mode: scale-to-fit; margin-top: 25px; margin-right: 25px; margin-bottom: 25px; margin-left: 25px;" />
-                        </ui:Foldout>
+                            <ui:VisualElement name="Right" style="flex-grow: 1; width: 100%;">
+                                <ui:Label text="&lt;b&gt;The64thGamer&lt;/b&gt;&#10;RR Engine" name="Right" style="flex-shrink: 1; -unity-text-align: upper-center; margin-bottom: 25px;" />
+                                <ui:Label text="&lt;b&gt;Himitsu&lt;/b&gt;&#10;RR Codebase Improvements" name="Right" style="flex-shrink: 1; -unity-text-align: upper-center; margin-bottom: 25px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="rosebyte" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Logos/rosebyte-white.png?fileID=2800000&amp;guid=2897d00e111ca0854be3b39628ab889a&amp;type=3#rosebyte-white&quot;); width: 100%; height: 75px; -unity-background-scale-mode: scale-to-fit; margin-top: 0; margin-bottom: 15px; -unity-background-image-tint-color: rgb(212, 53, 28);" />
                         <ui:Foldout text="Legal Information" name="Legal" value="false">
                             <ui:Label text="This project is an unofficial, fan-made continuation of the “Reel to Real” game, originally developed by The 64th Gamer. It is not affiliated with, endorsed by, or associated with Chuck E. Cheese, CEC Entertainment Inc, Creative Engineering Inc, or any related entities. All trademarks, characters, and other copyrighted materials are the property of their respective owners.&#10;&#10;This project is intended solely for educational and entertainment purposes, and is non-commercial in nature. No financial gain is made from this project, and all content remains free to the public. Any use of copyrighted materials is for the purpose of preservation, tribute, and transformation, and is considered fair use under copyright law.&#10;&#10;This project is provided &quot;as is,&quot; without any warranty of any kind, either express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, or non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software." />
                         </ui:Foldout>

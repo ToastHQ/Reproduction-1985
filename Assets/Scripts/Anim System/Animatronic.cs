@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Global;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Animations;
@@ -463,10 +464,4 @@ public class Movement
     // Sounds
     [HideInInspector] public bool previousState; // If it's already been played or not
     [HideInInspector] public bool mid; // If it's in the middle of a movement, used for air leaks & squeaks
-}
-
-public enum Drawer
-{
-    Top,
-    Bottom,
 }

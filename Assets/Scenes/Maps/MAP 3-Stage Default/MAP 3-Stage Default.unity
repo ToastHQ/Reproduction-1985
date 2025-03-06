@@ -748,7 +748,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -1003,7 +1003,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -1580,7 +1580,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -2324,17 +2324,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 675984014}
     m_Modifications:
-    - target: {fileID: 1918337359526889284, guid: 8f20a30f814d28e18b09ff6497e11100, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 3630807102527485215, guid: 8f20a30f814d28e18b09ff6497e11100, type: 3}
       propertyPath: m_Name
       value: Organ
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630807102527485215, guid: 8f20a30f814d28e18b09ff6497e11100, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4118796388398919589, guid: 8f20a30f814d28e18b09ff6497e11100, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2375,18 +2367,6 @@ PrefabInstance:
     - target: {fileID: 4118796388398919589, guid: 8f20a30f814d28e18b09ff6497e11100, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4736731156886086234, guid: 8f20a30f814d28e18b09ff6497e11100, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4736731156886086234, guid: 8f20a30f814d28e18b09ff6497e11100, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6979729214797073955, guid: 8f20a30f814d28e18b09ff6497e11100, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3200,7 +3180,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -3363,7 +3343,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 7248
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: -0.0003644079, z: 0, w: 82.25653}
@@ -3706,7 +3686,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -9618,7 +9598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bit: 95
   topOrBottom: 66
-  fadeSpeed: 0.0828
+  fadeSpeed: 0.2
   intensity: 0.125
   specialMode: 0
   strobe: 0
@@ -10518,7 +10498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bit: 95
   topOrBottom: 66
-  fadeSpeed: 0.0828
+  fadeSpeed: 0.2
   intensity: 0.125
   specialMode: 0
   strobe: 0
@@ -10986,8 +10966,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bit: 95
   topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.02
+  fadeSpeed: 0.1
+  intensity: 0.5
   specialMode: 0
   strobe: 0
   flash: 0
@@ -10999,7 +10979,7 @@ MonoBehaviour:
   invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
 --- !u!108 &491784394
 Light:
   m_ObjectHideFlags: 0
@@ -11633,7 +11613,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -14361,6 +14341,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 8411048797943015034, guid: 9f16f1162fa7b100cb93a518cd586a73, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8115ab63c7a01db0cb69bc308b098c79, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15732,7 +15716,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 7248
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: -0.0003644079, z: 0, w: 82.25653}
@@ -17150,7 +17134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bit: 95
   topOrBottom: 66
-  fadeSpeed: 0.0828
+  fadeSpeed: 0.2
   intensity: 0.125
   specialMode: 0
   strobe: 0
@@ -18549,7 +18533,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -20804,7 +20788,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -21620,7 +21604,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -27095,7 +27079,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -31440,7 +31424,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -32012,7 +31996,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -35958,7 +35942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bit: 95
   topOrBottom: 66
-  fadeSpeed: 0.0828
+  fadeSpeed: 0.2
   intensity: 0.125
   specialMode: 0
   strobe: 0
@@ -38831,7 +38815,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -41803,7 +41787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bit: 95
   topOrBottom: 66
-  fadeSpeed: 0.0828
+  fadeSpeed: 0.2
   intensity: 0.125
   specialMode: 0
   strobe: 0
@@ -42332,7 +42316,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -44384,7 +44368,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}
@@ -45800,7 +45784,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.7849045, y: 0.01}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.3924841}

@@ -1,4 +1,5 @@
 using System;
+using Global;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,7 +12,8 @@ public class LightController : MonoBehaviour
 {
     [FormerlySerializedAs("lightBit")]
     public int bit;
-    public char topOrBottom;
+
+    public Drawer drawer;
     
     [Range(0.01f, 1f)] public float fadeSpeed;
 
@@ -55,9 +57,11 @@ public class LightController : MonoBehaviour
     private bool errorOccured;
 
     
-    [Header("Deprecated - Use Intensity instead")]
+    [Header("Deprecated - Avoid using")]
     [Obsolete("Intensity Multiplier should not be used, use Intensity instead")]
     public float intensityMultiplier;
+    [Obsolete]
+    public char topOrBottom;
 
 
     private void Start()

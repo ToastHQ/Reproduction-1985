@@ -46,11 +46,23 @@
     -unity-font-definition: url("project://database/Assets/UI/Fonts/Ubuntu/Ubuntu-Bold.ttf?fileID=12800000&guid=3b73378d4903035c1be9c89ee6335f17&type=3#Ubuntu-Bold");
     align-self: auto;
     align-content: auto;
+    color: rgb(29, 112, 184);
+}
+
+.unity-tab__header:hover {
+    color: rgb(0, 48, 120);
+}
+
+.unity-tab__header:checked {
+    color: rgb(29, 112, 184);
 }
 
 .unity-tab__header:checked > .unity-tab__header-underline {
-    background-color: rgb(29, 112, 184);
     height: 3px;
+    background-color: rgb(29, 112, 184);
+    transition-property: background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
 }
 
 .unity-tab-view__header-container {
@@ -151,14 +163,6 @@
     border-right-width: 2px;
     border-bottom-width: 2px;
     border-left-width: 2px;
-}
-
-.splitter {
-    height: 1px;
-    background-color: rgb(177, 180, 182);
-    padding-top: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .splitter {
