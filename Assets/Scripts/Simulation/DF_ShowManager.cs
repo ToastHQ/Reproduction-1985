@@ -104,7 +104,7 @@ public class DF_ShowManager : MonoBehaviour
 
         //Update Lights
         for (int i = 0; i < stages[currentStage].lightValves.Length; i++)
-            stages[currentStage].lightValves[i].CreateMovements(Time.deltaTime * 60);
+            stages[currentStage].lightValves[i].UpdateLight();
 
         //Update Curtains
         if (stages[currentStage].curtainValves != null)
@@ -114,13 +114,6 @@ public class DF_ShowManager : MonoBehaviour
             else
                 stages[currentStage].curtainValves.CreateMovements(Time.deltaTime * 60, false);
         }
-
-        //Update Turntables
-        for (int i = 0; i < stages[currentStage].tableValves.Length; i++)
-            stages[currentStage].tableValves[i].CreateMovements(Time.deltaTime * 60);
-
-        //Update AudioController
-        if (stages[currentStage].texController != null) stages[currentStage].texController.CreateTex();
 
         //Update TV turn offs
         if (manager.videoPath != "")

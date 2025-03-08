@@ -250,8 +250,6 @@ public class DF_WindowManager : MonoBehaviour
         CustomiseWindow.transform.Find("Name").gameObject.GetComponent<TMP_Text>().text = stages[current].stageName;
         CustomiseWindow.transform.Find("Down").gameObject.GetComponent<Button3D>().funcWindow = current;
         CustomiseWindow.transform.Find("Up").gameObject.GetComponent<Button3D>().funcWindow = current;
-        CustomiseWindow.transform.Find("Icon").gameObject.GetComponent<Image>().sprite =
-            stages[current].stageIcon;
     }
 
     public void MakeDeleteMoveMenu(int page)

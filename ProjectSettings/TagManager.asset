@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - projectile
-  - FxTemporaire
-  - Seat Enter
-  - Seat Exit
+  - Prop
+  - Animatronic
   layers:
   - Default
   - TransparentFX
@@ -15,23 +13,23 @@ TagManager:
   - Player
   - Water
   - UI
-  - Player1
-  - Player2
+  - 
+  - 
   - PostProcessing
-  - Interactables
-  - Instrument
-  - DoorCollider
-  - Door
-  - VRHands
-  - NoInteractPickups
-  - Player UI
-  - Frozen Interactable
-  - Interactable Cube
-  - Frozen Cube
-  - Mr Hugs
-  - Pool Table
-  - VR Hands
-  - Brick
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

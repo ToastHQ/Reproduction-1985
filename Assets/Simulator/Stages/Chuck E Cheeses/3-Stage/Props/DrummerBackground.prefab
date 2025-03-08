@@ -77,6 +77,10 @@ PrefabInstance:
       value: DrummerBackground
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6fb318f7cfe2c131e9551aa842ddb320, type: 3}
+      propertyPath: m_TagString
+      value: Prop
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6fb318f7cfe2c131e9551aa842ddb320, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

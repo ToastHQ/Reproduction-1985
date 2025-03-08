@@ -61,12 +61,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 082b6af811369e72c9dbecce563a905c, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 082b6af811369e72c9dbecce563a905c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f2f8323a6d1e712499d53b45e3aa2645, type: 2}
     - target: {fileID: 919132149155446097, guid: 082b6af811369e72c9dbecce563a905c, type: 3}
       propertyPath: m_Name
       value: DogBarrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 082b6af811369e72c9dbecce563a905c, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 082b6af811369e72c9dbecce563a905c, type: 3}
       propertyPath: m_StaticEditorFlags

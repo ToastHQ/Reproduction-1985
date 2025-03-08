@@ -61,9 +61,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a41f1e97bb76144efbdbe0c740b930d7, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a41f1e97bb76144efbdbe0c740b930d7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 606c2d51978e9f84987ee87ef5783db2, type: 2}
+      objectReference: {fileID: 2100000, guid: 01d3c8c3a35375627b0a40c7c5002d43, type: 2}
     - target: {fileID: -7511558181221131132, guid: a41f1e97bb76144efbdbe0c740b930d7, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -75,6 +79,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a41f1e97bb76144efbdbe0c740b930d7, type: 3}
       propertyPath: m_Name
       value: TV
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a41f1e97bb76144efbdbe0c740b930d7, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a41f1e97bb76144efbdbe0c740b930d7, type: 3}
       propertyPath: m_StaticEditorFlags

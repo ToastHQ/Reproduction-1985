@@ -191,21 +191,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 92
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1858717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,9 +233,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 55.97927
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -271,7 +274,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 4079
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: -0.4015534, z: 0, w: 0}
@@ -418,21 +421,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!1 &12321432
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,21 +511,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 84
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &12321436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,9 +553,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0, g: 0.40828085, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -668,21 +677,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 66
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &16653618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,21 +935,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 67
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &49886539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,21 +1100,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 71
-  topOrBottom: 84
-  fadeSpeed: 0.28
+  invert: 0
+  drawer: 0
   intensity: 10
+  fadeTime: 0.02000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &51493881
 Light:
   m_ObjectHideFlags: 0
@@ -1337,21 +1355,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 93
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &73493565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,21 +1521,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 66
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &84287522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1664,21 +1688,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 83
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &95489955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,9 +1730,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -2224,21 +2251,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 81
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &119783468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2621,21 +2651,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 81
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &136235961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2937,21 +2970,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 81
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &147600999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2976,9 +3012,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0.3551203, g: 1, b: 0, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -3100,21 +3136,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 69
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &149720260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3263,21 +3302,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 74
-  topOrBottom: 84
-  fadeSpeed: 0.18
-  intensity: 0.35
+  invert: 0
+  drawer: 0
+  intensity: 70
+  fadeTime: 0.120000005
+  lightMode: 1
   specialMode: 0
-  strobe: 1
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &156880420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3606,21 +3648,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 68
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &164388211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3833,9 +3878,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1952079402}
   - {fileID: 1634061953}
-  - {fileID: 577291248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &176878267
@@ -3990,21 +4033,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 88
-  topOrBottom: 84
-  fadeSpeed: 0.0381
+  invert: 0
+  drawer: 0
   intensity: 60
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &177397195
 Light:
   m_ObjectHideFlags: 0
@@ -4141,21 +4187,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 86
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &178010060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4540,21 +4589,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!1001 &184409495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4711,21 +4763,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &188832926
 Light:
   m_ObjectHideFlags: 0
@@ -4967,21 +5022,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 71
-  topOrBottom: 84
-  fadeSpeed: 0.28
+  invert: 0
+  drawer: 0
   intensity: 10
+  fadeTime: 0.02000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &196611176
 Light:
   m_ObjectHideFlags: 0
@@ -5117,21 +5175,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &197110099
 Light:
   m_ObjectHideFlags: 0
@@ -5350,21 +5411,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 66
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &210716915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5387,7 +5451,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 0.34901962, g: 0.9372549, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.7058824, b: 1, a: 1}
   m_Intensity: 0
   m_Range: 6
   m_SpotAngle: 150
@@ -5434,6 +5498,127 @@ Light:
   m_ColorTemperature: 4079
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: 9.117989}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!1 &227826983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 227826984}
+  - component: {fileID: 227826986}
+  - component: {fileID: 227826985}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227826984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227826983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 977407834}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &227826985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227826983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &227826986
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227826983}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -5598,21 +5783,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 89
-  topOrBottom: 66
-  fadeSpeed: 0.0381
+  invert: 0
+  drawer: 1
   intensity: 5
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &233255341
 Light:
   m_ObjectHideFlags: 0
@@ -5630,7 +5818,7 @@ Light:
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -5749,21 +5937,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 71
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &243007998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5786,7 +5977,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 0.35087615, g: 0.9359934, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.7058824, b: 1, a: 1}
   m_Intensity: 0
   m_Range: 8
   m_SpotAngle: 160
@@ -6079,21 +6270,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 82
-  topOrBottom: 84
-  fadeSpeed: 0.0381
+  invert: 0
+  drawer: 0
   intensity: 60
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &248481872
 Light:
   m_ObjectHideFlags: 0
@@ -6960,21 +7154,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 88
-  topOrBottom: 66
-  fadeSpeed: 0.0381
+  invert: 0
+  drawer: 1
   intensity: 5
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &285719215
 Light:
   m_ObjectHideFlags: 0
@@ -6992,7 +7189,7 @@ Light:
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -7111,21 +7308,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 91
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 0.3225839
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &286125785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7360,21 +7560,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 74
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &299555894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7609,21 +7812,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 85
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &309158404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7773,21 +7979,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 85
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &309835390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7812,9 +8021,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -8634,21 +8843,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 81
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &350797692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8673,9 +8885,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0.3551203, g: 1, b: 0, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -8925,18 +9137,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 70
-  topOrBottom: 66
-  fadeSpeed: 0.151
+  invert: 0
+  drawer: 1
   intensity: 10.79038
+  fadeTime: 0.14900002
+  lightMode: 0
   specialMode: 2
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies:
   - {fileID: 2800000, guid: f45961f5b9af0c041836d3a98366bff8, type: 3}
@@ -8945,6 +9156,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 570f0cb3ca076e24ab49829ebb842c85, type: 3}
   - {fileID: 2800000, guid: 2548b18dcb4fb384eb00d83f73d3b4fd, type: 3}
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &361558179
 Light:
   m_ObjectHideFlags: 0
@@ -9092,115 +9307,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1869503973897881639, guid: 49e3f878c56ff3a4fbe24cf0bdbf821b, type: 3}
   m_PrefabInstance: {fileID: 363618912}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &363746597
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 363746598}
-  - component: {fileID: 363746601}
-  - component: {fileID: 363746600}
-  - component: {fileID: 363746599}
-  m_Layer: 0
-  m_Name: TV
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &363746598
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363746597}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.6862339, y: -0.17053762, z: 0.17053762, w: 0.6862339}
-  m_LocalPosition: {x: 5.052, y: 1.559, z: 3.712}
-  m_LocalScale: {x: 0.09983313, y: 0.001050808, z: 0.074231744}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 977407834}
-  m_LocalEulerAnglesHint: {x: -270, y: -349.5, z: 38.412}
---- !u!64 &363746599
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363746597}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &363746600
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363746597}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 257
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 448fb0e64a0794f4ea71715e9b90a6d5, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &363746601
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363746597}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &370304941
 GameObject:
   m_ObjectHideFlags: 0
@@ -9272,21 +9378,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 80
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 5
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &370304945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9435,21 +9544,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 84
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &370346930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9597,21 +9709,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 95
-  topOrBottom: 66
-  fadeSpeed: 0.2
-  intensity: 0.125
+  invert: 0
+  drawer: 1
+  intensity: 25
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &376388085
 Light:
   m_ObjectHideFlags: 0
@@ -10081,21 +10196,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 84
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &414354064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10120,9 +10238,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0, g: 0.40828085, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -10335,21 +10453,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 84
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &473547229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10497,21 +10618,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 95
-  topOrBottom: 66
-  fadeSpeed: 0.2
-  intensity: 0.125
+  invert: 0
+  drawer: 1
+  intensity: 25
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &474566922
 Light:
   m_ObjectHideFlags: 0
@@ -10647,18 +10771,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 70
-  topOrBottom: 66
-  fadeSpeed: 0.151
+  invert: 0
+  drawer: 1
   intensity: 10.79038
+  fadeTime: 0.14900002
+  lightMode: 0
   specialMode: 2
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies:
   - {fileID: 2800000, guid: f45961f5b9af0c041836d3a98366bff8, type: 3}
@@ -10667,6 +10790,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 570f0cb3ca076e24ab49829ebb842c85, type: 3}
   - {fileID: 2800000, guid: 2548b18dcb4fb384eb00d83f73d3b4fd, type: 3}
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &478846565
 Light:
   m_ObjectHideFlags: 0
@@ -10803,21 +10930,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 83
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &489734537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10965,21 +11095,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 95
-  topOrBottom: 66
-  fadeSpeed: 0.1
+  invert: 0
+  drawer: 1
   intensity: 0.5
+  fadeTime: 0.20000002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &491784394
 Light:
   m_ObjectHideFlags: 0
@@ -11116,21 +11249,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 82
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &496300676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11279,21 +11415,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 90
-  topOrBottom: 66
-  fadeSpeed: 0.0381
-  intensity: 2
+  invert: 0
+  drawer: 1
+  intensity: 300
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 150
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &498281816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11533,21 +11672,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 67
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &507961821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11889,21 +12031,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 85
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &523061801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11928,9 +12073,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -12138,21 +12283,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 91
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 0.3225839
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &529986425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12559,7 +12707,7 @@ Light:
   m_InnerSpotAngle: 70
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -12620,21 +12768,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!1 &565399106
 GameObject:
   m_ObjectHideFlags: 0
@@ -12707,21 +12858,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 85
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &565399110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12746,9 +12900,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -12881,71 +13035,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7227545116855099263, guid: b279dd39149c5e04dbccc3ef0b40ee2f, type: 3}
   m_PrefabInstance: {fileID: 571669863}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &577291247
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 577291248}
-  - component: {fileID: 577291249}
-  m_Layer: 0
-  m_Name: Reflection Probe
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &577291248
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577291247}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 0.7, z: -9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 175583566}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!215 &577291249
-ReflectionProbe:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577291247}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Type: 0
-  m_Mode: 1
-  m_RefreshMode: 1
-  m_TimeSlicingMode: 1
-  m_Resolution: 64
-  m_UpdateFrequency: 0
-  m_BoxSize: {x: 12, y: 3.5, z: 13}
-  m_BoxOffset: {x: 0, y: 0, z: 0}
-  m_NearClip: 0.3
-  m_FarClip: 1000
-  m_ShadowDistance: 10
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IntensityMultiplier: 1
-  m_BlendDistance: 1
-  m_HDR: 1
-  m_BoxProjection: 1
-  m_RenderDynamicObjects: 0
-  m_UseOcclusionCulling: 1
-  m_Importance: 1
-  m_CustomBakedTexture: {fileID: 0}
 --- !u!1 &583367850 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4389269856030946810, guid: 7317c0414aa0345428649f966e7f42b6, type: 3}
@@ -13281,21 +13370,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &614487840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13443,21 +13535,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 72
-  topOrBottom: 84
-  fadeSpeed: 0.28
+  invert: 0
+  drawer: 0
   intensity: 10
+  fadeTime: 0.02000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &614803440
 Light:
   m_ObjectHideFlags: 0
@@ -14095,21 +14190,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 83
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &650796355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14134,9 +14232,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -14971,21 +15069,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!1001 &700704197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15225,21 +15326,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 93
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &716097726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15485,21 +15589,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &722105883
 Light:
   m_ObjectHideFlags: 0
@@ -15636,21 +15743,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 75
-  topOrBottom: 84
-  fadeSpeed: 0.18
-  intensity: 0.35
+  invert: 0
+  drawer: 0
+  intensity: 70
+  fadeTime: 0.120000005
+  lightMode: 2
   specialMode: 0
-  strobe: 0
-  flash: 1
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &731398600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15885,21 +15995,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 84
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &764724720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16048,21 +16161,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 78
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &767490892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16214,7 +16330,7 @@ Light:
   m_InnerSpotAngle: 70
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -16275,21 +16391,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!1001 &775082474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16544,6 +16663,115 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 728806596233818925, guid: 9b62a5e67d3d31647a3e9fde392b46c8, type: 3}
   m_PrefabInstance: {fileID: 777659590}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &777871304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777871305}
+  - component: {fileID: 777871308}
+  - component: {fileID: 777871307}
+  - component: {fileID: 777871306}
+  m_Layer: 0
+  m_Name: TV
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &777871305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777871304}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6862339, y: -0.17053762, z: 0.17053762, w: 0.6862339}
+  m_LocalPosition: {x: 5.052, y: 1.559, z: 3.712}
+  m_LocalScale: {x: 0.09983313, y: 0.001050808, z: 0.074231744}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 977407834}
+  m_LocalEulerAnglesHint: {x: -270, y: -349.5, z: 38.412}
+--- !u!64 &777871306
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777871304}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &777871307
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777871304}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 448fb0e64a0794f4ea71715e9b90a6d5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &777871308
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777871304}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &784132313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16971,21 +17199,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 66
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &812122714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17008,7 +17239,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 0.34901962, g: 0.9372549, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.7058824, b: 1, a: 1}
   m_Intensity: 0
   m_Range: 6
   m_SpotAngle: 150
@@ -17133,21 +17364,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 95
-  topOrBottom: 66
-  fadeSpeed: 0.2
-  intensity: 0.125
+  invert: 0
+  drawer: 1
+  intensity: 25
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &813196795
 Light:
   m_ObjectHideFlags: 0
@@ -17449,21 +17683,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 82
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &841232263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17488,9 +17725,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.7599126, b: 0, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -17676,21 +17913,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!1001 &863783434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18020,21 +18260,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 76
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &865939988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18057,7 +18300,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 0.34901962, g: 0.9372549, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.7058824, b: 1, a: 1}
   m_Intensity: 0
   m_Range: 6
   m_SpotAngle: 150
@@ -18453,21 +18696,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 69
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &896434957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18683,21 +18929,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 94
-  topOrBottom: 66
-  fadeSpeed: 0.286
+  invert: 0
+  drawer: 1
   intensity: 0.2
+  fadeTime: 0.013999999
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 1
   emissiveObject: {fileID: 1140820839}
   emmissiveMatName: CECNeon (Instance)
   emissiveMultiplier: 2
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &910827208
 Light:
   m_ObjectHideFlags: 0
@@ -18979,21 +19228,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 84
-  fadeSpeed: 0.2
-  intensity: 100
+  invert: 0
+  drawer: 0
+  intensity: 250
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 0
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &925961964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19020,7 +19272,7 @@ Light:
   m_Intensity: 0
   m_Range: 12.55
   m_SpotAngle: 9.470873
-  m_InnerSpotAngle: 4.136935
+  m_InnerSpotAngle: 9.470873
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -19229,21 +19481,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 81
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &931375399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19268,9 +19523,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0.3551203, g: 1, b: 0, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -19392,21 +19647,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 73
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &936113341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19738,21 +19996,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 79
-  topOrBottom: 84
-  fadeSpeed: 0.1
+  invert: 0
+  drawer: 0
   intensity: 100
+  fadeTime: 0.20000002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 1
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &960847725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20216,12 +20477,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1717952221}
-  - {fileID: 363746598}
+  - {fileID: 777871305}
   - {fileID: 1989866283}
   - {fileID: 1745706100}
   - {fileID: 1279142212}
   - {fileID: 1177737030}
   - {fileID: 2782316736011041150}
+  - {fileID: 227826984}
   m_Father: {fileID: 2782316735723560118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &978628026
@@ -20381,21 +20643,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 84
-  fadeSpeed: 0.2
-  intensity: 100
+  invert: 0
+  drawer: 0
+  intensity: 250
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 0
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &982310643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20422,7 +20687,7 @@ Light:
   m_Intensity: 0
   m_Range: 12.55
   m_SpotAngle: 9.470873
-  m_InnerSpotAngle: 4.136935
+  m_InnerSpotAngle: 9.470873
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -20708,21 +20973,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 69
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1001281606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20871,21 +21139,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 78
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1008673672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21287,21 +21558,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 73
-  topOrBottom: 84
-  fadeSpeed: 0.28
+  invert: 0
+  drawer: 0
   intensity: 10
+  fadeTime: 0.02000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1037479673
 Light:
   m_ObjectHideFlags: 0
@@ -21524,21 +21798,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 68
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1040095900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21687,21 +21964,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1040987701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21934,21 +22214,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 80
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 5
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1052193605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22183,21 +22466,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1054762253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22346,21 +22632,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 68
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1055269682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22598,7 +22887,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 99b3cbafc8ad616d7ae81c6f8ece8f03, type: 3}
       propertyPath: 'm_Materials.Array.data[4]'
       value: 
-      objectReference: {fileID: 2100000, guid: 94579f12efa9e90d19e08c73a3084ef8, type: 2}
+      objectReference: {fileID: 2100000, guid: 5d5de57b5b4534d46b3a08b6bb94b5e4, type: 2}
     - target: {fileID: 919132149155446097, guid: 99b3cbafc8ad616d7ae81c6f8ece8f03, type: 3}
       propertyPath: m_Name
       value: Base
@@ -22804,21 +23093,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 81
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1077275647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22843,9 +23135,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0.3551203, g: 1, b: 0, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -22968,21 +23260,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 93
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1078332883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23005,11 +23300,11 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 0.35294116, g: 0.8327676, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.40784314, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 55.97927
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -23048,7 +23343,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 4079
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: -0.4015534, z: 0, w: 0}
@@ -23346,18 +23641,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 70
-  topOrBottom: 66
-  fadeSpeed: 0.151
+  invert: 0
+  drawer: 1
   intensity: 10.79038
+  fadeTime: 0.14900002
+  lightMode: 0
   specialMode: 2
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies:
   - {fileID: 2800000, guid: f45961f5b9af0c041836d3a98366bff8, type: 3}
@@ -23366,6 +23660,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 570f0cb3ca076e24ab49829ebb842c85, type: 3}
   - {fileID: 2800000, guid: 2548b18dcb4fb384eb00d83f73d3b4fd, type: 3}
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1085682233
 Light:
   m_ObjectHideFlags: 0
@@ -23806,21 +24104,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 92
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1114754308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24253,21 +24554,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 92
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1150669542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24292,9 +24596,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 55.97927
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -24333,7 +24637,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 4079
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0.9999999, y: -0.4015534, z: 0, w: 0}
@@ -24628,21 +24932,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 84
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1159398878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24876,21 +25183,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 81
-  topOrBottom: 84
-  fadeSpeed: 0.0381
+  invert: 0
+  drawer: 0
   intensity: 125
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1162145481
 Light:
   m_ObjectHideFlags: 0
@@ -25113,21 +25423,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 72
-  topOrBottom: 66
-  fadeSpeed: 0.0381
-  intensity: 1
+  invert: 0
+  drawer: 1
+  intensity: 25
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 25
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1173757998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25595,21 +25908,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 86
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1198654607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25926,21 +26242,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 83
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1203962285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26175,21 +26494,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 84
-  fadeSpeed: 0.2
-  intensity: 100
+  invert: 0
+  drawer: 0
+  intensity: 250
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 0
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1205737507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26216,7 +26538,7 @@ Light:
   m_Intensity: 0
   m_Range: 12.55
   m_SpotAngle: 9.470873
-  m_InnerSpotAngle: 4.136935
+  m_InnerSpotAngle: 9.470873
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -26522,21 +26844,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 73
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1224765352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26831,21 +27156,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!1001 &1235285004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26999,21 +27327,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 66
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1239097379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27163,21 +27494,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 84
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1240535331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27202,9 +27536,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0, g: 0.40828085, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -27326,21 +27660,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 79
-  topOrBottom: 84
-  fadeSpeed: 0.1
+  invert: 0
+  drawer: 0
   intensity: 10
+  fadeTime: 0.20000002
+  lightMode: 2
   specialMode: 0
-  strobe: 0
-  flash: 1
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1246554656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27488,18 +27825,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 70
-  topOrBottom: 66
-  fadeSpeed: 0.151
+  invert: 0
+  drawer: 1
   intensity: 10.79038
+  fadeTime: 0.14900002
+  lightMode: 0
   specialMode: 2
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies:
   - {fileID: 2800000, guid: f45961f5b9af0c041836d3a98366bff8, type: 3}
@@ -27508,6 +27844,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 570f0cb3ca076e24ab49829ebb842c85, type: 3}
   - {fileID: 2800000, guid: 2548b18dcb4fb384eb00d83f73d3b4fd, type: 3}
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1251814811
 Light:
   m_ObjectHideFlags: 0
@@ -27730,21 +28070,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 80
-  topOrBottom: 66
-  fadeSpeed: 0.148
+  invert: 0
+  drawer: 1
   intensity: 0.4
+  fadeTime: 0.15200001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1264210778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27975,21 +28318,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 74
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1276253174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28493,21 +28839,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 86
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1292045405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28743,21 +29092,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 86
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1308425315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28782,9 +29134,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -28907,21 +29259,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1311445594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28946,9 +29301,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0, g: 0.40828085, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -29091,6 +29446,10 @@ PrefabInstance:
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
+    - target: {fileID: 9221124378273534543, guid: c372dfd7f7262fb4388fda05084883f4, type: 3}
+      propertyPath: Pan2D
+      value: -0.186
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
@@ -29168,21 +29527,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 85
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1312169552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29539,21 +29901,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 84
-  fadeSpeed: 0.2
-  intensity: 100
+  invert: 0
+  drawer: 0
+  intensity: 250
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 0
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1341350867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29580,7 +29945,7 @@ Light:
   m_Intensity: 0
   m_Range: 12.55
   m_SpotAngle: 9.470873
-  m_InnerSpotAngle: 4.136935
+  m_InnerSpotAngle: 9.470873
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -29958,21 +30323,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 84
-  fadeSpeed: 0.0381
-  intensity: 2
+  invert: 0
+  drawer: 0
+  intensity: 300
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 1
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 150
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!1001 &1369063303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30294,21 +30662,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 82
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1391222664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30624,21 +30995,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 72
-  topOrBottom: 84
-  fadeSpeed: 0.28
+  invert: 0
+  drawer: 0
   intensity: 10
+  fadeTime: 0.02000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1404832217
 Light:
   m_ObjectHideFlags: 0
@@ -30930,7 +31304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5467024557104275486, guid: 9b62a5e67d3d31647a3e9fde392b46c8, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 127
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31013,21 +31387,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 77
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1418413021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31176,21 +31553,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 76
-  topOrBottom: 84
-  fadeSpeed: 0.1
-  intensity: 0.05
+  invert: 0
+  drawer: 0
+  intensity: 10
+  fadeTime: 0.05
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1424370557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31344,21 +31724,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 68
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1430350951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31507,21 +31890,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 67
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1454539383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31753,21 +32139,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1461818747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31792,9 +32181,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0, g: 0.40828085, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -31916,21 +32305,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 67
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1462080215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32423,21 +32815,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 84
-  fadeSpeed: 0.2
-  intensity: 100
+  invert: 0
+  drawer: 0
+  intensity: 250
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 0
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1487184254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32464,7 +32859,7 @@ Light:
   m_Intensity: 0
   m_Range: 12.55
   m_SpotAngle: 9.470873
-  m_InnerSpotAngle: 4.136935
+  m_InnerSpotAngle: 9.470873
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -32732,21 +33127,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!1 &1502495061
 GameObject:
   m_ObjectHideFlags: 0
@@ -32818,21 +33216,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 81
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1502495065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32957,21 +33358,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 0
+  drawer: 1
   intensity: 1
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 1
   emissiveObject: {fileID: 142477319}
   emmissiveMatName: House Lights Stage (Instance)
   emissiveMultiplier: 2
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1508582058
 Light:
   m_ObjectHideFlags: 0
@@ -33180,21 +33584,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 71
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1522356542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33217,7 +33624,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 0.35087615, g: 0.9359934, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.7058824, b: 1, a: 1}
   m_Intensity: 0
   m_Range: 8
   m_SpotAngle: 160
@@ -33342,21 +33749,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 73
-  topOrBottom: 84
-  fadeSpeed: 0.28
+  invert: 0
+  drawer: 0
   intensity: 10
+  fadeTime: 0.02000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1523668374
 Light:
   m_ObjectHideFlags: 0
@@ -33526,21 +33936,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1533740238
 Light:
   m_ObjectHideFlags: 0
@@ -33677,21 +34090,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 69
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 0
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 66
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0.0828
 --- !u!114 &1538065194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34011,21 +34427,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1547766076
 Light:
   m_ObjectHideFlags: 0
@@ -34163,21 +34582,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 82
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1554805192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34202,9 +34624,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.7599126, b: 0, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -34325,21 +34747,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1554869183
 Light:
   m_ObjectHideFlags: 0
@@ -34738,18 +35163,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 70
-  topOrBottom: 66
-  fadeSpeed: 0.151
+  invert: 0
+  drawer: 1
   intensity: 10.79038
+  fadeTime: 0.14900002
+  lightMode: 0
   specialMode: 2
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies:
   - {fileID: 2800000, guid: f45961f5b9af0c041836d3a98366bff8, type: 3}
@@ -34758,6 +35182,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 570f0cb3ca076e24ab49829ebb842c85, type: 3}
   - {fileID: 2800000, guid: 2548b18dcb4fb384eb00d83f73d3b4fd, type: 3}
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1564282060
 Light:
   m_ObjectHideFlags: 0
@@ -34980,21 +35408,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 77
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1567011657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35142,21 +35573,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1569282364
 Light:
   m_ObjectHideFlags: 0
@@ -35379,21 +35813,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 76
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1596398294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35416,7 +35853,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 0.34901962, g: 0.9372549, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.7058824, b: 1, a: 1}
   m_Intensity: 0
   m_Range: 6
   m_SpotAngle: 150
@@ -35709,21 +36146,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1600354765
 Light:
   m_ObjectHideFlags: 0
@@ -35941,21 +36381,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 95
-  topOrBottom: 66
-  fadeSpeed: 0.2
-  intensity: 0.125
+  invert: 0
+  drawer: 1
+  intensity: 25
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1624366392
 Light:
   m_ObjectHideFlags: 0
@@ -36286,21 +36729,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 86
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1645691397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36448,21 +36894,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 86
-  topOrBottom: 84
-  fadeSpeed: 0.0381
+  invert: 0
+  drawer: 0
   intensity: 60
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1650363720
 Light:
   m_ObjectHideFlags: 0
@@ -36600,21 +37049,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 86
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1661626330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36639,9 +37091,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -37205,21 +37657,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 85
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1713384488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37368,21 +37823,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 79
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1713500343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37656,21 +38114,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 93
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1719337148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37693,11 +38154,11 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 0.35294116, g: 0.8327676, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.40784314, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 55.97927
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -37736,7 +38197,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 4079
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: -0.4015534, z: 0, w: 0}
@@ -37819,21 +38280,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 71
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1727677108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37856,7 +38320,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 0.35087615, g: 0.9359934, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.7058824, b: 1, a: 1}
   m_Intensity: 0
   m_Range: 8
   m_SpotAngle: 160
@@ -38348,21 +38812,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 83
-  topOrBottom: 84
-  fadeSpeed: 0.0381
+  invert: 0
+  drawer: 0
   intensity: 60
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1764796860
 Light:
   m_ObjectHideFlags: 0
@@ -38498,21 +38965,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 85
-  topOrBottom: 84
-  fadeSpeed: 0.0381
+  invert: 0
+  drawer: 0
   intensity: 60
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1765462959
 Light:
   m_ObjectHideFlags: 0
@@ -38735,21 +39205,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 66
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1767909110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38985,21 +39458,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 84
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1771798799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39024,9 +39500,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0, g: 0.40828085, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -39527,21 +40003,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 84
-  topOrBottom: 84
-  fadeSpeed: 0.0381
+  invert: 0
+  drawer: 0
   intensity: 60
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1784887609
 Light:
   m_ObjectHideFlags: 0
@@ -40061,21 +40540,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 81
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1792384311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40392,21 +40874,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 73
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1796926517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40599,21 +41084,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 69
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1809844696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40765,7 +41253,7 @@ Light:
   m_InnerSpotAngle: 70
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -40826,21 +41314,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!1 &1814132781
 GameObject:
   m_ObjectHideFlags: 0
@@ -40912,21 +41403,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 77
-  topOrBottom: 84
-  fadeSpeed: 0.1
-  intensity: 0.05
+  invert: 0
+  drawer: 0
+  intensity: 10
+  fadeTime: 0.05
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1814132785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41225,21 +41719,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 64
-  topOrBottom: 66
-  fadeSpeed: 0.031
+  invert: 1
+  drawer: 1
   intensity: 8
+  fadeTime: 0.26900002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 1
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!4 &1828852055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5758945385194177687, guid: 7acf20c26d3308d4a933cbaf4a89948c, type: 3}
@@ -41317,21 +41814,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 86
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1833309762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41356,9 +41856,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -41562,21 +42062,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 84
-  fadeSpeed: 0.2
-  intensity: 100
+  invert: 0
+  drawer: 0
+  intensity: 250
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 0
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1848979310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41603,7 +42106,7 @@ Light:
   m_Intensity: 0
   m_Range: 12.55
   m_SpotAngle: 9.470873
-  m_InnerSpotAngle: 4.136935
+  m_InnerSpotAngle: 9.470873
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -41786,21 +42289,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 95
-  topOrBottom: 66
-  fadeSpeed: 0.2
-  intensity: 0.125
+  invert: 0
+  drawer: 1
+  intensity: 25
+  fadeTime: 0.10000001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &1869465285
 Light:
   m_ObjectHideFlags: 0
@@ -41937,21 +42443,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 68
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 0
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 66
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0.0828
 --- !u!114 &1870743036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42236,21 +42745,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 69
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1883154563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42571,21 +43083,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 79
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1896421071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42713,6 +43228,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2782316736011041150}
     m_Modifications:
+    - target: {fileID: 1668135149249919760, guid: 1439a0dcc07db1b4a9ea67b9539a5851, type: 3}
+      propertyPath: movements.Array.data[5].weightIn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668135149249919760, guid: 1439a0dcc07db1b4a9ea67b9539a5851, type: 3}
+      propertyPath: movements.Array.data[18].weightIn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6399878732559516432, guid: 1439a0dcc07db1b4a9ea67b9539a5851, type: 3}
       propertyPath: m_Name
       value: 3-Stage Helen
@@ -43132,21 +43655,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 92
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 16
+  fadeTime: 0.21720001
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1919310415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43295,21 +43821,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 74
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1930045012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43896,37 +44425,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5215550095545576150, guid: 7acf20c26d3308d4a933cbaf4a89948c, type: 3}
   m_PrefabInstance: {fileID: 2782316734043482467}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1952079401
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1952079402}
-  m_Layer: 0
-  m_Name: Lights
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1952079402
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952079401}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.23562479, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 175583566}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1959788765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44288,21 +44786,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 67
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &1972043046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45409,21 +45910,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 72
-  topOrBottom: 66
-  fadeSpeed: 0.0381
-  intensity: 1
+  invert: 0
+  drawer: 1
+  intensity: 25
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 25
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &2017426922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45704,21 +46208,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 68
-  topOrBottom: 84
-  fadeSpeed: 0.174
-  intensity: 1.25
+  invert: 0
+  drawer: 0
+  intensity: 62.5
+  fadeTime: 0.12600002
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 50
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &2041264157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46039,21 +46546,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 80
-  topOrBottom: 84
-  fadeSpeed: 0.1
+  invert: 0
+  drawer: 0
   intensity: 100
+  fadeTime: 0.20000002
+  lightMode: 0
   specialMode: 0
-  strobe: 1
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &2044146265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46291,21 +46801,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 80
-  topOrBottom: 84
-  fadeSpeed: 0.1
+  invert: 0
+  drawer: 0
   intensity: 10
+  fadeTime: 0.20000002
+  lightMode: 1
   specialMode: 0
-  strobe: 1
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &2059949810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46748,21 +47261,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 67
-  topOrBottom: 66
-  fadeSpeed: 0.0828
+  invert: 0
+  drawer: 1
   intensity: 2
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &2089127839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47084,21 +47600,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 86
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &2106062588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47123,9 +47642,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.23649447, b: 0.13679248, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -47223,21 +47742,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 75
-  topOrBottom: 66
-  fadeSpeed: 0.078
-  intensity: 0.2
+  invert: 0
+  drawer: 1
+  intensity: 40
+  fadeTime: 0.222
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 1
   emissiveObject: {fileID: 1562920135}
   emmissiveMatName: 
   emissiveMultiplier: 5
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 1
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &2115492015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47714,21 +48236,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 87
-  topOrBottom: 66
-  fadeSpeed: 0.0828
-  intensity: 0.08
+  invert: 0
+  drawer: 1
+  intensity: 5
+  fadeTime: 0.1
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &2138170582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47753,9 +48278,9 @@ Light:
   m_Type: 0
   m_Color: {r: 0, g: 0.40828085, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 4.754498
-  m_SpotAngle: 68.4
-  m_InnerSpotAngle: 12.678534
+  m_Range: 2
+  m_SpotAngle: 43.984936
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -47877,21 +48402,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 78
-  topOrBottom: 84
-  fadeSpeed: 0.1
-  intensity: 0.05
+  invert: 0
+  drawer: 0
+  intensity: 10
+  fadeTime: 0.05
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
-  intensityMultiplier: 200
+  intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!114 &2139933915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48039,21 +48567,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bit: 96
-  topOrBottom: 66
-  fadeSpeed: 0.0381
+  invert: 0
+  drawer: 1
   intensity: 60
+  fadeTime: 0.2619
+  lightMode: 0
   specialMode: 0
-  strobe: 0
-  flash: 0
   materialLight: 0
   emissiveObject: {fileID: 0}
   emmissiveMatName: 
   emissiveMultiplier: 1
   emissiveMatColor: {r: 1, g: 1, b: 1, a: 1}
-  invertBit: 0
   materialStars: 0
   starCookies: []
   intensityMultiplier: 1
+  topOrBottom: 0
+  strobe: 0
+  flash: 0
+  fadeSpeed: 0
 --- !u!108 &2140689845
 Light:
   m_ObjectHideFlags: 0
@@ -51713,7 +52244,7 @@ PrefabInstance:
     - target: {fileID: 5215550095897422190, guid: 7acf20c26d3308d4a933cbaf4a89948c, type: 3}
       propertyPath: 'stages.Array.data[0].tvs.Array.data[0].tvs.Array.data[0]'
       value: 
-      objectReference: {fileID: 363746600}
+      objectReference: {fileID: 0}
     - target: {fileID: 5215550095897422190, guid: 7acf20c26d3308d4a933cbaf4a89948c, type: 3}
       propertyPath: 'stages.Array.data[0].tvs.Array.data[0].tvs.Array.data[1]'
       value: 

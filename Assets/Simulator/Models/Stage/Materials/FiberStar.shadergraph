@@ -723,7 +723,7 @@
     "m_ShaderOutputName": "B",
     "m_StageCapability": 3,
     "m_Value": {
-        "e00": 5.0,
+        "e00": 0.25,
         "e01": 2.0,
         "e02": 2.0,
         "e03": 2.0,
@@ -1027,10 +1027,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1306.0,
-            "y": 136.99998474121095,
+            "x": -1333.9998779296875,
+            "y": 99.99999237060547,
             "width": 124.0,
-            "height": 173.0000457763672
+            "height": 172.99996948242188
         }
     },
     "m_Slots": [
@@ -1489,7 +1489,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_HashType": 1
+    "m_HashType": 0
 }
 
 {
@@ -1981,7 +1981,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "CellDensity",
     "m_StageCapability": 3,
-    "m_Value": 50.0,
+    "m_Value": 25.0,
     "m_DefaultValue": 5.0,
     "m_Labels": []
 }

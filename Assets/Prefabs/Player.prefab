@@ -878,7 +878,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1.3
-  m_Radius: 0.2
+  m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -904,6 +904,9 @@ MonoBehaviour:
   sensitivity: 0.25
   lockCamera: 0
   enableCamSmooth: 0
+  interactionMode: 0
+  selection: {fileID: 0}
+  selectionTags: []
   cursor: {fileID: 3852793578723043416}
   cursorText: {fileID: 9109519927512681436}
   uiLayerMask:
@@ -1301,6 +1304,57 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 4
   m_Text: Quit
+--- !u!1 &4162282159198380308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6596094175333911246}
+  - component: {fileID: 5980813912654178917}
+  m_Layer: 15
+  m_Name: Playback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6596094175333911246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4162282159198380308}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5076645860099521667}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5980813912654178917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4162282159198380308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: d08dd7dc19e83e06cb65eeac77e89703, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: f9d3eb70f8f4705ca801bdf1de4ba16f, type: 3}
+  m_SortingOrder: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
 --- !u!1 &6990413321681498761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1890,7 @@ RectTransform:
   m_Children:
   - {fileID: 3852793578723043417}
   - {fileID: 1835651151501541865}
+  - {fileID: 6596094175333911246}
   m_Father: {fileID: 3852793578409061699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

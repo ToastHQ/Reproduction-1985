@@ -387,6 +387,81 @@ MonoBehaviour:
   buttonText: 
   uiSound: 0
   ignoreCollider: 0
+--- !u!1 &378430395545118406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 15912031884714008}
+  - component: {fileID: 2792693118781323984}
+  - component: {fileID: 1972771298107057695}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &15912031884714008
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378430395545118406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2917692630620509304}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 389.99997, y: 0.000030517578}
+  m_SizeDelta: {x: 500, y: 400}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!222 &2792693118781323984
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378430395545118406}
+  m_CullTransparentMesh: 1
+--- !u!114 &1972771298107057695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378430395545118406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6f2cd61d9f4665b9e99e1db261c08134, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &731588238293903384
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +950,7 @@ RectTransform:
   m_Children:
   - {fileID: 5141105623111645857}
   - {fileID: 7410018824935835038}
+  - {fileID: 15912031884714008}
   m_Father: {fileID: 4573965060225088529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -16797,12 +16873,6 @@ MonoBehaviour:
   stages:
   - stageName: Default
     stage: {fileID: 0}
-    stageDesc: The standard stage that ran throughout the lifetime of Freddy Fazbear's
-      Pizza. Footage from this stage was always used in promotional material, despite
-      the budget cuts made to the stage later on.
-    stageDate: 1988
-    stageIcon: {fileID: 21300000, guid: 10d368067afc05b4eab38e01c96f2e4e, type: 3}
-    stageType: 0
     curtain: {fileID: 0}
     curtainValves: {fileID: 0}
     lights: {fileID: 0}
@@ -16811,8 +16881,6 @@ MonoBehaviour:
     animatronics: []
     props: []
     lightValves: []
-    tableValves: []
-    texController: {fileID: 0}
     tvs:
     - tvSettings: 0
       onWhenCurtain: 0
@@ -16833,15 +16901,6 @@ MonoBehaviour:
       curtainSubState: 0
   - stageName: Reduced Stage
     stage: {fileID: 0}
-    stageDesc: The reduced stage that was seen in the final year of the restaurant.
-      The original stage was deemed too expensive to run, and much of its effects
-      and lights were reduced. The background was darkened and more stars were put
-      up to give the feeling of night-time, to which the shows reflected this. The
-      floor was also raised to stop children from climbing on-stage. Customers were
-      very underwhelmed with the new look however.
-    stageDate: 1993
-    stageIcon: {fileID: 21300000, guid: 92780d6c72a63134cbd499de8f2e3385, type: 3}
-    stageType: 0
     curtain: {fileID: 0}
     curtainValves: {fileID: 0}
     lights: {fileID: 0}
@@ -16850,8 +16909,6 @@ MonoBehaviour:
     animatronics: []
     props: []
     lightValves: []
-    tableValves: []
-    texController: {fileID: 0}
     tvs:
     - tvSettings: 0
       onWhenCurtain: 0
@@ -16872,11 +16929,6 @@ MonoBehaviour:
       curtainSubState: 0
   - stageName: Green Screen
     stage: {fileID: 0}
-    stageDesc: A green screen stage useful for prizes at the Prize Corner. Some lights
-      work on the stage too.
-    stageDate: N/A
-    stageIcon: {fileID: 21300000, guid: 41df27413f5fdac4285d7b63d8d18b44, type: 3}
-    stageType: 3
     curtain: {fileID: 0}
     curtainValves: {fileID: 0}
     lights: {fileID: 0}
@@ -16885,8 +16937,6 @@ MonoBehaviour:
     animatronics: []
     props: []
     lightValves: []
-    tableValves: []
-    texController: {fileID: 0}
     tvs:
     - tvSettings: 0
       onWhenCurtain: 0

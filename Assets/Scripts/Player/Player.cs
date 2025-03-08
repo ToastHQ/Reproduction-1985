@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -37,6 +38,13 @@ public class Player : MonoBehaviour
     // Flashlight
     private Light _flashlight;
     private bool _flashEnabled;
+
+    
+    [Header("Interaction")]
+    public InteractionMode interactionMode = InteractionMode.None;
+    [HideInInspector] public GameObject selection;
+    [HideInInspector] public string[] selectionTags;
+    private Outline _lastOutline;
     
     [Header("WorldSpace UI")] 
     public GameObject cursor;
@@ -97,9 +105,14 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        cursor.SetActive(false);
+
         HandleLocomotion();
         HandleCamera();
         HandleUI();
+
+        if (interactionMode == InteractionMode.Selection)
+            HandleSelectMode(selectionTags);
     }
 
 
@@ -254,9 +267,80 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }
+    
+    // Messy as hell code, god forbid anyone who tries working on this :sobs:
+    public void HandleSelectMode(string[] tags = null)
+    {
+        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out RaycastHit hit, 20f))
+        {
+            GameObject targetObject = GetOutlineCandidate(hit.collider.gameObject);
+
+            // Shit code, but for some reason 64th nestled in the models a lot in an animatronic prefab so we gotta do this.
+            if (targetObject == null || (tags != null && !tags.Contains(targetObject.tag) && !tags.Contains(targetObject.transform.parent.tag) && !tags.Contains(targetObject.transform.parent.tag)))
+            {
+                ClearOutline();
+                return;
+            }
+            
+            cursor.SetActive(true);
+
+            Outline outline = targetObject.GetComponent<Outline>();
+
+            if (outline == null)
+                outline = targetObject.AddComponent<Outline>();
+
+            outline.OutlineColor = targetObject == selection ? new Color(244, 119, 0) : Color.white;
+
+            if (_lastOutline != outline)
+            {
+                ClearOutline();
+                _lastOutline = outline;
+            }
+
+            if (_interactAction.triggered)
+            {
+                if (selection != null)
+                    Destroy(selection.GetComponent<Outline>());
+                
+                selection = targetObject;
+            }
+                
+        }
         else
         {
-            cursor.SetActive(false);
+            ClearOutline();
         }
     }
+
+    private GameObject GetOutlineCandidate(GameObject hitObject)
+    {
+        if (hitObject != null)
+            return hitObject;
+
+        Transform parent = hitObject.transform.parent;
+        while (parent != null)
+        {
+            if (parent.gameObject != null)
+                return parent.gameObject;
+            parent = parent.parent;
+        }
+
+        return null;
+    }
+
+    private void ClearOutline()
+    {
+        if (_lastOutline != null && _lastOutline.gameObject != selection)
+        {
+            Destroy(_lastOutline);
+            _lastOutline = null;
+        }
+    }
+}
+
+public enum InteractionMode
+{
+    None,
+    Selection,
 }

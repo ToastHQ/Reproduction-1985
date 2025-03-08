@@ -61,6 +61,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 3b67df3ddbaf4c646b76de0461189672, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3b67df3ddbaf4c646b76de0461189672, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d5888595d4c06954abb2f6ffb1ec945c, type: 2}
@@ -83,6 +87,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3b67df3ddbaf4c646b76de0461189672, type: 3}
       propertyPath: m_Name
       value: Star
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b67df3ddbaf4c646b76de0461189672, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3b67df3ddbaf4c646b76de0461189672, type: 3}
       propertyPath: m_StaticEditorFlags

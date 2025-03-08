@@ -1,6 +1,42 @@
+:root {
+    --text-colour: rgb(11, 12, 12);
+    --secondary-text-colour: rgb(80, 90, 95);
+    --link-colour: rgb(29, 112, 184);
+    --link-hover-colour: rgb(0, 48, 120);
+    --link-visited-colour: rgb(76, 44, 146);
+    --link-active-colour: rgb(11, 12, 12);
+    --border-colour: rgb(177, 180, 182);
+    --input-border-colour: rgb(11, 12, 12);
+    --focus-colour: rgb(255, 221, 0);
+    --focus-text-colour: rgb(11, 12, 12);
+    --error-colour: rgb(212, 53, 28);
+    --success-colour: rgb(0, 112, 60);
+    --brand-colour: rgb(29, 112, 184);
+    --colour-red: rgb(212, 53, 28);
+    --colour-yellow: rgb(255, 221, 0);
+    --colour-green: rgb(0, 112, 60);
+    --colour-blue: rgb(29, 112, 184);
+    --colour-dark-blue: rgb(0, 48, 120);
+    --colour-light-blue: rgb(86, 148, 202);
+    --colour-purple: rgb(76, 44, 146);
+    --colour-black: rgb(11, 12, 12);
+    --colour-dark-grey: rgb(80, 90, 95);
+    --colour-mid-grey: rgb(177, 180, 182);
+    --colour-light-grey: rgb(243, 242, 241);
+    --colour-white: rgb(255, 255, 255);
+    --colour-light-purple: rgb(111, 114, 175);
+    --colour-bright-purple: rgb(145, 43, 136);
+    --colour-pink: rgb(213, 56, 128);
+    --colour-light-pink: rgb(244, 153, 190);
+    --colour-orange: rgb(244, 119, 56);
+    --colour-brown: rgb(181, 136, 64);
+    --colour-light-green: rgb(133, 153, 75);
+    --colour-turquoise: rgb(40, 161, 151);
+}
+
 .header {
     flex-grow: 1;
-    background-color: rgb(11, 12, 12);
+    background-color: var(--text-colour);
     max-height: 50px;
     align-items: auto;
     align-content: stretch;
@@ -14,7 +50,7 @@
     flex-grow: 1;
     max-height: 50px;
     background-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgb(177, 180, 182);
+    border-bottom-color: var(--border-colour);
     border-top-width: 1px;
     border-right-width: 1px;
     border-bottom-width: 1px;
@@ -36,30 +72,26 @@
     min-width: auto;
 }
 
-.unity-label {
-    white-space: pre-wrap;
-}
-
 .unity-tab__header {
     min-height: 50px;
     font-size: 20px;
     -unity-font-definition: url("project://database/Assets/UI/Fonts/Ubuntu/Ubuntu-Bold.ttf?fileID=12800000&guid=3b73378d4903035c1be9c89ee6335f17&type=3#Ubuntu-Bold");
     align-self: auto;
     align-content: auto;
-    color: rgb(29, 112, 184);
+    color: var(--link-colour);
 }
 
 .unity-tab__header:hover {
-    color: rgb(0, 48, 120);
+    color: var(--link-hover-colour);
 }
 
 .unity-tab__header:checked {
-    color: rgb(29, 112, 184);
+    color: var(--link-colour);
 }
 
 .unity-tab__header:checked > .unity-tab__header-underline {
     height: 3px;
-    background-color: rgb(29, 112, 184);
+    background-color: var(--link-colour);
     transition-property: background-color;
     transition-duration: 0.25s;
     transition-timing-function: linear;
@@ -67,128 +99,58 @@
 
 .unity-tab-view__header-container {
     border-bottom-width: 1px;
-    border-bottom-color: rgb(177, 180, 182);
+    border-bottom-color: var(--border-colour);
     flex-grow: 0;
     flex-direction: row;
     align-self: stretch;
-}
-
-.unity-tab-view__content {
-}
-
-.unity-tab-view {
-    align-items: stretch;
-    align-self: stretch;
-    flex-grow: 1;
-}
-
-.unity-tab-view__content-container {
-    align-self: stretch;
-    align-content: stretch;
-    flex-grow: 1;
-    flex-direction: row;
-}
-
-.unity-tab {
-    width: 100%;
-}
-
-.unity-scroll-view {
-    flex-grow: 1;
-}
-
-.unity-scroll-view__content-container {
-    align-content: auto;
-    flex-direction: column;
-    align-items: auto;
-    align-self: auto;
-    justify-content: center;
 }
 
 .unity-foldout {
     width: 100%;
     font-size: 18px;
     border-bottom-width: 1px;
-    border-bottom-color: rgb(177, 180, 182);
-}
-
-.unity-foldout__toggle {
-    padding-top: 2px;
-    padding-right: 4px;
-    padding-bottom: 2px;
-    padding-left: 4px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    -unity-font-definition: url("project://database/Assets/UI/Fonts/Ubuntu/Ubuntu-Medium.ttf?fileID=12800000&guid=4973394c0b9f002c8a757abaa532facc&type=3#Ubuntu-Medium");
+    border-bottom-color: var(--border-colour);
 }
 
 .unity-foldout__toggle:hover {
-    background-color: rgb(243, 242, 241);
+    background-color: var(--colour-light-grey);
 }
 
-.unity-foldout__content {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.unity-button {
+    background-color: var(--colour-green);
+    color: var(--colour-white);
+    border-width: 0;
+    border-bottom-width: 2px;
+    border-color: var(--text-colour);
 }
 
-.unity-base-field__label {
-    width: 200px;
-}
-
-.unity-base-field__input {
-    margin-left: 0;
+.unity-button:hover {
+    background-color: var(--colour-green);
     opacity: 1;
 }
 
-.unity-enum-field__input {
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
-    background-color: rgba(0, 0, 0, 0);
-    border-left-color: rgb(11, 12, 12);
-    border-right-color: rgb(11, 12, 12);
-    border-top-color: rgb(11, 12, 12);
-    border-bottom-color: rgb(11, 12, 12);
+.unity-button:active {
+    border-width: 0;
+    background-color: var(--colour-yellow);
+    opacity: 1;
 }
 
-.unity-group-box {
-    border-top-width: 2px;
-    border-left-color: rgb(243, 242, 241);
-    border-right-color: rgb(243, 242, 241);
-    border-top-color: rgb(243, 242, 241);
-    border-bottom-color: rgb(243, 242, 241);
-    border-right-width: 2px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
+.unity-button:disabled {
+    opacity: 0.5;
+    cursor: url("project://database/Assets/UI/Cursors/24/not-allowed.png?fileID=2800000&guid=fd9fe840ccde0aa518269ee8a243a99b&type=3#not-allowed");
 }
 
 .splitter {
     height: 1px;
-    background-color: rgb(177, 180, 182);
+    background-color: var(--border-colour);
     padding-top: 0;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.widthContainer {
-    flex-grow: 1;
-    width: 1024px;
-    max-width: 1024px;
-    align-self: center;
-    justify-content: center;
-    align-content: stretch;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-shrink: 1;
-    min-width: auto;
-}
-
 .container {
     flex-grow: 1;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--colour-white);
     -unity-font-definition: url("project://database/Assets/UI/Fonts/Ubuntu/Ubuntu-Regular.ttf?fileID=12800000&guid=cfc5eed0bad77e0f198e594f963c0a74&type=3#Ubuntu-Regular");
 }

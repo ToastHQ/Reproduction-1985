@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6957695076457154256}
   m_Layer: 0
   m_Name: Valence
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -92,6 +92,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f4e5e1b082c9d84e384256de0195fdc8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f4e5e1b082c9d84e384256de0195fdc8, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f4e5e1b082c9d84e384256de0195fdc8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -203,6 +207,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f4e5e1b082c9d84e384256de0195fdc8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f4e5e1b082c9d84e384256de0195fdc8, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f4e5e1b082c9d84e384256de0195fdc8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

@@ -1,0 +1,19 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UI%20Toolkit/Design.uss?fileID=7433441132597879392&amp;guid=db6abca3d152003d1a5db431c66cc6b0&amp;type=3#Design" />
+    <engine:VisualElement name="Container" style="flex-grow: 1; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; flex-direction: row;">
+        <engine:Button text="PLAY" name="Play" style="height: 70px; width: 70px;" />
+        <engine:VisualElement name="Stack" style="flex-grow: 1; margin-left: 5px;">
+            <engine:VisualElement name="Top" style="flex-grow: 1; height: 50%; flex-direction: row;">
+                <engine:Button text="BCK" name="Back" />
+                <engine:Button text="RVS" name="Reverse" />
+                <engine:Button text="STP" name="Stop" />
+                <engine:Button text="FWD" name="Forward" />
+                <engine:Button text="NXT" name="Next" />
+            </engine:VisualElement>
+            <engine:VisualElement name="Bottom" style="flex-grow: 1; height: 50%; justify-content: center;">
+                <engine:Slider value="42" high-value="100" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:Slider value="42" high-value="100" direction="Vertical" name="Volume" fill="true" />
+    </engine:VisualElement>
+</engine:UXML>

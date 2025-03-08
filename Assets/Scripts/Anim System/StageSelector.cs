@@ -15,12 +15,6 @@ public class StageSelector
     [Header("Stage")] public string stageName;
 
     public GameObject stage;
-
-    [Header("Description")] public string stageDesc;
-
-    public string stageDate;
-    public Sprite stageIcon;
-    public StageT stageType;
     
     [Header("Special Objects")] public GameObject curtain;
 
@@ -31,14 +25,11 @@ public class StageSelector
     public GameObject animatronicsContainer;
     public GameObject propsContainer;
     
-    public AnimatronicData[] animatronics;
+    [HideInInspector] public AnimatronicData[] animatronics;
     
-    public PropData[] props;
+    [HideInInspector] public PropData[] props;
 
     [HideInInspector] public LightController[] lightValves;
-
-    public TurntableController[] tableValves;
-    public TextureController texController;
     public ShowTV[] tvs;
 
     public void Startup()

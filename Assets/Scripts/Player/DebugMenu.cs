@@ -1,22 +1,28 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DebugMenu : MonoBehaviour
 {
-    private bool _showFPS;
+    private bool _showDebug;
+    InputAction debugAction;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.F1))
+        debugAction = InputSystem.actions.FindAction("Debug");
+    }
+
+    private void Update()
+    {
+        if (debugAction.triggered)
         {
-            _showFPS = !_showFPS;
+            _showDebug = !_showDebug;
         }
     }
     
-    void OnGUI()
+    private void OnGUI()
     {
-        if (_showFPS)
+        if (_showDebug)
         {
             GUILayout.Label($"{Mathf.Round(1.0f / Time.deltaTime)}FPS [F1]");
         }

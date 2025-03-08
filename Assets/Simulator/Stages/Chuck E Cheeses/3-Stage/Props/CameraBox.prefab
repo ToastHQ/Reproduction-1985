@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3551603188701557452}
   m_Layer: 0
   m_Name: CameraBox
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -94,13 +94,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: c2406e204417046e593f3f12927363ad, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c2406e204417046e593f3f12927363ad, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a0a61c5e6c3f61e4ea06b00eefa3a367, type: 2}
     - target: {fileID: -7511558181221131132, guid: c2406e204417046e593f3f12927363ad, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: a7828608d14f40a43a0e8bbbe65f4b35, type: 2}
+      objectReference: {fileID: 2100000, guid: 0f016e5a27b384041b4833049a4cd3c1, type: 2}
     - target: {fileID: 919132149155446097, guid: c2406e204417046e593f3f12927363ad, type: 3}
       propertyPath: m_Name
       value: MMBB Demo
@@ -214,13 +218,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: c2406e204417046e593f3f12927363ad, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c2406e204417046e593f3f12927363ad, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f2f8323a6d1e712499d53b45e3aa2645, type: 2}
     - target: {fileID: -7511558181221131132, guid: c2406e204417046e593f3f12927363ad, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: a7828608d14f40a43a0e8bbbe65f4b35, type: 2}
+      objectReference: {fileID: 2100000, guid: 0f016e5a27b384041b4833049a4cd3c1, type: 2}
     - target: {fileID: 919132149155446097, guid: c2406e204417046e593f3f12927363ad, type: 3}
       propertyPath: m_Name
       value: MMBB Default

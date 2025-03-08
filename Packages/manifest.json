@@ -1,15 +1,7 @@
 {
-  "scopedRegistries": [
-    {
-      "name": "iBicha",
-      "url": "https://registry.npmjs.com",
-      "scopes": [
-        "com.ibicha"
-      ]
-    }
-  ],
   "dependencies": {
-    "com.jiaozi158.unityssgiurp": "file:../Assets/UnitySSGIURP",
+    "com.jiaozi158.unityssgiurp": "https://github.com/jiaozi158/UnitySSGIURP.git",
+    "com.limworks.urpssrpackage": "https://github.com/JoshuaLim007/Unity-ScreenSpaceReflections-URP.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.addressables": "2.2.2",
     "com.unity.ai.navigation": "2.0.6",
@@ -26,6 +18,7 @@
     "com.unity.toolchain.linux-x86_64": "2.0.10",
     "com.unity.toolchain.win-x86_64-linux-x86_64": "2.0.10",
     "com.unity.ugui": "2.0.0",
+    "com.unity.xr.interaction.toolkit": "3.0.7",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
