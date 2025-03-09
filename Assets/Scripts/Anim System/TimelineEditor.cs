@@ -486,12 +486,6 @@ public class TimelineEditor : MonoBehaviour
         StartCoroutine(CreateAndLinkScene(uiShowtapeManager.showtapeSegmentPaths[0]
             .Substring(uiShowtapeManager.showtapeSegmentPaths[0].Length - 4, 4)));
     }
-
-    public void setCurtains()
-    {
-        sidePanel.AutoCurtains(0);
-    }
-
     public void setTechLights()
     {
         sidePanel.Upperlights(0);

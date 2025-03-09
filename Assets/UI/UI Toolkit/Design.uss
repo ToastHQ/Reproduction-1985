@@ -125,12 +125,14 @@
 }
 
 .unity-button:hover {
+    border-color: var(--text-colour);
     background-color: var(--colour-green);
     opacity: 1;
 }
 
 .unity-button:active {
     border-width: 0;
+    border-color: var(--text-colour);
     background-color: var(--colour-yellow);
     opacity: 1;
 }

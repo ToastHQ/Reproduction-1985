@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -46,8 +47,9 @@ public class Player : MonoBehaviour
     [HideInInspector] public string[] selectionTags;
     private Outline _lastOutline;
     
-    [Header("WorldSpace UI")] 
+    [Header("UI")] 
     public GameObject cursor;
+    public GameObject controlUx;
     public TMP_Text cursorText;
     public LayerMask uiLayerMask;
 
@@ -77,6 +79,8 @@ public class Player : MonoBehaviour
     private InputAction _sprintAction;
     private InputAction _crouchAction;
     private InputAction _flashlightAction;
+    private InputAction _menuAction;
+    private InputAction _exitAction;
     private InputAction _scrollY;
 
     private bool _runGamepad;
@@ -86,6 +90,8 @@ public class Player : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         Cursor.lockState = CursorLockMode.Locked;
+        
+        controlUx.SetActive(false);
 
         //Initialize Variables
         _controller = GetComponent<CharacterController>();
@@ -100,6 +106,8 @@ public class Player : MonoBehaviour
         _sprintAction = InputSystem.actions.FindAction("Sprint");
         _crouchAction = InputSystem.actions.FindAction("Crouch");
         _flashlightAction = InputSystem.actions.FindAction("Flashlight");
+        _menuAction = InputSystem.actions.FindAction("Menu");
+        _exitAction = InputSystem.actions.FindAction("Exit");
         _scrollY = InputSystem.actions.FindAction("ScrollY");
     }
 
@@ -107,8 +115,16 @@ public class Player : MonoBehaviour
     {
         cursor.SetActive(false);
 
-        HandleLocomotion();
-        HandleCamera();
+        if (!lockCamera)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            HandleLocomotion();
+            HandleCamera();
+        }
+        else
+            Cursor.lockState = CursorLockMode.None;
+        
+        
         HandleUI();
 
         if (interactionMode == InteractionMode.Selection)
@@ -177,67 +193,52 @@ public class Player : MonoBehaviour
     /// </summary>
     private void HandleCamera()
     {
-        if (!lockCamera)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
+        Vector2 look = -_lookAction.ReadValue<Vector2>();
+        float roll = _rollAction.ReadValue<float>();
+        float scroll = _scrollY.ReadValue<float>();
 
-            Vector2 look = -_lookAction.ReadValue<Vector2>();
-            float roll = _rollAction.ReadValue<float>();
-            float scroll = _scrollY.ReadValue<float>();
+        // Camera Zoom
+        _targetFOV -= scroll * 10f; 
+        _targetFOV = Mathf.Clamp(_targetFOV, 20f, 110f); 
 
-            // Camera Zoom
-            _targetFOV -= scroll * 10f; 
-            _targetFOV = Mathf.Clamp(_targetFOV, 20f, 110f); 
+        mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, _targetFOV, Time.deltaTime * 2f);
 
-            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, _targetFOV, Time.deltaTime * 2f);
+        // Flashlight
+        if (_flashlightAction.WasPressedThisFrame())
+            _flashEnabled = !_flashEnabled;
 
-            // Flashlight
-            if (_flashlightAction.WasPressedThisFrame())
-                _flashEnabled = !_flashEnabled;
+        _flashlight.intensity = Mathf.Lerp(_flashlight.intensity, _flashEnabled ? 20 : 0, Time.deltaTime * 10);
 
-            _flashlight.intensity = Mathf.Lerp(_flashlight.intensity, _flashEnabled ? 20 : 0, Time.deltaTime * 10);
+        // Camera Rotation
+        _rotation.x += look.x * sensitivity;
+        _rotation.y += look.y * sensitivity;
+        _rotation.y = Mathf.Clamp(_rotation.y, -90f, 90f);
 
-            // Camera Rotation
-            _rotation.x += look.x * sensitivity;
-            _rotation.y += look.y * sensitivity;
-            _rotation.y = Mathf.Clamp(_rotation.y, -90f, 90f);
+        // Accumulate roll input over time into target roll
+        _targetRoll -= roll * Time.deltaTime * 15f;
+        _targetRoll = Mathf.Clamp(_targetRoll, -90f, 90f); // Limit max roll angle
 
-            // Accumulate roll input over time into target roll
-            _targetRoll -= roll * Time.deltaTime * 15f;
-            _targetRoll = Mathf.Clamp(_targetRoll, -90f, 90f); // Limit max roll angle
+        // Lerp actual rotation.z towards the target roll for smooth movement
+        _rotation.z = Mathf.Lerp(_rotation.z, _targetRoll, Time.deltaTime * 2f);
 
-            // Lerp actual rotation.z towards the target roll for smooth movement
-            _rotation.z = Mathf.Lerp(_rotation.z, _targetRoll, Time.deltaTime * 2f);
-
-            Quaternion targetRotation = Quaternion.Euler(_rotation.y, -_rotation.x, _rotation.z);
-            mainCamera.transform.rotation = Quaternion.Slerp(mainCamera.transform.rotation, targetRotation, Time.deltaTime * 10f);
-        }
-
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
+        Quaternion targetRotation = Quaternion.Euler(_rotation.y, -_rotation.x, _rotation.z);
+        mainCamera.transform.rotation = Quaternion.Slerp(mainCamera.transform.rotation, targetRotation, Time.deltaTime * 10f);
     }
 
     /// <summary>
     /// Handles everything to do with the player UI
-    /// ESC menu, etc
+    /// Control menu, etc
     /// </summary>
     private void HandleUI()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (_menuAction.triggered)
         {
-            if (pauseMenu.activeSelf)
-            {
-                pauseMenu.SetActive(false);
-                lockCamera = false;
-            }
-            else
-            {
-                pauseMenu.SetActive(true);
-                lockCamera = true;
-            }
+            lockCamera = !lockCamera;
+            controlUx.SetActive(lockCamera);
         }
+
+        if (_exitAction.triggered)
+            SceneManager.LoadScene("Launcher");
     }
     
 

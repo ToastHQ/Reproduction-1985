@@ -60,12 +60,12 @@ public class UI_SidePanel : MonoBehaviour
             else
             {
                 hidepanels = !hidepanels;
-                transform.parent.localPosition += Vector3.one * 100;
+                transform.parent.localPosition  += Vector3.one * 100;
                 showPanelUI.transform.parent.localPosition += Vector3.one * 100;
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.BackQuote)) showPanelUI.pauseSong();
+        if (Input.GetKeyDown(KeyCode.BackQuote)) showPanelUI.TogglePlayback();
     }
 
     public void Upperlights(int input)
@@ -163,24 +163,6 @@ public class UI_SidePanel : MonoBehaviour
             camSmoothText.text = "On";
             showPanelUI.thePlayer.GetComponent<Player>().enableCamSmooth = true;
         }
-    }
-
-    public void AutoCurtains(int input)
-    {
-        for (int i = 0; i < showPanelUI.stages.Length; i++)
-            if (showPanelUI.stages[i].curtainValves != null)
-            {
-                if (showPanelUI.stages[i].curtainValves.curtainOverride)
-                {
-                    curtainText.text = "Off";
-                    showPanelUI.stages[i].curtainValves.curtainOverride = false;
-                }
-                else
-                {
-                    curtainText.text = "On";
-                    showPanelUI.stages[i].curtainValves.curtainOverride = true;
-                }
-            }
     }
 
     public void PSIChange(int input)

@@ -509,14 +509,22 @@ public class DF_ShowManager : MonoBehaviour
 
     /// <summary>
     ///     Pauses or unpauses the showtape.
+    ///  !!! Will open the showtape file prompt if no showtape is loaded!
     /// </summary>
-    public void pauseSong()
+    public void TogglePlayback()
     {
-        if ((manager.useVideoAsReference && manager.referenceVideo.isPlaying) ||
-            (!manager.useVideoAsReference && manager.referenceSpeaker.isPlaying))
-            AVPause();
+        if (manager.rshwData != null)
+        {
+            if ((manager.useVideoAsReference && manager.referenceVideo.isPlaying) ||
+                (!manager.useVideoAsReference && manager.referenceSpeaker.isPlaying))
+                AVPause();
+            else
+                AVPlay();
+        }
         else
-            AVPlay();
+        {
+            manager.Load();
+        }
     }
 
     /// <summary>

@@ -112,6 +112,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Menu",
+                    "type": "Button",
+                    "id": "ddcfed6a-0dc8-4c6a-bb5c-a2ca56441118",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "68c89fb4-92cb-4ebe-adba-ed8e63f2a50a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -565,6 +583,61 @@
                     "action": "Roll",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "d89475a1-2b46-4824-ac1c-a95b4634eb12",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d424159-c256-49b8-9917-ab32fca242ae",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "29197e78-6ff3-472e-8b34-c5a097ec68f9",
+                    "path": "<XRController>/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f7b35053-e2de-47a8-9ea0-3326bced4210",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": ";Touch",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5063325c-681c-489b-83f3-6b3e6291686b",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

@@ -253,10 +253,10 @@ MonoBehaviour:
     animation: {fileID: 6209474720423992317, guid: c76ab4d69e9bad84899bb54a350d040d, type: 3}
     bit: 47
     drawer: 0
-    flowControlOut: 0.65
-    flowControlIn: 0.7
-    gravityScale: 0.3
-    gravityScaleOut: 0.3
+    flowControlOut: 0.75
+    flowControlIn: 1
+    gravityScale: 0.1
+    gravityScaleOut: 0.2
     smashOut: 0
     smashIn: 0
     smashSpeedOut: 0
