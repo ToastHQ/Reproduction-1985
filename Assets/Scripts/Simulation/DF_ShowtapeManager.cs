@@ -24,7 +24,6 @@ public class DF_ShowtapeManager : MonoBehaviour
     //Inspector Objects
     [Header("Inspector Objects")] public MacValves mack;
 
-    public InputHandler inputHandler;
     [HideInInspector] public DF_ShowtapeCreator creator;
     public AudioSource referenceSpeaker;
     [HideInInspector] public float refSpeakerVol;
@@ -45,7 +44,6 @@ public class DF_ShowtapeManager : MonoBehaviour
 
     public UnityEvent audioVideoPause;
     public UnityEvent audioVideoGetData;
-    public UnityEvent newDataRecorded;
     public UnityEvent curtainClose;
     public UnityEvent curtainOpen;
     public UnityEvent syncTvsAndSpeakers;
@@ -57,14 +55,6 @@ public class DF_ShowtapeManager : MonoBehaviour
     public bool playMovements;
 
     public bool useVideoAsReference;
-
-    //New Simulation
-    [HideInInspector] public float timeSongStarted;
-    [HideInInspector] public float timeSongOffset;
-    [HideInInspector] public float timePauseStart;
-    [HideInInspector] public float timeInputSpeedStart;
-    [HideInInspector] public int previousFramePosition;
-    [HideInInspector] public bool previousAnyButtonHeld;
 
     [Space(20)]
 
@@ -92,16 +82,12 @@ public class DF_ShowtapeManager : MonoBehaviour
             syncTvsAndSpeakers.Invoke();
         }
 
-        if (inputHandler != null)
-        {
-            InputDataObj inputDataObj = inputHandler.InputCheck();
-
-            //Clear Drawers
-            mack.topDrawer = inputDataObj.topDrawer;
-            mack.bottomDrawer = inputDataObj.bottomDrawer;
+        //Clear Drawers
+            mack.topDrawer = new bool[300];
+            mack.bottomDrawer = new bool[300];
 
             //Check for inputs and send to mack valves
-            if (inputHandler != null && mack != null)
+            if (mack != null)
                 if (useVideoAsReference || (!useVideoAsReference && referenceSpeaker.clip != null))
                     if (rshwData != null)
                     {
@@ -124,45 +110,6 @@ public class DF_ShowtapeManager : MonoBehaviour
                             else
                                 arrayDestination = rshwData.Length;
                         }
-
-                        //Record
-                        if (recordMovements)
-                            //Record
-                            if (inputDataObj.anyButtonHeld)
-                            {
-                                for (int i = 0; i < 150; i++)
-                                {
-                                    if (inputDataObj.topDrawer[i]) rshwData[arrayDestination].Set(i, true);
-                                    if (inputDataObj.bottomDrawer[i]) rshwData[arrayDestination].Set(i + 150, true);
-                                }
-
-                                if (previousAnyButtonHeld)
-                                {
-                                    //Record forward or backward
-                                    if (previousFramePosition <= arrayDestination)
-                                        //Forward
-                                        for (int i = 0; i < arrayDestination - previousFramePosition; i++)
-                                        for (int e = 0; e < 150; e++)
-                                        {
-                                            if (inputDataObj.topDrawer[e])
-                                                rshwData[previousFramePosition + i].Set(e, true);
-                                            if (inputDataObj.bottomDrawer[e])
-                                                rshwData[previousFramePosition + i].Set(e + 150, true);
-                                        }
-                                    else
-                                        //Backward
-                                        for (int i = 0; i < previousFramePosition - arrayDestination; i++)
-                                        for (int e = 0; e < 150; e++)
-                                        {
-                                            if (inputDataObj.topDrawer[e])
-                                                rshwData[previousFramePosition - i].Set(e, true);
-                                            if (inputDataObj.bottomDrawer[e])
-                                                rshwData[previousFramePosition - i].Set(e + 150, true);
-                                        }
-                                }
-
-                                newDataRecorded.Invoke();
-                            }
 
 
                         //Apply the current frame of simulation data to the Mack Valves
@@ -226,10 +173,8 @@ public class DF_ShowtapeManager : MonoBehaviour
                                 }
                             }
 
-                        previousFramePosition = arrayDestination;
-                        previousAnyButtonHeld = inputDataObj.anyButtonHeld;
+                        previousFramePosition = arrayDestination; 
                     }
-        }
     }
 
     public void Load()
@@ -290,17 +235,9 @@ public class DF_ShowtapeManager : MonoBehaviour
         else
             playMovements = !playMovements;
         syncTvsAndSpeakers.Invoke();
-        if (playMovements)
-        {
-            timeSongOffset += Time.time - timePauseStart;
-            timePauseStart = 0;
-            audioVideoPlay.Invoke();
-        }
-        else
-        {
-            timePauseStart = Time.time;
-            audioVideoPause.Invoke();
-        }
+        
+        audioVideoPlay.Invoke();
+
     }
 
     public void SwapLoop()
@@ -349,84 +286,6 @@ public class DF_ShowtapeManager : MonoBehaviour
         audioVideoPause.Invoke();
         curtainClose.Invoke();
     }
-
-
-    public void DeleteMove(int bitDelete)
-    {
-        int combinedNewInput = bitDelete + 24 * GetComponent<DF_WindowManager>().deletePage;
-        Debug.Log("Deleting Move: " + combinedNewInput);
-
-
-        //Call File Browser
-        showtapeSegmentPaths = new string[1];
-        string[] paths = StandaloneFileBrowser.OpenFilePanel("Browse Showtape", "", fileExtention, false);
-        if (paths.Length > 0)
-        {
-            showtapeSegmentPaths[0] = paths[0];
-            currentShowtapeSegment = 0;
-            playMovements = false;
-            //Check if null
-            if (showtapeSegmentPaths[0] != "")
-            {
-                rshwFormat thefile = rshwFormat.ReadFromFile(showtapeSegmentPaths[0]);
-                speakerClip = OpenWavParser.ByteArrayToAudioClip(thefile.audioData);
-                var newSignals = new List<BitArray>();
-                int countlength = 0;
-                if (thefile.signalData[0] != 0)
-                {
-                    countlength = 1;
-                    BitArray bit = new(300);
-                    newSignals.Add(bit);
-                }
-
-                for (int i = 0; i < thefile.signalData.Length; i++)
-                    if (thefile.signalData[i] == 0)
-                    {
-                        countlength += 1;
-                        BitArray bit = new(300);
-                        newSignals.Add(bit);
-                    }
-                    else
-                    {
-                        newSignals[countlength - 1].Set(thefile.signalData[i] - 1, true);
-                    }
-
-                rshwData = newSignals.ToArray();
-
-                //Actual Deletion Code
-                for (int i = 0; i < rshwData.Length; i++) rshwData[i].Set(combinedNewInput - 1, false);
-                creator.SaveRecording();
-            }
-        }
-    }
-
-    public void DeleteMoveNoSaving(int bitDelete, bool fill)
-    {
-        Debug.Log("Deleting Move (No Save): " + bitDelete);
-
-        //Actual Deletion Code
-        for (int i = 0; i < rshwData.Length; i++) rshwData[i].Set(bitDelete - 1, fill);
-    }
-
-    public void PadMove(int bitPad, int padding)
-    {
-        bitPad -= 1;
-        if (padding > 0)
-        {
-            int oldLength = rshwData.Length;
-            //Create new space
-            for (int i = 0; i < padding; i++) rshwData = rshwData.Append(new BitArray(300)).ToArray();
-            for (int e = 0; e < oldLength; e++)
-                rshwData[rshwData.Length - 1 - e].Set(bitPad, rshwData[oldLength - 1 - e].Get(bitPad));
-        }
-        else
-        {
-            padding = Mathf.Abs(padding);
-            for (int i = 0; i < rshwData.Length - padding; i++)
-                rshwData[i].Set(bitPad, rshwData[i + padding].Get(bitPad));
-        }
-    }
-
     public void PadAllBits(int padding)
     {
         if (rshwData != null)

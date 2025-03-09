@@ -17,51 +17,40 @@ public class DF_ShowManager : MonoBehaviour
 
     [HideInInspector] public int currentStage;
 
-    private DF_WindowManager _uiWindowMaker;
 
     //Inspector Objects
     [Header("Inspector Objects")]
     public AudioSource[] speakerR;
 
     public AudioSource[] speakerL;
-    public Sprite[] icons;
     [HideInInspector] public GameObject mackValves;
     [HideInInspector] public DF_ShowtapeCreator creator;
-    public UI_SidePanel sidePanel;
-    public Text AddSource;
-    public Text Uncompress;
     [HideInInspector] public VideoPlayer videoplayer;
     [HideInInspector] public GameObject thePlayer;
     public SignalChange signalChange;
 
     public DF_ShowtapeManager manager;
     public FloatEvent characterEvent = new();
-
-    private InputHandler inputHandlercomp;
     
 
     [Space(20)]
 
     //Show Data
     [Header("Show Data")]
-    private MacValves mack;
+    private MacValves _mac;
 
 
     private void Awake()
     {
         //Initialize Objects
         thePlayer = GameObject.Find("Player");
-        inputHandlercomp = mackValves.GetComponent<InputHandler>();
-        mack = mackValves.GetComponent<MacValves>();
-        manager.inputHandler = inputHandlercomp;
+        _mac = gameObject.GetComponentInChildren<MacValves>();
         videoplayer = GetComponent<VideoPlayer>();
         creator = GetComponent<DF_ShowtapeCreator>();
-        _uiWindowMaker = gameObject.GetComponent<DF_WindowManager>();
 
         //Start up stages
         for (int i = 0; i < stages.Length; i++) stages[i].Startup();
 
-        SwitchWindow(1);
     }
 
     private void Update()
@@ -69,7 +58,7 @@ public class DF_ShowManager : MonoBehaviour
         //Advances the tutorial if it is active
         if (manager.recordMovements && manager.referenceSpeaker.clip != null)
             if (manager.referenceSpeaker.time >= manager.speakerClip.length)
-                SpecialSaveAs(11);
+                SpecialSaveAs();
 
         //Run the Simulation
         UpdateAnims();
@@ -81,18 +70,18 @@ public class DF_ShowManager : MonoBehaviour
         switch (signalChange)
         {
             case SignalChange.PreCU:
-                bool g = mack.topDrawer[85];
-                mack.topDrawer[85] = mack.topDrawer[80];
-                mack.topDrawer[80] = false;
-                mack.topDrawer[83] = g;
-                mack.topDrawer[92] = mack.topDrawer[90];
-                mack.topDrawer[93] = mack.topDrawer[91];
-                mack.bottomDrawer[79] = mack.bottomDrawer[74];
-                mack.bottomDrawer[90] = mack.bottomDrawer[74];
-                mack.bottomDrawer[89] = false;
-                mack.bottomDrawer[63] = true;
-                mack.topDrawer[25] = !mack.topDrawer[25];
-                mack.topDrawer[26] = !mack.topDrawer[26];
+                bool g = _mac.topDrawer[85];
+                _mac.topDrawer[85] = _mac.topDrawer[80];
+                _mac.topDrawer[80] = false;
+                _mac.topDrawer[83] = g;
+                _mac.topDrawer[92] = _mac.topDrawer[90];
+                _mac.topDrawer[93] = _mac.topDrawer[91];
+                _mac.bottomDrawer[79] = _mac.bottomDrawer[74];
+                _mac.bottomDrawer[90] = _mac.bottomDrawer[74];
+                _mac.bottomDrawer[89] = false;
+                _mac.bottomDrawer[63] = true;
+                _mac.topDrawer[25] = !_mac.topDrawer[25];
+                _mac.topDrawer[26] = !_mac.topDrawer[26];
                 break;
             case SignalChange.PrePTT:
 
@@ -123,13 +112,13 @@ public class DF_ShowManager : MonoBehaviour
                 bool bitOn = false;
                 if (stages[currentStage].tvs[i].drawer)
                 {
-                    if (mack.bottomDrawer[stages[currentStage].tvs[i].bitOff]) bitOff = true;
-                    if (mack.bottomDrawer[stages[currentStage].tvs[i].bitOn]) bitOn = true;
+                    if (_mac.bottomDrawer[stages[currentStage].tvs[i].bitOff]) bitOff = true;
+                    if (_mac.bottomDrawer[stages[currentStage].tvs[i].bitOn]) bitOn = true;
                 }
                 else
                 {
-                    if (mack.topDrawer[stages[currentStage].tvs[i].bitOff]) bitOff = true;
-                    if (mack.topDrawer[stages[currentStage].tvs[i].bitOn]) bitOn = true;
+                    if (_mac.topDrawer[stages[currentStage].tvs[i].bitOff]) bitOff = true;
+                    if (_mac.topDrawer[stages[currentStage].tvs[i].bitOn]) bitOn = true;
                 }
 
 
@@ -209,256 +198,7 @@ public class DF_ShowManager : MonoBehaviour
                 }
             }
     }
-
-    /// <summary>
-    ///     Switches which window is displayed on the main UI panel.
-    /// </summary>
-    /// <param name="thewindow"></param>
-    public void SwitchWindow(int thewindow)
-    {
-        try
-        {
-            _uiWindowMaker.Loading.SetActive(true);
-            switch (thewindow)
-            {
-                case 0:
-                    // Unused
-                    break;
-                case 1:
-                    //Main Screen
-                    _uiWindowMaker.MakeThreeWindow(icons[0], icons[1], icons[2], 0, 8, 6, 3, "Customize",
-                        "Play", "Record");
-                    WindowSwitchDisable(true);
-                    creator.EraseShowtape();
-                    break;
-                case 2:
-                    // Unused
-                    break;
-                case 3:
-                    //Record Screen
-                    _uiWindowMaker
-                        .MakeTwoWindow(icons[2], icons[3], 1, 5, 4, "New Recording", "Edit Recording");
-                    WindowSwitchDisable(true);
-                    creator.EraseShowtape();
-                    break;
-                case 4:
-                    //Edit Recording Screen
-                    _uiWindowMaker
-                        .MakeTwoWindow(icons[3], icons[5], 3, 34, 21, "Edit Segment", "Add to Segment");
-                    WindowSwitchDisable(true);
-                    creator.EraseShowtape();
-                    break;
-                case 5:
-                    //New Recording Screen
-                    _uiWindowMaker.MakeNewRecordWindow();
-                    creator.EraseShowtape();
-                    break;
-                case 6:
-                    //Player Menu (Single)
-                    manager.Load();
-                    if (manager.rshwData != null) _uiWindowMaker.MakePlayWindow(false);
-                    break;
-                case 7:
-                    //Player Menu (Folder)
-                    manager.LoadFolder();
-                    if (manager.rshwData != null) _uiWindowMaker.MakePlayWindow(false);
-                    break;
-                case 8:
-                    //Customize Screen
-                    _uiWindowMaker
-                        .MakeThreeWindow(icons[8], icons[9], icons[9], 1, 16, 9, 28, "Edit Stage", "Edit Characters", "Edit Props");
-                    break;
-                case 9:
-                    //Edit Character Icons Screen
-                    _uiWindowMaker.MakeCharacterCustomizeIconsWindow();
-                    break;
-                case 11:
-                    //Recording Groups Screen (Or New Recording Screen)
-                    _uiWindowMaker.MakeRecordIconsWindow();
-                    WindowSwitchDisable(false);
-                    creator.EraseShowtape();
-                    break;
-                case 16:
-                    //Stage Customize Menu
-                    StageCustomMenu();
-                    break;
-                case 17:
-                    if (manager.rshwData != null) _uiWindowMaker.MakePlayWindow(false);
-                    break;
-                case 21:
-                    //Recording Groups Screen (Standalone)
-                    _uiWindowMaker.MakeRecordIconsWindow();
-                    WindowSwitchDisable(false);
-                    creator.EraseShowtape();
-                    break;
-                case 22:
-                    //Delete Movement Screen 1
-                    _uiWindowMaker.MakeDeleteMoveMenu(0);
-                    break;
-                case 23:
-                    //Delete Movement Back 1
-                    _uiWindowMaker.MakeDeleteMoveMenu(-1);
-                    break;
-                case 24:
-                    //Delete Movement Forward 1
-                    _uiWindowMaker.MakeDeleteMoveMenu(1);
-                    break;
-                case 28:
-                    // Edit Prop Icons Screen
-                    _uiWindowMaker.MakePropCustomizeIconsWindow();
-                    break;
-                case 29:
-                    //Segment Window 1
-
-                    break;
-                case 30:
-                    //Segment Window -1
-
-                    break;
-                case 31:
-                    // Unused
-                    break;
-                case 32:
-                    // Unused
-
-                    break;
-                case 33:
-                    // Unused
-                    break;
-                case 34:
-                    _uiWindowMaker
-                        .MakeTwoWindow(icons[6], icons[5], 4, 22, 35, "Delete Bits", "Replace Audio");
-                    break;
-                case 35:
-                    creator.ReplaceShowAudio();
-                    break;
-            }
-            _uiWindowMaker.Loading.SetActive(false);
-        }
-        catch(Exception e)
-        {
-            _uiWindowMaker.MakeErrorWindow(e);
-        }
-    }
-
-    /// <summary>
-    ///     Starts new show.
-    /// </summary>
-    /// <param name="input"></param>
-    public void StartNewShow(int input)
-    {
-        Debug.Log("Starting New Show");
-        manager.Load();
-        if (manager.speakerClip != null) SwitchWindow(input);
-    }
-
-    /// <summary>
-    ///     Load a customize window for a particular character.
-    /// </summary>
-    /// <param name="input"></param>
-    public void CharacterCustomMenu(int input)
-    {
-        _uiWindowMaker.MakeCharacterCustomizeWindow(input);
-    }
-
-    /// <summary>
-    ///     Load a customize stage window for a particular stage.
-    /// </summary>
-    public void StageCustomMenu()
-    {
-        _uiWindowMaker.MakeStageCustomizeWindow(stages, currentStage);
-    }
-
-    /// <summary>
-    ///     Index up the current costume of a character. Costume 0 is no character on stage.
-    /// </summary>
-    /// <param name="input"></param>
-    public void CostumeUp(int input)
-    {
-        if (stages[currentStage].animatronics[input].currentCostume > -1)
-        {
-            stages[currentStage].animatronics[input].currentCostume--;
-            _uiWindowMaker.MakeCharacterCustomizeWindow(input);
-        }
-    }
-
-    /// <summary>
-    ///     Index down the current costume of a character.
-    /// </summary>
-    /// <param name="input"></param>
-    public void CostumeDown(int input)
-    {
-        if (stages[currentStage].animatronics[input].currentCostume < stages[currentStage].animatronics[input].costumes.Length - 1)
-        {
-            stages[currentStage].animatronics[input].currentCostume++;
-            _uiWindowMaker.MakeCharacterCustomizeWindow(input);
-        }
-    }
-
-    /// <summary>
-    ///     Index up the current stage presented.
-    /// </summary>
-    /// <param name="input"></param>
-    public void StageUp(int input)
-    {
-        if (input > 0)
-        {
-            currentStage--;
-            for (int i = 0; i < stages.Length; i++)
-                if (i != currentStage)
-                {
-                    if (stages[i].stage.activeSelf) stages[i].stage.SetActive(false);
-                }
-                else
-                {
-                    if (!stages[i].stage.activeSelf) stages[i].stage.SetActive(true);
-                }
-
-            _uiWindowMaker.MakeStageCustomizeWindow(stages, currentStage);
-        }
-    }
-
-    /// <summary>
-    ///     Index down the current stage presented.
-    /// </summary>
-    /// <param name="input"></param>
-    public void StageDown(int input)
-    {
-        if (input < stages.Length - 1)
-        {
-            currentStage++;
-            for (int i = 0; i < stages.Length; i++)
-                if (i != currentStage)
-                {
-                    if (stages[i].stage.activeSelf) stages[i].stage.SetActive(false);
-                }
-                else
-                {
-                    if (!stages[i].stage.activeSelf) stages[i].stage.SetActive(true);
-                }
-
-            _uiWindowMaker.MakeStageCustomizeWindow(stages, currentStage);
-        }
-    }
-
-    /// <summary>
-    ///     Open a window for the current movment group to be used.
-    /// </summary>
-    /// <param name="input"></param>
-    public void RecordingGroupMenu(int input)
-    {
-        _uiWindowMaker.MakeMoveTestWindow(input);
-    }
-
-    /// <summary>
-    ///     Stops the recording during a window switch.
-    /// </summary>
-    /// <param name="curtainStop"></param>
-    private void WindowSwitchDisable(bool curtainStop)
-    {
-        manager.recordMovements = false;
-        inputHandlercomp.valveMapping = 0;
-    }
+    
 
     /// <summary>
     ///     Loads audio and video from the showtape manager into the stage speakers.
@@ -477,8 +217,6 @@ public class DF_ShowManager : MonoBehaviour
 
         manager.Play(true, true);
         syncAudio();
-        SwitchWindow(17);
-        _uiWindowMaker.playMenuManager.TextUpdate(false);
     }
 
     /// <summary>
@@ -502,7 +240,6 @@ public class DF_ShowManager : MonoBehaviour
         manager.referenceSpeaker.time = 0;
         manager.referenceVideo.time = 0;
         manager.Play(true, false);
-        SwitchWindow(1);
         for (int i = 0; i < stages[currentStage].curtainValves.curtainbools.Length; i++)
             stages[currentStage].curtainValves.curtainbools[i] = false;
     }
@@ -532,10 +269,9 @@ public class DF_ShowManager : MonoBehaviour
     ///     This is called when creating a new showtape.
     /// </summary>
     /// <param name="input"></param>
-    public void SpecialSaveAs(int input)
+    public void SpecialSaveAs()
     {
-        if (creator.SaveRecordingAs()) SwitchWindow(input);
-        if (input == 11) SwitchWindow(input);
+        creator.SaveRecordingAs();
     }
 
     /// <summary>

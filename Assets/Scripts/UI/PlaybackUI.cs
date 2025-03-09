@@ -30,8 +30,8 @@ public class PlaybackUI : MonoBehaviour
         _root = GetComponent<UIDocument>().rootVisualElement;
 
         _container = _root.Q<VisualElement>("Playback");
-        _container.RegisterCallback<MouseEnterEvent>(evt => ToggleUI(true));
-        _container.RegisterCallback<MouseLeaveEvent>(evt => ToggleUI(false));
+        _container.RegisterCallback<PointerEnterEvent>(evt => ToggleUI(true));
+        _container.RegisterCallback<PointerLeaveEvent>(evt => ToggleUI(false));
 
         _playbackButton = _container.Q<Button>("TogglePlayback");
         _reverseButton = _root.Q<Button>("ReverseShowtape");
@@ -58,7 +58,7 @@ public class PlaybackUI : MonoBehaviour
         _volumeSlider.RegisterValueChangedCallback(evt => UpdateVolume(evt.newValue));
 
 
-        _container.style.bottom = -90;
+        _container.style.bottom = -93;
 
     }
     
@@ -91,9 +91,9 @@ public class PlaybackUI : MonoBehaviour
     private void ToggleUI(bool show)
     {
         float start = _container.style.bottom.value.value;
-        float end = show ? 0 : -90;
+        float end = show ? 0 : -93;
 
-        LeanTween.value(start, end, 0.25f)
+        LeanTween.value(start, end, 0.2f)
             .setEase(LeanTweenType.easeOutQuad)
             .setOnUpdate(val => _container.style.bottom = val);
     }

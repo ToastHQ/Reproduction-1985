@@ -100,7 +100,7 @@ public class Animatronic : MonoBehaviour
         animator.cullingMode = AnimatorCullingMode.CullCompletely;
         animator.runtimeAnimatorController = null;
 
-        ui = GameObject.Find("UI").GetComponent<DF_ShowManager>();
+        ui = GameObject.Find("Scripts").GetComponent<DF_ShowManager>();
         ui.characterEvent.AddListener(CreateMovements);
         bitChart = GameObject.Find("Mac Valves").GetComponent<MacValves>();
         

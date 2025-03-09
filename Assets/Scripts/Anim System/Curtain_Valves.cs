@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Curtain_Valves : MonoBehaviour
 {
-    public GameObject mackValves;
 
     [Range(0.0001f, .01f)] public float[] flowControlOut;
 
@@ -20,7 +19,7 @@ public class Curtain_Valves : MonoBehaviour
     private void Start()
     {
         characterValves = GetComponent<Animator>();
-        bitChart = mackValves.GetComponent<MacValves>();
+        bitChart = gameObject.transform.root.GetComponentInChildren<MacValves>();
         for (int e = 0; e < characterValves.layerCount; e++)
         {
             string temp = characterValves.GetLayerName(e);
