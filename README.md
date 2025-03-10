@@ -8,6 +8,7 @@
 
 ---
 
+
 ### Contents
 1. [About](#about)
 2. [Getting Started](#getting-started)
@@ -27,9 +28,12 @@ See the wiki for information
 
 ## Contributing
 
-> [!WARNING]
+> [!INFO]
 > Be advised that maintaining your own independent "mod" of the software will be a challenging task if you intend on staying up to date with the latest features. It's easier to contribute to the main repository instead.
 > If you do choose to maintain your own mod, please make sure you keep it up to date with the base to ensure proper compatibility.
+
+> [!WARNING]
+> The codebase is significantly changing at this time. Shows & code may break.
 
 ### Branches
 There are two branches currently
@@ -47,7 +51,7 @@ Once you have made the necessary changes in your fork, [open up a pull request](
 - [x] Valve Sounds
     
 - [ ] **Maps**   
-  - [ ] **3-Stage**  
+  - [ ] **3-Stage Munch's Make Believe Band**  
     - [x] All materials converted to URP (no pink missing shaders)
     - [x] General Props implemented fully
     - [ ] Spotlights prop
@@ -66,11 +70,10 @@ Once you have made the necessary changes in your fork, [open up a pull request](
       - [ ] **Characters**
         - [ ] CathodePlayer's MMBB Cyberamics (unknown location, was publically released in [Animatronic Game Hub](https://discord.gg/WRQvaw6EM9))
         - [ ] ReminaProd's MMBB Stages (from [Reel to Real Ultimate Mod](https://github.com/ReminaProd/RR-Engine-Ultimate-Mod))
+  - [ ] **3-Stage Rockafire Explosion**  
   - [ ] **Winchester**  
       - [ ] All materials converted to URP (no pink missing shaders)
   - [ ] **Kooser**  
-      - [ ] All materials converted to URP (no pink missing shaders)
-  - [ ] **Awesome Adventure Machine**  
       - [ ] All materials converted to URP (no pink missing shaders)
   - [ ] **Tully**  
       - [ ] All materials converted to URP (no pink missing shaders)
