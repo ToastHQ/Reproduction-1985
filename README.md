@@ -8,6 +8,7 @@
 
 ---
 
+
 ### Contents
 1. [About](#about)
 2. [Getting Started](#getting-started)
@@ -26,8 +27,10 @@ Project Duofur is an animatronic simulation software based in Unity. Most of its
 See the wiki for information
 
 ## Contributing
+> [!CAUTION]
+> The codebase is significantly changing at this time. Shows & code may break.
 
-> [!WARNING]
+> [!NOTE]
 > Be advised that maintaining your own independent "mod" of the software will be a challenging task if you intend on staying up to date with the latest features. It's easier to contribute to the main repository instead.
 > If you do choose to maintain your own mod, please make sure you keep it up to date with the base to ensure proper compatibility.
 
@@ -47,13 +50,26 @@ Once you have made the necessary changes in your fork, [open up a pull request](
 - [x] Valve Sounds
     
 - [ ] **Maps**   
-  - [ ] **3-Stage**  
+  - [ ] **3-Stage Munch's Make Believe Band**  
     - [x] All materials converted to URP (no pink missing shaders)
     - [x] General Props implemented fully
     - [ ] Spotlights prop
     - [ ] **Characters**
       - [ ] CathodePlayer's Helen (unknown location, was publically released in [Animatronic Game Hub](https://discord.gg/WRQvaw6EM9))
       - [ ] Munch Jr.
+  - [ ] **3-Stage Rockafire Explosion**
+    - [ ] **Characters**
+      - [ ] Rolfe & Earl
+      - [ ] Dook
+      - [ ] Fatz
+      - [ ] Mitzi
+      - [ ] Beach Bear
+      - [ ] Billy Bob
+      - [ ] Sun
+      - [ ] Moon
+      - [ ] Choo-Choo
+    - [ ] General Props implemented fully
+    - [ ] Stage
   - [ ] **Cyberamics (Pizza Time Players)**
     - [ ] All materials converted to URP (no pink missing shaders)
     - [ ] Band Board prop
@@ -69,8 +85,6 @@ Once you have made the necessary changes in your fork, [open up a pull request](
   - [ ] **Winchester**  
       - [ ] All materials converted to URP (no pink missing shaders)
   - [ ] **Kooser**  
-      - [ ] All materials converted to URP (no pink missing shaders)
-  - [ ] **Awesome Adventure Machine**  
       - [ ] All materials converted to URP (no pink missing shaders)
   - [ ] **Tully**  
       - [ ] All materials converted to URP (no pink missing shaders)
