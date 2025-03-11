@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Light = Show.Light;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(CharacterController))]
@@ -37,7 +38,7 @@ public class Player : MonoBehaviour
     public bool enableCamSmooth;
     
     // Flashlight
-    private Light _flashlight;
+    private UnityEngine.Light _flashlight;
     private bool _flashEnabled;
 
     
@@ -95,7 +96,7 @@ public class Player : MonoBehaviour
 
         //Initialize Variables
         _controller = GetComponent<CharacterController>();
-        _flashlight = gameObject.GetComponentInChildren<Light>();
+        _flashlight = gameObject.GetComponentInChildren<UnityEngine.Light>();
         
         // Get Actions
         _moveAction = InputSystem.actions.FindAction("Move");
@@ -199,7 +200,7 @@ public class Player : MonoBehaviour
 
         // Camera Zoom
         _targetFOV -= scroll * 10f; 
-        _targetFOV = Mathf.Clamp(_targetFOV, 20f, 110f); 
+        _targetFOV = Mathf.Clamp(_targetFOV, 10f, 110f); 
 
         mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, _targetFOV, Time.deltaTime * 2f);
 

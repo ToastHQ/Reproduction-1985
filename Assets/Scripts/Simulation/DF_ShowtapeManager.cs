@@ -1,19 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using eToile;
 using SFB;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Video;
 
-public class FloatEvent : UnityEvent<float>
-{
-}
-
 public class DF_ShowtapeManager : MonoBehaviour
 {
+    private GameObject _player;
     public enum LoopVers
     {
         noLoop,
@@ -22,12 +16,11 @@ public class DF_ShowtapeManager : MonoBehaviour
     }
 
     //Inspector Objects
-    [Header("Inspector Objects")] public MacValves mack;
+    [Header("Inspector Objects")] private MacValves _mac;
 
-    [HideInInspector] public DF_ShowtapeCreator creator;
-    public AudioSource referenceSpeaker;
+    private RR_SHW_Manager _creator;
+    private DF_ShowController _showController;
     [HideInInspector] public float refSpeakerVol;
-    public VideoPlayer referenceVideo;
     public AudioClip speakerClip;
     public LoopVers songLoopSetting;
     public string wavPath;
@@ -44,11 +37,16 @@ public class DF_ShowtapeManager : MonoBehaviour
 
     public UnityEvent audioVideoPause;
     public UnityEvent audioVideoGetData;
-    public UnityEvent curtainClose;
-    public UnityEvent curtainOpen;
     public UnityEvent syncTvsAndSpeakers;
 
     [HideInInspector] public bool disableCharactersOnStart = true;
+    
+    [HideInInspector] public float timeSongStarted;
+    [HideInInspector] public float timeSongOffset;
+    [HideInInspector] public float timePauseStart;
+    [HideInInspector] public float timeInputSpeedStart;
+    [HideInInspector] public int previousFramePosition;
+    [HideInInspector] public bool previousAnyButtonHeld;
 
     //Sim States
     public bool recordMovements;
@@ -67,9 +65,10 @@ public class DF_ShowtapeManager : MonoBehaviour
 
     private void Start()
     {
-        creator = GetComponent<DF_ShowtapeCreator>();
-        referenceVideo = GetComponent<VideoPlayer>();
-        refSpeakerVol = referenceSpeaker.volume;
+        _player = GameObject.FindGameObjectWithTag("Player");
+        _mac = GameObject.FindGameObjectWithTag("Mac Valves").GetComponent<MacValves>();
+        _creator = transform.root.GetComponentInChildren<RR_SHW_Manager>();
+        _showController = GameObject.FindGameObjectWithTag("Show Controller").GetComponent<DF_ShowController>();
     }
 
     private void Update()
@@ -83,12 +82,11 @@ public class DF_ShowtapeManager : MonoBehaviour
         }
 
         //Clear Drawers
-            mack.topDrawer = new bool[300];
-            mack.bottomDrawer = new bool[300];
+            _mac.topDrawer = new bool[300];
+            _mac.bottomDrawer = new bool[300];
 
             //Check for inputs and send to mack valves
-            if (mack != null)
-                if (useVideoAsReference || (!useVideoAsReference && referenceSpeaker.clip != null))
+                if (useVideoAsReference || (!useVideoAsReference && _showController.referenceAudio.clip != null))
                     if (rshwData != null)
                     {
                         //Show Code
@@ -96,9 +94,9 @@ public class DF_ShowtapeManager : MonoBehaviour
                         //Being unpaused means deciding where to start next sim frame
                         int arrayDestination;
                         if (useVideoAsReference)
-                            arrayDestination = (int)(referenceVideo.time * dataStreamedFPS);
+                            arrayDestination = (int)(_showController.referenceVideo.time * dataStreamedFPS);
                         else
-                            arrayDestination = (int)(referenceSpeaker.time * dataStreamedFPS);
+                            arrayDestination = (int)(_showController.referenceAudio.time * dataStreamedFPS);
 
 
                         //Check if new frames need to be created
@@ -116,14 +114,14 @@ public class DF_ShowtapeManager : MonoBehaviour
                         if (arrayDestination < rshwData.Length)
                             for (int i = 0; i < 150; i++)
                             {
-                                if (rshwData[arrayDestination].Get(i)) mack.topDrawer[i] = true;
-                                if (rshwData[arrayDestination].Get(i + 150)) mack.bottomDrawer[i] = true;
+                                if (rshwData[arrayDestination].Get(i)) _mac.topDrawer[i] = true;
+                                if (rshwData[arrayDestination].Get(i + 150)) _mac.bottomDrawer[i] = true;
                             }
 
                         //Check if show is over
-                        if ((!useVideoAsReference && referenceSpeaker.time >= speakerClip.length * speakerClip.channels)
-                            || (useVideoAsReference && referenceVideo.time >=
-                                referenceVideo.length * referenceVideo.GetAudioChannelCount(0)))
+                        if ((!useVideoAsReference && _showController.referenceAudio.time >= speakerClip.length * speakerClip.channels)
+                            || (useVideoAsReference && _showController.referenceVideo.time >=
+                                _showController.referenceVideo.length * _showController.referenceVideo.GetAudioChannelCount(0)))
                             if (!recordMovements)
                             {
                                 Debug.Log("Song is over. Queuing next song / stopping.");
@@ -132,12 +130,12 @@ public class DF_ShowtapeManager : MonoBehaviour
                                 {
                                     if (currentShowtapeSegment == -1)
                                     {
-                                        referenceSpeaker.time = 0;
-                                        referenceVideo.time = 0;
+                                        _showController.referenceAudio.time = 0;
+                                        _showController.referenceVideo.time = 0;
                                     }
                                     else
                                     {
-                                        creator.LoadFromURL(showtapeSegmentPaths[currentShowtapeSegment]);
+                                        _creator.LoadFromURL(showtapeSegmentPaths[currentShowtapeSegment]);
                                     }
                                 }
                                 else
@@ -145,8 +143,8 @@ public class DF_ShowtapeManager : MonoBehaviour
                                     //Check if multi showtape or single
                                     if (currentShowtapeSegment == -1)
                                     {
-                                        referenceSpeaker.time = 0;
-                                        referenceVideo.time = 0;
+                                        _showController.referenceAudio.time = 0;
+                                        _showController.referenceVideo.time = 0;
                                         Unload();
                                     }
                                     else
@@ -158,7 +156,7 @@ public class DF_ShowtapeManager : MonoBehaviour
                                             if (songLoopSetting == LoopVers.loopPlaylist)
                                             {
                                                 currentShowtapeSegment = 0;
-                                                creator.LoadFromURL(showtapeSegmentPaths[currentShowtapeSegment]);
+                                                _creator.LoadFromURL(showtapeSegmentPaths[currentShowtapeSegment]);
                                             }
                                             else
                                             {
@@ -167,7 +165,7 @@ public class DF_ShowtapeManager : MonoBehaviour
                                         }
                                         else
                                         {
-                                            creator.LoadFromURL(showtapeSegmentPaths[currentShowtapeSegment]);
+                                            _creator.LoadFromURL(showtapeSegmentPaths[currentShowtapeSegment]);
                                         }
                                     }
                                 }
@@ -182,8 +180,8 @@ public class DF_ShowtapeManager : MonoBehaviour
         CursorLockMode lockState = Cursor.lockState;
         Cursor.lockState = CursorLockMode.None;
         Debug.Log("Load");
-        if (referenceSpeaker != null) referenceSpeaker.time = 0;
-        if (referenceVideo != null) referenceVideo.time = 0;
+        if (_showController.referenceAudio != null) _showController.referenceAudio.time = 0;
+        if (_showController.referenceVideo != null) _showController.referenceVideo.time = 0;
 
         //Call File Browser
         showtapeSegmentPaths = new string[1];
@@ -191,7 +189,7 @@ public class DF_ShowtapeManager : MonoBehaviour
         if (fileExtention == "")
         {
             ExtensionFilter[] extensions;
-            extensions = new[] { new ExtensionFilter("Show Files", "cshw", "sshw", "rshw", "nshw") };
+            extensions = new[] { new ExtensionFilter("Show Files", "cshw", "sshw", "rshw") };
 
             paths = StandaloneFileBrowser.OpenFilePanel("Browse Showtape Audio", "", extensions, false);
         }
@@ -202,27 +200,16 @@ public class DF_ShowtapeManager : MonoBehaviour
 
         if (paths.Length > 0)
         {
-            showtapeSegmentPaths[0] = paths[0];
-            currentShowtapeSegment = 0;
-            creator.LoadFromURL(paths[0]);
-        }
-
-        Cursor.lockState = lockState;
-    }
-
-    public void LoadFolder()
-    {
-        CursorLockMode lockState = Cursor.lockState;
-        Cursor.lockState = CursorLockMode.None;
-        referenceSpeaker.time = 0;
-        referenceVideo.time = 0;
-        //Call File Browser
-        string[] paths = StandaloneFileBrowser.OpenFolderPanel("Select Folder of Showtapes", "", false);
-        if (paths.Length > 0)
-        {
-            showtapeSegmentPaths = Directory.GetFiles(paths[0], "*." + fileExtention);
-            currentShowtapeSegment = 0;
-            creator.LoadFromURL(showtapeSegmentPaths[currentShowtapeSegment]);
+            if (paths[0].EndsWith("rshw") || paths[0].EndsWith("cshw") || paths[0].EndsWith("sshw"))
+            {
+                ControlUI controlUI = _player.GetComponentInChildren<ControlUI>();
+                if (controlUI.DisplayWarning("The .*shw format is dangerous and should not be used. Only proceed if you trust the source of the showtape.\n\n(https://aka.ms/binaryformatter)"))
+                {
+                    showtapeSegmentPaths[0] = paths[0];
+                    currentShowtapeSegment = 0;
+                    _creator.LoadFromURL(paths[0]);
+                }
+            }
         }
 
         Cursor.lockState = lockState;
@@ -240,51 +227,17 @@ public class DF_ShowtapeManager : MonoBehaviour
 
     }
 
-    public void SwapLoop()
-    {
-        if (songLoopSetting == LoopVers.loopPlaylist)
-            songLoopSetting = LoopVers.loopSong;
-        else if (songLoopSetting == LoopVers.loopSong)
-            songLoopSetting = LoopVers.noLoop;
-        else
-            songLoopSetting = LoopVers.loopPlaylist;
-    }
-
-    public void SkipSong(int skip)
-    {
-        playMovements = false;
-        referenceSpeaker.time = 0;
-        referenceVideo.time = 0;
-        if (songLoopSetting == LoopVers.noLoop || songLoopSetting == LoopVers.loopPlaylist)
-            currentShowtapeSegment += skip;
-
-        if (currentShowtapeSegment < 0)
-        {
-            currentShowtapeSegment = 0;
-        }
-        else if (currentShowtapeSegment >= showtapeSegmentPaths.Length)
-        {
-            if (songLoopSetting == LoopVers.loopPlaylist)
-                currentShowtapeSegment = 0;
-            else
-                currentShowtapeSegment = showtapeSegmentPaths.Length - 1;
-        }
-
-        creator.LoadFromURL(showtapeSegmentPaths[currentShowtapeSegment]);
-    }
-
     public void Unload()
     {
         videoPath = "";
         playMovements = false;
         recordMovements = false;
-        referenceSpeaker.time = 0;
-        referenceVideo.time = 0;
+        _showController.referenceAudio.time = 0;
+        _showController.referenceVideo.time = 0;
         currentShowtapeSegment = -1;
         showtapeSegmentPaths = new string[1];
         rshwData = new BitArray[0];
         audioVideoPause.Invoke();
-        curtainClose.Invoke();
     }
     public void PadAllBits(int padding)
     {
@@ -292,9 +245,9 @@ public class DF_ShowtapeManager : MonoBehaviour
         {
             int address;
             if (useVideoAsReference)
-                address = (int)(referenceVideo.time * dataStreamedFPS);
+                address = (int)(_showController.referenceVideo.time * dataStreamedFPS);
             else
-                address = (int)(referenceSpeaker.time * dataStreamedFPS);
+                address = (int)(_showController.referenceAudio.time * dataStreamedFPS);
 
 
             if (padding > 0)

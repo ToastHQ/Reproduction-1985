@@ -9,9 +9,9 @@ public class PlaybackUI : MonoBehaviour
     
     private VisualElement _root;
 
-    private DF_ShowManager _showManager;
+    private DF_ShowController _showController;
     private DF_ShowtapeManager _showtapeManager;
-    private DF_ShowtapeCreator _showtapeCreator;
+    private RR_SHW_Manager _showtapeCreator;
 
     private VisualElement _container;
     private Button _playbackButton, _reverseButton, _stopButton, _forwardButton, _curtainButton;
@@ -19,10 +19,10 @@ public class PlaybackUI : MonoBehaviour
 
     private void Awake()
     {
-        GameObject ui = GameObject.Find("UI");
-        _showManager = ui.GetComponent<DF_ShowManager>();
-        _showtapeManager = ui.GetComponent<DF_ShowtapeManager>();
-        _showtapeCreator = ui.GetComponent<DF_ShowtapeCreator>();
+        _showController = GameObject.FindGameObjectWithTag("Show Controller").GetComponent<DF_ShowController>();;
+        _showtapeManager = GameObject.FindGameObjectWithTag("Showtape Manager").GetComponent<DF_ShowtapeManager>();
+        
+        _showtapeCreator = GameObject.Find("Formats").GetComponent<RR_SHW_Manager>();
     }
 
     private void OnEnable()
@@ -43,11 +43,11 @@ public class PlaybackUI : MonoBehaviour
         _volumeSlider = _root.Q<Slider>("VolumeSlider");
 
 
-        _playbackButton.clicked += () => _showManager.TogglePlayback();
+        _playbackButton.clicked += () => _showController.TogglePlayback();
         _curtainButton.clicked += () => ToggleCurtains();
-        _reverseButton.clicked += () => _showManager.FFSong(-1);
-        _stopButton.clicked += () => _showManager.Stop();
-        _forwardButton.clicked += () => _showManager.FFSong(1);
+        _reverseButton.clicked += () => _showController.FFSong(-1);
+        _stopButton.clicked += () => _showController.Stop();
+        _forwardButton.clicked += () => _showController.FFSong(1);
 
         UpdatePlaybackActivity();
 
@@ -68,10 +68,10 @@ public class PlaybackUI : MonoBehaviour
         {
             if (_showtapeManager.speakerClip.length > 0)
             {
-                _dataSlider.value = (_showtapeManager.referenceSpeaker.time / _showtapeManager.speakerClip.length) * 100;
-                _volumeSlider.value = _showManager.speakerL[0].volume * 100;
+                _dataSlider.value = (_showController.referenceAudio.time / _showtapeManager.speakerClip.length) * 100;
+                _volumeSlider.value = _showController.stages[_showController.currentStage].speakers[0].volume * 100;
             }
-            if (_showtapeManager.referenceSpeaker.isPlaying)
+            if (_showController.referenceAudio.isPlaying)
                 _playbackButton.iconImage = PauseIcon;
             else
                 _playbackButton.iconImage = PlayIcon;
@@ -106,12 +106,11 @@ public class PlaybackUI : MonoBehaviour
     {
         if (_showtapeManager.speakerClip.length > 0)
         {
-            _showtapeManager.referenceSpeaker.time = (value / 100) * _showtapeManager.speakerClip.length;
-            for (int i = 0; i < _showManager.speakerL.Length; i++) _showManager.speakerL[i].time = (value / 100) * _showtapeManager.speakerClip.length;
-            for (int i = 0; i < _showManager.speakerR.Length; i++) _showManager.speakerR[i].time = (value / 100) * _showtapeManager.speakerClip.length;
+            _showController.referenceAudio.time = (value / 100) * _showtapeManager.speakerClip.length;
+            for (int i = 0; i < _showController.stages[_showController.currentStage].speakers.Length; i++) _showController.stages[_showController.currentStage].speakers[i].time = (value / 100) * _showtapeManager.speakerClip.length;
             
             if (_showtapeManager.videoPath != null)
-                _showManager.videoplayer.time = (value / 100) * _showtapeManager.speakerClip.length;
+                _showController.referenceVideo.time = (value / 100) * _showtapeManager.speakerClip.length;
         }
     }
 
@@ -123,8 +122,7 @@ public class PlaybackUI : MonoBehaviour
     {
         if (_showtapeManager.speakerClip.length > 0)
         {
-            for (int i = 0; i < _showManager.speakerL.Length; i++) _showManager.speakerL[i].volume = (value / 100);
-            for (int i = 0; i < _showManager.speakerR.Length; i++) _showManager.speakerR[i].volume = (value / 100);
+            for (int i = 0; i < _showController.stages[_showController.currentStage].speakers.Length; i++) _showController.stages[_showController.currentStage].speakers[i].volume = (value / 100);
         }
     }
 
@@ -144,17 +142,17 @@ public class PlaybackUI : MonoBehaviour
     
     private void ToggleCurtains()
     {
-        foreach (StageSelector t in _showManager.stages)
-            if (t.curtainValves != null)
+        foreach (Stage t in _showController.stages)
+            if (t.curtains != null)
             {
-                if (t.curtainValves.curtainOverride)
+                if (t.curtains.curtainOverride)
                 {
-                    t.curtainValves.curtainOverride = false;
+                    t.curtains.curtainOverride = false;
                     _curtainButton.text = "Open Curtains";
                 }
                 else
                 {
-                    t.curtainValves.curtainOverride = true;
+                    t.curtains.curtainOverride = true;
                     _curtainButton.text = "Close Curtains";
                 }
             }

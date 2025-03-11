@@ -2,10 +2,11 @@ using UnityEngine;
 using UnityEditor;
 using Global;
 using UnityEngine.SceneManagement;
+using Light = Show.Light;
 
 public class ConversionTools : EditorWindow
 {
-    private LightController[] lightControllers;
+    private Light[] Lights;
 
     [MenuItem("Duofur/RR Conversion Tools")]
     public static void ShowWindow() => GetWindow<ConversionTools>().titleContent = new GUIContent("RR Conversion Tools");
@@ -22,21 +23,21 @@ public class ConversionTools : EditorWindow
         
         GUILayout.Space(15);
         
-        if (lightControllers == null)
-            lightControllers = FindObjectsOfType<LightController>();
+        if (Lights == null)
+            Lights = FindObjectsOfType<Light>();
         
-        GUILayout.Label($"Light Controllers ({lightControllers.Length})", EditorStyles.boldLabel);
+        GUILayout.Label($"Light Controllers ({Lights.Length})", EditorStyles.boldLabel);
 
-        if (GUILayout.Button("Convert FadeSpeed \u2192 FadeTime") && ConfirmConversion("LightController","fadeSpeed"))
+        if (GUILayout.Button("Convert FadeSpeed \u2192 FadeTime") && ConfirmConversion("Light","fadeSpeed"))
             ConvertFadeSpeed();
 
-        if (GUILayout.Button("Convert TopOrBottom \u2192 Drawer Enum") && ConfirmConversion("LightController","topOrBottom"))
+        if (GUILayout.Button("Convert TopOrBottom \u2192 Drawer Enum") && ConfirmConversion("Light","topOrBottom"))
             ConvertTopOrBottom();
 
-        if (GUILayout.Button("Merge IntensityMultiplier \u2192 Intensity") && ConfirmConversion("LightController","intensityMultiplier"))
+        if (GUILayout.Button("Merge IntensityMultiplier \u2192 Intensity") && ConfirmConversion("Light","intensityMultiplier"))
             ConvertIntensityMultiplier();
         
-        if (GUILayout.Button("Convert Flash & Strobe \u2192 LightMode") && ConfirmConversion("LightController","flash & strobe"))
+        if (GUILayout.Button("Convert Flash & Strobe \u2192 LightMode") && ConfirmConversion("Light","flash & strobe"))
             ConvertStrobeFlash();
         
 
@@ -61,7 +62,7 @@ public class ConversionTools : EditorWindow
     private void ConvertFadeSpeed()
     {
         int convertedCount = 0;
-        foreach (var controller in lightControllers)
+        foreach (var controller in Lights)
         {
             if (controller.fadeSpeed != 0)
             {
@@ -70,12 +71,12 @@ public class ConversionTools : EditorWindow
                 convertedCount++;
             }
         }
-        Debug.Log($"fadeSpeed Conversion completed. {convertedCount} LightControllers updated.");
+        Debug.Log($"fadeSpeed Conversion completed. {convertedCount} Lights updated.");
     }
     private void ConvertTopOrBottom()
     {
         int convertedCount = 0;
-        foreach (var controller in lightControllers)
+        foreach (var controller in Lights)
         {
             if (controller.topOrBottom == 'T') controller.drawer = Drawer.Top;
             else if (controller.topOrBottom == 'B') controller.drawer = Drawer.Bottom;
@@ -83,13 +84,13 @@ public class ConversionTools : EditorWindow
             controller.topOrBottom = '\0';
             convertedCount++;
         }
-        Debug.Log($"topOrBottom Conversion completed. {convertedCount} LightControllers updated.");
+        Debug.Log($"topOrBottom Conversion completed. {convertedCount} Lights updated.");
     }
 
     private void ConvertIntensityMultiplier()
     {
         int convertedCount = 0;
-        foreach (var controller in lightControllers)
+        foreach (var controller in Lights)
         {
             if (controller.intensityMultiplier != 1)
             {
@@ -98,28 +99,28 @@ public class ConversionTools : EditorWindow
                 convertedCount++;
             }
         }
-        Debug.Log($"intensityMultiplier Conversion completed. {convertedCount} LightControllers updated.");
+        Debug.Log($"intensityMultiplier Conversion completed. {convertedCount} Lights updated.");
     }
     
     private void ConvertStrobeFlash()
     {
         int convertedCount = 0;
-        foreach (var controller in lightControllers)
+        foreach (var controller in Lights)
         {
             if (controller.strobe)
             {
-                controller.lightMode = LightController.LightMode.Strobe;
+                controller.lightMode = Light.LightMode.Strobe;
                 controller.strobe = false;
                 convertedCount++;
             }
 
             if (controller.flash)
             {
-                controller.lightMode = LightController.LightMode.Flash;
+                controller.lightMode = Light.LightMode.Flash;
                 controller.flash = false;
                 convertedCount++;
             }
         }
-        Debug.Log($"Flash & Strobe Conversion completed. {convertedCount} LightControllers updated.");
+        Debug.Log($"Flash & Strobe Conversion completed. {convertedCount} Lights updated.");
     }
 }

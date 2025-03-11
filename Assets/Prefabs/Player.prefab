@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 9221124378273534543}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -908,6 +908,7 @@ GameObject:
   - component: {fileID: 3669446371274710770}
   - component: {fileID: 4379774335145124964}
   - component: {fileID: 8348800396588936037}
+  - component: {fileID: 5335831705511020950}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -963,6 +964,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayIcon: {fileID: 2800000, guid: 0d5b764beb7a70e1abcf49be3a8ddef9, type: 3}
   PauseIcon: {fileID: 2800000, guid: cfe17763c2eabb77abee71a4f9cc96a3, type: 3}
+--- !u!114 &5335831705511020950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796481333345149442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e17e919e4c4b578a512e648efd3166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7721184935988952501
 GameObject:
   m_ObjectHideFlags: 0

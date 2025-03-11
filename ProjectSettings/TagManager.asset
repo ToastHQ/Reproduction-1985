@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Prop
   - Animatronic
+  - Speaker
+  - Show Controller
+  - Mac Valves
+  - Showtape Manager
+  - Video
   layers:
   - Default
   - TransparentFX
