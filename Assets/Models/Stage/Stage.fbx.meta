@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 65f5ddb1235e8d54b83e45851d2533cf
+guid: d5cfa7523d23f074880e7a54811caf86
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 90s Carpet
+    second: {fileID: 2100000, guid: 8228fe5af0200e146b33bdb4c7144021, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -17,8 +22,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Beta Bush
+    second: {fileID: 2100000, guid: 6c50b536822be0b43911591da8ef31f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Black Blank
-    second: {fileID: 2100000, guid: 8c03d91254582ff4286342fb880b4a86, type: 2}
+    second: {fileID: 2100000, guid: 3e59338b7bc9d7a4fa052f84395f0161, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -28,22 +38,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BlackCeiling
-    second: {fileID: 2100000, guid: 5d5de57b5b4534d46b3a08b6bb94b5e4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BlackGlass
-    second: {fileID: 2100000, guid: e9dc92beee08f3a4cb9edb5293201dd1, type: 2}
+    second: {fileID: 2100000, guid: 77f00ddfa75ffb44ebc8fbe1fd8e5af3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Blank
-    second: {fileID: 2100000, guid: 0c8fe350332c52847b4a86d660c9d488, type: 2}
+    second: {fileID: 2100000, guid: d21138f7d47542f4487c69b58e7877ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boiler
+    second: {fileID: 2100000, guid: 1b4eae0f4aa284843ac7788dd09038c9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bushes
-    second: {fileID: 2100000, guid: b7acd8dab99e85e4e809956462da1c3b, type: 2}
+    second: {fileID: 2100000, guid: fe97109d147ac7a45a749f470b9ee5ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Campfire
+    second: {fileID: 2100000, guid: cb998b81df2775a49b2fe91955e5da75, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -57,48 +72,53 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CeilingLight
-    second: {fileID: 2100000, guid: 9e11a0bd1587a8b4caf652cb023deaaa, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Condiment Set
-    second: {fileID: 2100000, guid: e85af0f142d408944849292f764b0ced, type: 2}
+      name: Curtain
+    second: {fileID: 2100000, guid: a7dc31023e237534db377c76f501e187, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cushons
-    second: {fileID: 2100000, guid: 095a21f329b59344b9c38f23df1a301d, type: 2}
+    second: {fileID: 2100000, guid: 069eb8c5b4906ec43800ef99a370a5a0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: FNaFSpeaker
-    second: {fileID: 2100000, guid: 606c2d51978e9f84987ee87ef5783db2, type: 2}
+      name: GasPump
+    second: {fileID: 2100000, guid: c2be37bef08b24e44b94b400ed19a42b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Fake Wood
-    second: {fileID: 2100000, guid: dbcce4706727aa24098da08ee1fab834, type: 2}
+      name: Glass
+    second: {fileID: 2100000, guid: c53314f0e0122a9409ca94eb8f7a7b32, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Grass
-    second: {fileID: 2100000, guid: 5b69e35204b55614fbc3f8c763d5d121, type: 2}
+    second: {fileID: 2100000, guid: 13d8461c13faf9f40ab9e1ff90cbfd90, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Grey Carpet
-    second: {fileID: 2100000, guid: 088a2be45062669458cf55995c890d67, type: 2}
+    second: {fileID: 2100000, guid: 8228fe5af0200e146b33bdb4c7144021, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Lights
-    second: {fileID: 2100000, guid: f6ab1cc20dbccb8498dbba74cb1bbd18, type: 2}
+    second: {fileID: 2100000, guid: 1e905526a1873bd4c99762a88460ae40, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Logos
     second: {fileID: 2100000, guid: 65421d71b82a72c4a8e5f074c2378a1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LooneyBarrel_Diffuse
+    second: {fileID: 2100000, guid: 76a5ce8e6b46c2040b0b03a44ca416d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Moonshine
+    second: {fileID: 2100000, guid: 457faca29eb39e247b92b09f021a424b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -112,18 +132,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: PaintedLogosDrawings
-    second: {fileID: 2100000, guid: 1dbf822386fc54d4d84e0f7b2978364c, type: 2}
+      name: Poster Set
+    second: {fileID: 2100000, guid: 1b43e239d5919a043b916d3f21157d06, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Plant
-    second: {fileID: 2100000, guid: 7c22a7b022f905044ab62893754c5ac5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PosterA
-    second: {fileID: 2100000, guid: d3baa37103e9d334d8ef34f78ff9082b, type: 2}
+      name: Posterset Two
+    second: {fileID: 2100000, guid: 4c880309bf545eb49a01b08ecab32537, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -133,12 +148,37 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Record
-    second: {fileID: 2100000, guid: 5eae49fea2c748d46bccca3045859a82, type: 2}
+    second: {fileID: 2100000, guid: 4ffef58aa415829478d25f6a5c3f69b2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: RedWall
-    second: {fileID: 2100000, guid: 8d5a096c42a16564ea34cea344871ad3, type: 2}
+    second: {fileID: 2100000, guid: 89382a69a4f41f94aa95871259921eb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rocks
+    second: {fileID: 2100000, guid: 64eaeda3c8f683245b6ef9279448c7f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShowbizTable
+    second: {fileID: 2100000, guid: cf4f7f60fbbc09b4d82febda45f0175a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShowbizWall
+    second: {fileID: 2100000, guid: d21138f7d47542f4487c69b58e7877ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SmittySign
+    second: {fileID: 2100000, guid: 670d949b97658ce4e80d6f1e50181726, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stage Lights
+    second: {fileID: 2100000, guid: 7168c15f19effda43bd6abdcdc4e7b45, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -147,18 +187,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: VendingMachine
-    second: {fileID: 2100000, guid: 65a1084d13a813f43bf2b399d2f055a2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Vent
-    second: {fileID: 2100000, guid: a4513c23d361d9b4ba5b8f4773529001, type: 2}
+      name: Valence
+    second: {fileID: 2100000, guid: 57ac742282eb0e04d9dd05f6ced8a11a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Walls
-    second: {fileID: 2100000, guid: ac27290b5bf4cf5448823e6b06cf8f20, type: 2}
+    second: {fileID: 2100000, guid: 914a83467d057704e824b47b0fbebbf7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteTiledWood
+    second: {fileID: 2100000, guid: b4f8083b8d3eb90488a03966366a42e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodThree
+    second: {fileID: 2100000, guid: 5b427f572da4aa449a64ad54811b77dd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -167,15 +212,10 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: WoodWhite
-    second: {fileID: 2100000, guid: 1ec281143c6d07a4a937538613860c04, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: YellowWall
-    second: {fileID: 2100000, guid: bfbdebec204fcc84991c01c8ae76e1d2, type: 2}
+    second: {fileID: 2100000, guid: 701c11c4289580d409ff757c45d8e5ce, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 2
     materialLocation: 1
@@ -232,7 +272,7 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
-    secondaryUVMarginMethod: 1
+    secondaryUVMarginMethod: 0
     secondaryUVMinLightmapResolution: 512
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 5

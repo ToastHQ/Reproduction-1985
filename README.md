@@ -8,6 +8,7 @@
 
 ---
 
+
 ### Contents
 1. [About](#about)
 2. [Getting Started](#getting-started)
@@ -23,41 +24,13 @@
 Project Duofur is an animatronic simulation software based in Unity. Most of its code currently derives from [RR Engine Vanilla Enhanced](https://github.com/EnderSkippy/RR-Engine-Vanilla-Enhanced), a fork of the long-abandoned RR Engine (aka Reel to Real). This project aims to continue it and add needed features.
 
 ## Getting Started
-> [!NOTE]
-> Most maps are not ready at this time. The 3-Stage map is the most stable and ideally should be used as a base.
-This is instructions on how to install and setup the software. Only the source code method can be used if you intend on [contributing to the software.](#contributing)
-
-> [!IMPORTANT]
-> Read the [Legal Disclaimer](#legal-disclaimer) before you use this software.
-
-### Gamejolt
-*Recommended for general users of the software. Quickest method.*
-
-No releases have been published at this time. Please check back later.
-
-### Source Code
-*Recommended for experienced users & people intending on contributing to the software.*
-
-> [!NOTE]
-> It's recommended to have good knowledge of both Github and Unity before proceeding, else you are more likely to run into issues.
-
-1. Setup Prerequisites
-   - Make sure you are on a stable internet connection
-   - Install Unity 6 Long Term Support (6000.0.37f1). This can be done via the [Unity Hub](https://docs.unity3d.com/hub/manual/InstallHub.html)
-   - Install a suitable git client, we recommend [Github Desktop](https://desktop.github.com/download/)
-   - [Fork the repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) and then [clone your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#cloning-your-forked-repository) onto a drive with suitable space (25GB+)
-2. Open the project
-   - Switch to the relevant branch based on what you intend on doing. See [Branches](#branches) for more info.
-   - Open the Unity Hub and then click `Open > Add Project From Disk`
-   - Wait for the project to open, it will take a bit as it has to download & install all the packages.
-4. Get editing!
-   - As of right now, map scenes are stored in `Assets > Scenes > Maps`. Once you're in one *(we recommend the 3-Stage map as it is the most used)*, hit the play button and you'll be shortly loaded in!
-  
-Make sure you fetch changes regularly via your git client (e.g Github Desktop). Fetching changes will make sure you always have the latest version of the software.
+See the wiki for information
 
 ## Contributing
+> [!CAUTION]
+> The codebase is significantly changing at this time. Shows & code may break.
 
-> [!WARNING]
+> [!NOTE]
 > Be advised that maintaining your own independent "mod" of the software will be a challenging task if you intend on staying up to date with the latest features. It's easier to contribute to the main repository instead.
 > If you do choose to maintain your own mod, please make sure you keep it up to date with the base to ensure proper compatibility.
 
@@ -74,16 +47,29 @@ Once you have made the necessary changes in your fork, [open up a pull request](
 - [ ] Launcher-style main menu
 - [ ] New flow management system
 - [ ] Improve the existing .*shw format's security & performance
-- [ ] Valve Sounds
+- [x] Valve Sounds
     
 - [ ] **Maps**   
-  - [ ] **3-Stage**  
+  - [ ] **3-Stage Munch's Make Believe Band**  
     - [x] All materials converted to URP (no pink missing shaders)
-    - [ ] General Props implemented fully
+    - [x] General Props implemented fully
     - [ ] Spotlights prop
     - [ ] **Characters**
       - [ ] CathodePlayer's Helen (unknown location, was publically released in [Animatronic Game Hub](https://discord.gg/WRQvaw6EM9))
       - [ ] Munch Jr.
+  - [ ] **3-Stage Rockafire Explosion**
+    - [ ] **Characters**
+      - [ ] Rolfe & Earl
+      - [ ] Dook
+      - [ ] Fatz
+      - [ ] Mitzi
+      - [ ] Beach Bear
+      - [ ] Billy Bob
+      - [ ] Sun
+      - [ ] Moon
+      - [ ] Choo-Choo
+    - [ ] General Props implemented fully
+    - [ ] Stage
   - [ ] **Cyberamics (Pizza Time Players)**
     - [ ] All materials converted to URP (no pink missing shaders)
     - [ ] Band Board prop
@@ -99,8 +85,6 @@ Once you have made the necessary changes in your fork, [open up a pull request](
   - [ ] **Winchester**  
       - [ ] All materials converted to URP (no pink missing shaders)
   - [ ] **Kooser**  
-      - [ ] All materials converted to URP (no pink missing shaders)
-  - [ ] **Awesome Adventure Machine**  
       - [ ] All materials converted to URP (no pink missing shaders)
   - [ ] **Tully**  
       - [ ] All materials converted to URP (no pink missing shaders)

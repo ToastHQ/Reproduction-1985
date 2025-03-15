@@ -1,0 +1,8 @@
+/media/rose/Data/Documents/RR-Engine-Duofur/.utmp/RelWithDebInfo/2f306s2a/arm64-v8a/CMakeFiles/edit_cache.dir
+/media/rose/Data/Documents/RR-Engine-Duofur/.utmp/RelWithDebInfo/2f306s2a/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/media/rose/Data/Documents/RR-Engine-Duofur/.utmp/RelWithDebInfo/2f306s2a/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/media/rose/Data/Documents/RR-Engine-Duofur/.utmp/RelWithDebInfo/2f306s2a/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/media/rose/Data/Documents/RR-Engine-Duofur/.utmp/RelWithDebInfo/2f306s2a/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+/media/rose/Data/Documents/RR-Engine-Duofur/.utmp/RelWithDebInfo/2f306s2a/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+/media/rose/Data/Documents/RR-Engine-Duofur/.utmp/RelWithDebInfo/2f306s2a/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+/media/rose/Data/Documents/RR-Engine-Duofur/.utmp/RelWithDebInfo/2f306s2a/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
