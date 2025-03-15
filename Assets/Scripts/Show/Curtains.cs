@@ -15,16 +15,14 @@ namespace Show
         public bool curtainOverride;
         private readonly List<int> cylindersBottom = new();
         private readonly List<int> cylindersTop = new();
-        private MacValves bitChart;
 
         private Animator characterValves;
         
-        private DF_ShowController _showController;
+        private ShowController _showController;
 
         private void Start()
         {
             characterValves = GetComponent<Animator>();
-            bitChart = gameObject.transform.root.GetComponentInChildren<MacValves>();
             for (int e = 0; e < characterValves.layerCount; e++)
             {
                 string temp = characterValves.GetLayerName(e);
@@ -35,7 +33,7 @@ namespace Show
             }
 
             curtainbools = new bool[characterValves.layerCount];
-            _showController = GameObject.FindGameObjectWithTag("Show Controller").GetComponent<DF_ShowController>();
+            _showController = GameObject.FindGameObjectWithTag("Show Controller").GetComponent<ShowController>();
         }
 
         private void Update()
@@ -51,10 +49,10 @@ namespace Show
             //Loop through cylinders to update
             for (int i = 0; i < cylindersTop.Count; i++)
                 //Get current animation value
-                SetTime("T", cylindersTop[i], bitChart.topDrawer, i, num3);
+                SetTime("T", cylindersTop[i], _showController.topDrawer, i, num3);
             for (int i = 0; i < cylindersBottom.Count; i++)
                 //Get current animation value
-                SetTime("B", cylindersBottom[i], bitChart.bottomDrawer, i, num3);
+                SetTime("B", cylindersBottom[i], _showController.bottomDrawer, i, num3);
         }
 
         private void SetTime(string drawername, int currentAnim, bool[] drawer, int lasti, float num3)

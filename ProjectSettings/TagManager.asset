@@ -9,8 +9,10 @@ TagManager:
   - Speaker
   - Show Controller
   - Mac Valves
-  - Showtape Manager
   - Video
+  - Air Compressor
+  - Stage
+  - Curtains
   layers:
   - Default
   - TransparentFX

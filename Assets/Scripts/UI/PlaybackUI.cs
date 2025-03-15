@@ -1,4 +1,5 @@
 using System;
+using Show;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,33 +8,31 @@ public class PlaybackUI : MonoBehaviour
 
     public Texture2D PlayIcon, PauseIcon;
     
-    private VisualElement _root;
+    private VisualElement _root, _bottomBar;
 
-    private DF_ShowController _showController;
-    private DF_ShowtapeManager _showtapeManager;
-    private RR_SHW_Manager _showtapeCreator;
+    private ShowController _showController;
+    private RR_SHW_Manager _rrShwManager;
 
-    private VisualElement _container;
-    private Button _playbackButton, _reverseButton, _stopButton, _forwardButton, _curtainButton;
+    private VisualElement _playback, _tools;
+    private Button _createButton, _playbackButton, _reverseButton, _stopButton, _forwardButton, _curtainButton;
     private Slider _dataSlider, _volumeSlider;
+    
+    private ControlUI _controlUI;
 
     private void Awake()
     {
-        _showController = GameObject.FindGameObjectWithTag("Show Controller").GetComponent<DF_ShowController>();;
-        _showtapeManager = GameObject.FindGameObjectWithTag("Showtape Manager").GetComponent<DF_ShowtapeManager>();
+        _showController = GameObject.FindGameObjectWithTag("Show Controller").GetComponent<ShowController>();;
+        _rrShwManager = _showController.gameObject.GetComponent<RR_SHW_Manager>();
+        _controlUI = GetComponent<ControlUI>();
         
-        _showtapeCreator = GameObject.Find("Formats").GetComponent<RR_SHW_Manager>();
-    }
-
-    private void OnEnable()
-    {
         _root = GetComponent<UIDocument>().rootVisualElement;
 
-        _container = _root.Q<VisualElement>("Playback");
-        _container.RegisterCallback<PointerEnterEvent>(evt => ToggleUI(true));
-        _container.RegisterCallback<PointerLeaveEvent>(evt => ToggleUI(false));
-
-        _playbackButton = _container.Q<Button>("TogglePlayback");
+        _bottomBar = _root.Q<VisualElement>("BottomBar");        
+        _playback = _bottomBar.Q<VisualElement>("Playback");
+        _tools = _bottomBar.Q<VisualElement>("Tools");
+        
+        _createButton = _tools.Q<Button>("Create");
+        _playbackButton = _playback.Q<Button>("TogglePlayback");
         _reverseButton = _root.Q<Button>("ReverseShowtape");
         _stopButton = _root.Q<Button>("StopShowtape");
         _forwardButton = _root.Q<Button>("ForwardShowtape");
@@ -42,7 +41,7 @@ public class PlaybackUI : MonoBehaviour
         _dataSlider = _root.Q<Slider>("DataSlider");
         _volumeSlider = _root.Q<Slider>("VolumeSlider");
 
-
+        _createButton.clicked += () => _controlUI.DisplayConvert();
         _playbackButton.clicked += () => _showController.TogglePlayback();
         _curtainButton.clicked += () => ToggleCurtains();
         _reverseButton.clicked += () => _showController.FFSong(-1);
@@ -50,52 +49,50 @@ public class PlaybackUI : MonoBehaviour
         _forwardButton.clicked += () => _showController.FFSong(1);
 
         UpdatePlaybackActivity();
-
-        _showtapeManager.audioVideoPlay.AddListener(UpdatePlaybackActivity);
-        _showtapeManager.audioVideoPause.AddListener(UpdatePlaybackActivity);
+        
         
         _dataSlider.RegisterValueChangedCallback(evt => UpdateDataTime(evt.newValue));
         _volumeSlider.RegisterValueChangedCallback(evt => UpdateVolume(evt.newValue));
-
-
-        _container.style.bottom = -93;
-
     }
     
     private void Update()
     {
-        if (_showtapeManager.rshwData != null)
+        UpdatePlaybackActivity();
+        if (_showController)
         {
-            if (_showtapeManager.speakerClip.length > 0)
+            if (_showController.playing)
             {
-                _dataSlider.value = (_showController.referenceAudio.time / _showtapeManager.speakerClip.length) * 100;
-                _volumeSlider.value = _showController.stages[_showController.currentStage].speakers[0].volume * 100;
+                if (_showController.referenceAudio.clip.length > 0)
+                {
+                    _dataSlider.value = (_showController.referenceAudio.time / _showController.referenceAudio.clip.length) * 100;
+                    _volumeSlider.value = _showController.referenceAudio.volume * 100;
+                }
+                if (_showController.referenceAudio.isPlaying)
+                    _playbackButton.iconImage = PauseIcon;
+                else
+                    _playbackButton.iconImage = PlayIcon;
             }
-            if (_showController.referenceAudio.isPlaying)
-                _playbackButton.iconImage = PauseIcon;
             else
+            {
                 _playbackButton.iconImage = PlayIcon;
-        }
-        else
-        {
-            _playbackButton.iconImage = PlayIcon;
+                _dataSlider.value = 0;
+            }
         }
     }
     
-    private void OnDisable()
+    public void ToggleUI(bool toggle)
     {
-        _showtapeManager.audioVideoPlay.RemoveListener(UpdatePlaybackActivity);
-        _showtapeManager.audioVideoPause.RemoveListener(UpdatePlaybackActivity);
-    }
+        float targetPos = toggle ? 0 : -100;
+        float targetAlpha = toggle ? 1f : 0f;
+        LeanTweenType easeType = toggle ? LeanTweenType.easeOutQuad : LeanTweenType.easeInQuad;
 
-    private void ToggleUI(bool show)
-    {
-        float start = _container.style.bottom.value.value;
-        float end = show ? 0 : -93;
+        LeanTween.value(gameObject, _bottomBar.style.bottom.value.value, targetPos, 0.25f)
+            .setOnUpdate(val => _bottomBar.style.bottom = val)
+            .setEase(easeType);
 
-        LeanTween.value(start, end, 0.2f)
-            .setEase(LeanTweenType.easeOutQuad)
-            .setOnUpdate(val => _container.style.bottom = val);
+        LeanTween.value(gameObject, _bottomBar.style.opacity.value, targetAlpha, 0.15f)
+            .setOnUpdate(val => _bottomBar.style.opacity = val)
+            .setEase(easeType);
     }
     
     /// <summary>
@@ -104,13 +101,12 @@ public class PlaybackUI : MonoBehaviour
     /// <param name="value"></param>
     private void UpdateDataTime(float value)
     {
-        if (_showtapeManager.speakerClip.length > 0)
+        if (_showController.referenceAudio.clip.length > 0)
         {
-            _showController.referenceAudio.time = (value / 100) * _showtapeManager.speakerClip.length;
-            for (int i = 0; i < _showController.stages[_showController.currentStage].speakers.Length; i++) _showController.stages[_showController.currentStage].speakers[i].time = (value / 100) * _showtapeManager.speakerClip.length;
+            _showController.referenceAudio.time = (value / 100) * _showController.referenceAudio.clip.length;
             
-            if (_showtapeManager.videoPath != null)
-                _showController.referenceVideo.time = (value / 100) * _showtapeManager.speakerClip.length;
+            if (_showController.videoPath != null)
+                _showController.referenceVideo.time = (value / 100) * _showController.referenceAudio.clip.length;
         }
     }
 
@@ -120,10 +116,7 @@ public class PlaybackUI : MonoBehaviour
     /// <param name="value"></param>
     private void UpdateVolume(float value)
     {
-        if (_showtapeManager.speakerClip.length > 0)
-        {
-            for (int i = 0; i < _showController.stages[_showController.currentStage].speakers.Length; i++) _showController.stages[_showController.currentStage].speakers[i].volume = (value / 100);
-        }
+        _showController.referenceAudio.volume = (value / 100);
     }
 
     /// <summary>
@@ -131,7 +124,7 @@ public class PlaybackUI : MonoBehaviour
     /// </summary>
     private void UpdatePlaybackActivity()
     {
-        bool isPlaying = _showtapeManager.playMovements;
+        bool isPlaying = _showController.playing;
         _reverseButton.SetEnabled(isPlaying);
         _stopButton.SetEnabled(isPlaying);
         _forwardButton.SetEnabled(isPlaying);
@@ -142,20 +135,22 @@ public class PlaybackUI : MonoBehaviour
     
     private void ToggleCurtains()
     {
-        foreach (Stage t in _showController.stages)
-            if (t.curtains != null)
+        // Tacky solution, but it'll do assuming all curtains in the scene have the same state.
+        var curtain = transform.root.GetComponentInChildren<Curtains>();
+        
+        if (curtain != null)
+        {
+            if (curtain.curtainOverride)
             {
-                if (t.curtains.curtainOverride)
-                {
-                    t.curtains.curtainOverride = false;
-                    _curtainButton.text = "Open Curtains";
-                }
-                else
-                {
-                    t.curtains.curtainOverride = true;
-                    _curtainButton.text = "Close Curtains";
-                }
+                curtain.curtainOverride = false;
+                _curtainButton.text = "Open Curtains";
             }
+            else
+            {
+                curtain.curtainOverride = true;
+                _curtainButton.text = "Close Curtains";
+            }
+        }
     }
     
 }

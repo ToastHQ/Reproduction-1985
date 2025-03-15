@@ -36,7 +36,6 @@ namespace Show
         public bool materialStars;
         public Texture2D[] starCookies;
         private float acceleration;
-        private MacValves macValves;
         private UnityEngine.Light currentLight;
         private int currentTextureSet;
 
@@ -50,7 +49,7 @@ namespace Show
 
         private bool errorOccured;
     
-        DF_ShowController showController;
+        ShowController showController;
 
     
         // DEPRECATED - Only here for caching before conversion.
@@ -76,8 +75,7 @@ namespace Show
 
             if (materialStars) emissiveObject.SetActive(false);
 
-            macValves = GameObject.FindGameObjectWithTag("Mac Valves").GetComponent<MacValves>();
-            showController = GameObject.FindGameObjectWithTag("Show Controller").GetComponent<DF_ShowController>();
+            showController = GameObject.FindGameObjectWithTag("Show Controller").GetComponent<ShowController>();
         }
 
         private void Update()
@@ -95,9 +93,9 @@ namespace Show
                 try
                 {
                     bool onOff = false;
-                    if (drawer == Drawer.Top && macValves.topDrawer[bit - 1])
+                    if (drawer == Drawer.Top && showController.topDrawer[bit - 1])
                         onOff = true;
-                    else if (drawer == Drawer.Bottom && macValves.bottomDrawer[bit - 1]) 
+                    else if (drawer == Drawer.Bottom && showController.bottomDrawer[bit - 1]) 
                         onOff = true;
                     if (invert) onOff = !onOff;
                     

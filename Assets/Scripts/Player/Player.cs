@@ -56,7 +56,6 @@ public class Player : MonoBehaviour
 
     
     
-    public GameObject pauseMenu;
     private bool _isJumping;
     
     private Vector2 _camAcceleration;
@@ -83,6 +82,8 @@ public class Player : MonoBehaviour
     private InputAction _menuAction;
     private InputAction _exitAction;
     private InputAction _scrollY;
+    
+    PlaybackUI _playbackUI;
 
     private bool _runGamepad;
 
@@ -92,7 +93,8 @@ public class Player : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         
-        controlUx.SetActive(false);
+        _playbackUI = controlUx.GetComponentInChildren<PlaybackUI>();
+        _playbackUI.ToggleUI(false);
 
         //Initialize Variables
         _controller = GetComponent<CharacterController>();
@@ -124,7 +126,6 @@ public class Player : MonoBehaviour
         }
         else
             Cursor.lockState = CursorLockMode.None;
-        
         
         HandleUI();
 
@@ -235,7 +236,7 @@ public class Player : MonoBehaviour
         if (_menuAction.triggered)
         {
             lockCamera = !lockCamera;
-            controlUx.SetActive(lockCamera);
+            _playbackUI.ToggleUI(lockCamera);
         }
 
         if (_exitAction.triggered)

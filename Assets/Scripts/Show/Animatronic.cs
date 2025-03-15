@@ -56,7 +56,6 @@ public class Animatronic : MonoBehaviour
     public int headOutBit;
     public int headInBit;
     
-    private MacValves bitChart;
 
     private Animator animator;
     
@@ -68,42 +67,29 @@ public class Animatronic : MonoBehaviour
     private PlayableGraph _graph;
     private AnimationLayerMixerPlayable _mixer;
     private AnimationPlayableOutput _output;
+
+    private ShowController _showController;
+    private AirCompressor _airCompressor;
     
-    DF_ShowController showController;
     private void Awake()
     {
         if (movements.Length == 0)
         {
             Debug.LogWarning($"No movements assigned to {gameObject.name} so disabling. Please assign at least one in the inspector.");
         }
+        _showController = GameObject.FindGameObjectWithTag("Show Controller").GetComponent<ShowController>();
+        _airCompressor = GameObject.FindGameObjectWithTag("Air Compressor").GetComponent<AirCompressor>();
     }
 
-    private void OnDisable()
-    {
-        _graph.Destroy();
-    }
-
-    private void Update()
-    {
-        if (showController.active)
-        {
-            CreateMovements(Time.deltaTime * showController.updateRate);
-        }
-    }
-
-    public void StartUp()
+    private void Start()
     {
         transform.parent.name = transform.parent.name.Replace("(Clone)", "").Trim();
         
-        ////////////////////////////THIS NEEDS TO BE IN HERE NOTHING SHOULD BE IENUMERATOR
         Debug.Log("Startup Performed on " + name);
         
         animator = GetComponent<Animator>();
         animator.cullingMode = AnimatorCullingMode.CullCompletely;
         animator.runtimeAnimatorController = null;
-
-        showController = GameObject.FindGameObjectWithTag("Show Controller").GetComponent<DF_ShowController>();
-        bitChart = GameObject.Find("Mac Valves").GetComponent<MacValves>();
         
         _valveAudioSource = new GameObject("ValveSounds").AddComponent<AudioSource>();
         _valveAudioSource.transform.SetParent(transform.parent);
@@ -134,6 +120,19 @@ public class Animatronic : MonoBehaviour
         Debug.Log($"{gameObject.name} is Ready! Playables: {_mixer.GetInputCount()}");
     }
 
+    private void OnDisable()
+    {
+        _graph.Destroy();
+    }
+
+    private void Update()
+    {
+        if (_showController.active)
+        {
+            CreateMovements(Time.deltaTime * _showController.updateRate);
+        }
+    }
+
     /// <summary>
     ///     Simulates the exact position for each animation layer of the character.
     ///     Thanks to Himitsu for completely overhauling the entire sim to improve
@@ -142,7 +141,7 @@ public class Animatronic : MonoBehaviour
     /// <param name="timeDeltaTime"></param>
     public void CreateMovements(float timeDeltaTime)
     {
-        if (bitChart != null)
+        if (_showController != null)
         {
             for (int i = 0; i < movements.Length; i++)
             {
@@ -155,34 +154,34 @@ public class Animatronic : MonoBehaviour
                 
                 //Assign PSI and Valve Position
                 float currentValvePos = _mixer.GetInputWeight(i);
-                float valvePsi = bitChart.PSI / 1050f * PSIScale * timeDeltaTime;
+                float valvePsi = _airCompressor.airPressure / 1050f * PSIScale * timeDeltaTime;
                 
                 bool state;
                 bool dpr = false;
                 if (movements[i].drawer == Drawer.Top)
                 {
-                    state = bitChart.topDrawer[movements[i].bit - 1];
+                    state = _showController.topDrawer[movements[i].bit - 1];
                     switch (dualPressureState)
                     {
                         case DualPressureState.Off:
                             valvePsi *= 0.65f;
                             break;
                         case DualPressureState.Rockafire:
-                            dpr = bitChart.topDrawer[40];
+                            dpr = _showController.topDrawer[40];
                             valvePsi *= 0.75f;
                             break;
                     }
                 }
                 else
                 {
-                    state = bitChart.bottomDrawer[movements[i].bit - 1];
+                    state = _showController.bottomDrawer[movements[i].bit - 1];
                     switch (dualPressureState)
                     {
                         case DualPressureState.Off:
                             valvePsi *= 0.65f;
                             break;
                         case DualPressureState.Rockafire:
-                            dpr = bitChart.bottomDrawer[60];
+                            dpr = _showController.bottomDrawer[60];
                             break;
                     }
                 }
@@ -384,8 +383,8 @@ public class Animatronic : MonoBehaviour
 
         bool isTopDrawer = movements[i].drawer == Drawer.Top;
         bool currentState = isTopDrawer 
-            ? bitChart.topDrawer[movements[i].bit] 
-            : bitChart.bottomDrawer[movements[i].bit];
+            ? _showController.topDrawer[movements[i].bit] 
+            : _showController.bottomDrawer[movements[i].bit];
         
         if (currentState && !movements[i].previousState) // Valve In
         {

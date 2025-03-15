@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.gustavopsantos.unitymainthreaddispatcher": {
+      "version": "https://github.com/gustavopsantos/unitymainthreaddispatcher.git?path=/Assets/UnityMainThreadDispatcher/#1.0.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "5553609a79c1c093639afc2ea789a40594715cb6"
+    },
     "com.jiaozi158.unityssgiurp": {
       "version": "https://github.com/jiaozi158/UnitySSGIURP.git",
       "depth": 0,
@@ -237,6 +244,13 @@
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
       "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
