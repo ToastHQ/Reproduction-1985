@@ -53,17 +53,17 @@ Once you have made the necessary changes in your fork, [open up a pull request](
   - [ ] **3-Stage Munch's Make Believe Band**  
     - [x] All materials converted to URP (no pink missing shaders)
     - [x] General Props implemented fully
-    - [ ] Spotlights prop
-    - [ ] **Characters**
-      - [ ] CathodePlayer's Helen (unknown location, was publically released in [Animatronic Game Hub](https://discord.gg/WRQvaw6EM9))
-      - [ ] Munch Jr.
+    - [x] Spotlights prop
+    - [x] **Characters**
+      - [x] CathodePlayer's Helen (unknown location, was publically released in [Animatronic Game Hub](https://discord.gg/WRQvaw6EM9))
+      - [x] Munch Jr. (Mech)
   - [ ] **3-Stage Rockafire Explosion**
     - [ ] **Characters**
-      - [ ] Rolfe & Earl
+      - [x] Rolfe & Earl
       - [ ] Dook
       - [ ] Fatz
       - [ ] Mitzi
-      - [ ] Beach Bear
+      - [x] Beach Bear
       - [ ] Billy Bob
       - [ ] Sun
       - [ ] Moon
